@@ -1,0 +1,160 @@
+/* Variables =================================================== */
+
+$default_sans_family: helvetica,arial,sans-serif;
+$default_serif_family: "adobe-garamond-pro",serif;
+
+$serif: "adobe-garamond-pro", Georgia, Serif;
+$sans-serif: "AvantGardeGothicITCW01D", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+$header_primary_background_color: #fefefe;
+$header_secondary_background_color: #fafafa;
+$page_background_color: #35393C;
+$lighter_page_background_color 	: lighten($page_background_color,2%);
+$dark_grey:#2A2A2A;
+$grey:#3C4841;
+$orange:#ED5A48;
+$green:#CED300;
+$purple:#6a0bc1;
+
+// greyscale
+
+$black 			: rgb(0,0,0);
+$darkgrey 		: lighten($black, 25%);
+$grey 			: lighten($black, 50%);
+$lightgrey 		: lighten($black, 75%);
+$lightergrey 	: lighten($black, 90%);
+$white 			: rgb(255,255,255);
+
+$network_active : #E2613E;
+$network_off 	: #96C8D1;
+$network_over 	: #589DAB;
+
+
+// 1. ROOT 					==============================
+
+$bodycolor : #eeeeee;
+$textcolor : $page_background_color;
+
+// 2. TYPOGRAPHY 			==============================
+
+$default_sans_family: $default_sans_family;
+
+$basefont : $default_sans_family;
+$basefontsize : 16;
+$baselineheight : 1.5em;
+
+$baseheadingfont : $sans-serif;
+$baseheadingfontweight : normal;
+$baseheadingfontcolor : $black;
+
+$altfont : $default_sans_family;
+$altlineheight : 1.35em;
+
+$codefont : Monaco, Courier New, monospace;
+
+// 3. COLOUR 				==============================
+
+$basecolor 		: $page_background_color;
+$compcolor 		: adjust-hue($basecolor, 180);
+$bordercolor    : lighten($basecolor, 60%);
+
+// Links
+
+$linkcolor 		    : $darkgrey;
+$linkcolorhover 	: darken($linkcolor, 20%);
+$linkcolorvisited   : $darkgrey;
+$linkcolorfocus 	: darken($linkcolor, 20%);
+
+// colour palettes
+
+$alertcolor 	: rgb(252,248,227);
+$errorcolor 	: #E51913;
+$infocolor 		: #7f7f7f;
+$inverscolor 	: rgb(65,65,65);
+$successcolor 	: rgb(91,183,91);
+$warningcolor 	: rgb(250,167,50);
+$deletecolor 	: rgb(218,79,73);
+
+// 4. TEXTURE 				==============================
+
+// alert
+
+$alertbordercolor	: darken($alertcolor, 20%);
+$alertborderwidth 	: 1px;
+$alertborderstyle 	: solid;
+$alerttext			: darken($alertcolor, 60%);
+
+// alert-error
+$alerterrorcolor 	: lighten($errorcolor, 30%);
+$alerterrorborder  	: lighten($errorcolor, 20%);
+$alerterrortext 	: $errorcolor;
+
+// alert-info
+$alertinfocolor 	: $infocolor;
+$alertinfoborder  	: lighten($infocolor, 20%);
+$alertinfotext 		: darken($infocolor, 50%);
+
+// alert-inverse
+$alertinversecolor 	: $inverscolor;
+$alertinverseborder : $black;
+$alertinversetext 	: $white;
+
+// alert-success
+$alertsuccesscolor 	: lighten($successcolor, 30%);
+$alertsuccessborder : lighten($successcolor, 20%);
+$alertsuccesstext 	: darken($successcolor, 20%);
+
+// alert-warning
+$alertwarningcolor 	: lighten($warningcolor, 30%);
+$alertwarningborder : lighten($warningcolor, 20%);
+$alertwarningtext 	: darken($warningcolor, 20%);
+
+// badges
+
+$badgebackground 	: $lightergrey;
+$badgecolor 		: $grey;
+
+// buttons
+
+$buttonbackground 	: $white;
+$buttonbordercolor 	: $black;
+$buttoncolor 		: $black;
+$buttonborderwidth	: 4px;
+$buttonborderstyle	: solid;
+
+// boxes (well)
+
+$wellbackground		: lighten($basecolor, 75%);
+$wellbordercolor	: darken($wellbackground, 20%);
+$wellborderwidth	: 1px;
+$wellborderstyle	: solid;
+$wellshadow			: darken($wellbackground, 10%);
+$wellshadowblur		: 10px;
+
+// tables
+
+$tablebackground 	: transparent;
+$tablestripe 		: lighten($lightergrey, 60%);
+$tablehover 		: lighten($lightergrey, 50%);
+$tableborder 		: #eee;
+$tableborderwidth	: 1px;
+$tableborderstyle	: solid;
+
+// forms
+
+$inputbackground 	: $white;
+$inputborder 		: lighten($lightgrey, 10%);
+$inputborderwidth	: 2px;
+$inputborderstyle	: solid;
+$inputhover 		: darken($lightgrey, 10%);
+$inputfocus 		: $basecolor;
+$placeholdercolor 	: $lightgrey;
+
+// 6. LAYOUT 				==============================
+
+$baseline : $baselineheight;
+$gutterwidth : 24px;
+
+//  7. VENDOR-SPECIFIC 		==============================
+//  8. MODERNIZR 			==============================
+//  9. TEMPLATE SPECIFICS 	==============================

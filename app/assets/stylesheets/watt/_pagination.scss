@@ -1,0 +1,34 @@
+.pagination {
+margin: 18px 0 0 0;
+display: inline-block;
+overflow: hidden;
+border: 1px solid #c5c5c5;
+}
+
+.pagination a, .pagination span {
+float: left;
+padding: 3px 10px 3px;
+margin: 0;
+color: #555;
+font-size: 13px;
+text-decoration: none;
+text-shadow: 0 1px 0 white;
+background-color: #eaeaea;
+}
+.pagination span {
+	border-left: 1px solid #c5c5c5;
+}
+
+.pagination span:first-child {
+	border-left:none
+}
+
+.pagination .page.current, .pagination .page.current a, .pagination .page.current span {
+	color: #ccc;
+	background-color: #fff;
+}
+
+.pagination a+a, .pagination a+span, .pagination span+a, .pagination span+span {
+margin-left: -1px;
+box-shadow: inset 1px 0 0 rgba(255,255,255,0.2);
+}

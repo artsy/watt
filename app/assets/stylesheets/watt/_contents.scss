@@ -1,0 +1,29 @@
+#sidebar-container {
+	display:none;
+}
+#contents-container {
+	padding:80px 20px 40px 20px;
+}
+
+#contents-container {
+	h2 {
+		font-size:18px;
+		line-height: 40px;
+		text-transform:uppercase;
+	}
+}
+
+#page-title-utilities {float:right;padding:0 0 0 0;}
+.unit-title-utilities {float:right;padding:0 0 0 0;}
+.item {border-top:2px solid #eee;padding:18px 0 18px 0;}
+ul {
+	padding:0 0 0 10px;
+	margin:10px 0 20px 0;
+	li {
+		margin:0 0 0 10px;
+		padding:2px 0 2px 0;
+		font-size:16px;
+		line-height:1.25;
+	}
+}
+a {text-decoration:underline;}

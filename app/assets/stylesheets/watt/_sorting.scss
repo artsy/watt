@@ -1,0 +1,16 @@
+ol.sortable-list {
+	padding:0 0 0 10px;
+	margin:10px 0 0 0;
+	border-left:10px solid #eee;
+	li {
+		margin:0 0 0 10px;
+		padding:2px 0 2px 0;
+		font-size:16px;
+		line-height:1.25;
+		list-style-type:none;
+	}
+	li:hover {
+		
+		cursor:move;
+	}
+}
