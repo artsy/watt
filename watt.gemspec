@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Watt::VERSION
   spec.authors       = ["Artsy - Partner Engineering"]
   spec.email         = ["it@artsymail.com"]
-  spec.description   = %q{Watt is a shared asset library for Artsy rubys apps.}
-  spec.summary       = %q{Watt is a shared asset library for Artsy rubys apps.}
+  spec.description   = %q{Watt is a shared asset library for Artsy Partner Engineering rails apps.}
+  spec.summary       = %q{Watt is a shared asset library for Artsy Partner Engineering rails apps.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
