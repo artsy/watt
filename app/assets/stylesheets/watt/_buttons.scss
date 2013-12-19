@@ -51,6 +51,32 @@ input[type="submit"].btn:visited,
   }
 }
 
+.selected-text-from-btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+
+  padding: 14px 20px 11px 20px;
+  @include font-size(12);
+  line-height: 12px;
+
+  margin-bottom: 0;
+  font: {
+    weight: normal;
+    family: $basefont;
+  }
+  color: $warningcolor;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $buttonbackground;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
 .btn:first-child { *margin-left: 0; }
 
 // disabled
