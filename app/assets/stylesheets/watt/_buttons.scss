@@ -1,8 +1,7 @@
 
-
 /* Buttons =================================================== */
 
-input[type="submit"].btn, 
+input[type="submit"].btn,
 input[type="submit"].btn:visited,
 .btn, .btn:visited {
   display: inline-block;
@@ -43,14 +42,39 @@ input[type="submit"].btn:visited,
 
   cursor: pointer;
   text-decoration: none;
-  
+
   &:hover {
     color: $white;
-	background-color:$purple;
-	border-color: $purple;
-  
+    background-color: $purple;
+    border-color: $purple;
     text-decoration: none;
   }
+}
+
+.selected-text-from-btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+
+  padding: 14px 20px 11px 20px;
+  @include font-size(12);
+  line-height: 12px;
+
+  margin-bottom: 0;
+  font: {
+    weight: normal;
+    family: $basefont;
+  }
+  color: $warningcolor;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $buttonbackground;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  text-transform:uppercase;
+  font-weight:bold;
 }
 
 .btn:first-child { *margin-left: 0; }
@@ -60,45 +84,44 @@ input[type="submit"].btn:visited,
 input[type="submit"].btn.btn-disabled,
 a.btn.btn-disabled {
   @include opacity(.25);
-  background-color:$white;	
+  background-color: $white;
   border-color: $buttonbordercolor;
   color: $black;
 
-  &:hover, &:visited { 
-  	background-color:$white;	
-  	border-color: $buttonbordercolor;
-  	color: $black;
+  &:hover, &:visited {
+    background-color: $white;
+    border-color: $buttonbordercolor;
+    color: $black;
   }
 }
 
 input[type="submit"].btn.btn-error,
 a.btn.btn-error,
 .btn-error:visited {
-  background-color:$white;	
+  background-color: $white;
   border-color: $errorcolor;
   color: $errorcolor;
 
-  &:hover { 
-  	background-color:$errorcolor;
+  &:hover {
+    background-color: $errorcolor;
     border-color: $errorcolor;
-	color: $white;
+    color: $white;
   }
 }
-
 
 // primary
 
 input[type="submit"].btn.btn-primary,
 a.btn.btn-primary,
 .btn-primary:visited {
-  background-color:$black;	
+  background-color: $black;
   border-color: $buttonbordercolor;
   color: $white;
 
-  &:hover { 
-  	background-color:$purple;
+  &:hover {
+    background-color: $purple;
     border-color: $purple;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -107,14 +130,14 @@ a.btn.btn-primary,
 input[type="submit"].btn.btn-secondary,
 a.btn.btn-secondary,
 .btn-secondary:visited {
-  background-color:$white;	
+  background-color: $white;
   border-color: lighten($black, 90%);
   color: $black;
 
-  &:hover { 
-  	background-color:$purple;
+  &:hover {
+    background-color: $purple;
     border-color: $purple;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -123,14 +146,14 @@ a.btn.btn-secondary,
 input[type="submit"].btn.btn-inverse,
 a.btn.btn-inverse,
 .btn-inverse:visited {
-  background-color:$white;	
+  background-color: $white;
   border-color: $purple;
   color: $black;
 
-  &:hover { 
-  	background-color:$purple;
+  &:hover {
+    background-color:$purple;
     border-color: $purple;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -139,14 +162,14 @@ a.btn.btn-inverse,
 input[type="submit"].btn.btn-info,
 a.btn.btn-info,
 .btn-info:visited {
-  background-color:$white;	
+  background-color: $white;
   border-color: $infocolor;
   color: $infocolor;
 
-  &:hover { 
-  	background-color:$infocolor;
+  &:hover {
+    background-color:$infocolor;
     border-color: $infocolor;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -155,14 +178,14 @@ a.btn.btn-info,
 input[type="submit"].btn.btn-success,
 a.btn.btn-success,
 .btn-success:visited {
-  background-color:$white;	
+  background-color: $white;
   border-color: $successcolor;
   color: $successcolor;
 
-  &:hover { 
-  	background-color:$successcolor;
+  &:hover {
+    background-color:$successcolor;
     border-color: $successcolor;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -171,14 +194,14 @@ a.btn.btn-success,
 input[type="submit"].btn.btn-warning,
 a.btn.btn-warning,
 .btn-warning:visited {
-  background-color:$white;	
+  background-color: $white;
   border-color: $warningcolor;
   color: $warningcolor;
 
-  &:hover { 
-  	background-color:$warningcolor;
+  &:hover {
+    background-color: $warningcolor;
     border-color: $warningcolor;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -187,14 +210,14 @@ a.btn.btn-warning,
 input[type="submit"].btn.btn-delete,
 a.btn.btn-delete,
 .btn-delete:visited {
-  background-color:$white;	
+  background-color: $white;
   border-color: lighten($deletecolor,10%);
   color: lighten($deletecolor,10%);
 
-  &:hover { 
-  	background-color:$deletecolor;
+  &:hover {
+    background-color: $deletecolor;
     border-color: $deletecolor;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -208,7 +231,7 @@ a.btn.btn-delete,
   border-width: 4px;
 }
 
-.btn-large {	
+.btn-large {
   padding: 11px 20px 9px 20px;
   @include font-size(14);
   line-height: 14px;
