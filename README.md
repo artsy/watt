@@ -1,6 +1,6 @@
 # Watt
 
-TODO: Write a gem description
+WAT is Watt?  Watt is a shared js/css/img asset library for Artsy Partner Engineering Rails apps.
 
 ## Installation
 
