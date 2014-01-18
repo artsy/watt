@@ -1,0 +1,18 @@
+@import "watt/base";
+
+
+header.navbar .navbar-header a.navbar-brand {
+  background-image:url('/images/watt/artsy_mark_transparent_black-70x70.png');
+}
+
+header.navbar.navbar-inverse .navbar-header a.navbar-brand {
+  background-image:url('/images/watt/artsy_mark_transparent_white-70x70.png');
+}
+
+.page-title h2 a {
+  background-image:url('/images/watt/backarrow-34x23.png');
+}
+
+.index-action a {
+  background-image:url('/images/watt/arrow-18x33.png');
+}

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http_equiv='X-UA-Compatible'>
+    <title>Partner Engineering Style Guide</title>
+    <meta content='' name='description'>
+    <meta content='' name='author'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+      <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+    <link href='/stylesheets/style.css' rel='stylesheet' type='text/css'>
+    <script>
+      //<![CDATA[
+        (function() {
+          var config = {
+            kitId: 'lep8qgg',
+            scriptTimeout: 3000
+          };
+          var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+        })();
+      //]]>
+    </script>
+  </head>
+  <body class='elements elements_buttons elements_buttons_index' data-offset='70' data-spy='scroll' data-target='#section-nav' id='rotation-app'>
+    <header class='navbar navbar-inverse navbar-fixed-top' role='navigation'>
+      <div class='navbar-header'>
+        <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+          <span class='sr-only'>
+            Toggle navigation
+          </span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+        <a class='navbar-brand' href='/'>Artsy</a>
+      </div>
+      <div class='navbar-collapse collapse'>
+        <ul class='nav navbar-nav navbar-right'>
+          <li class='dropdown'>
+            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+              Style Guide <b class="caret"></b>
+            </a>
+            <ul class='dropdown-menu'>
+              <li>
+                <a href='/interface'>Interface</a>
+              </li>
+              <li>
+                <a href='/elements'>Elements</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class='nav navbar-nav'>
+          <li>
+            <a href='/elements'>Index</a>
+          </li>
+          <li>
+            <a href='/elements/typography'>Typography</a>
+          </li>
+          <li class='active'>
+            <a href='/elements/buttons'>Buttons</a>
+          </li>
+          <li>
+            <a href='/elements/forms'>Forms</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class='container full-width'>
+      <div id='content-wrap'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-md-10'>
+              <div class='page-title bordered'>
+                <h2>Buttons</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-md-10'>
+              <div class='unit' id='btn-basic'>
+                <h3>
+                  Basic (no class)
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-basic ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-basic btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-basic btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-basic btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-basic btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-basic btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-primary'>
+                <h3>
+                  btn-primary
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-secondary'>
+                <h3>
+                  btn-secondary
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-warning'>
+                <h3>
+                  btn-warning
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-info'>
+                <h3>
+                  btn-info
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-info ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-info &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-info btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-info btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-info btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-info btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-info btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-info btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-info btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-info btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-info btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-info btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-primary-gradient'>
+                <h3>
+                  btn-primary-gradient
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary-gradient ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary-gradient &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary-gradient btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary-gradient btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary-gradient btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary-gradient btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary-gradient btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary-gradient btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary-gradient btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary-gradient btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-primary-gradient btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-primary-gradient btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-secondary-gradient'>
+                <h3>
+                  btn-secondary-gradient
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary-gradient ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-warning-gradient'>
+                <h3>
+                  btn-warning-gradient
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning-gradient ' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning-gradient &quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning-gradient btn-micro' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning-gradient btn-micro&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning-gradient btn-mini' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning-gradient btn-mini&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning-gradient btn-small' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning-gradient btn-small&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning-gradient btn-large' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning-gradient btn-large&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-3'>
+                    <div>
+                      <a class='btn btn-warning-gradient btn-extlarge' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-9'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-warning-gradient btn-extlarge&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+              <div class='unit' id='btn-full-width'>
+                <h3>
+                  btn-full-width
+                </h3>
+                <h4>
+                  Basic (no size class)
+                </h4>
+                <div class='row'>
+                  <div class='col-md-4'>
+                    <div>
+                      <a class='btn btn-secondary-gradient  btn-full-width' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient  btn-full-width&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-micro
+                </h4>
+                <div class='row'>
+                  <div class='col-md-4'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-micro btn-full-width' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-micro btn-full-width&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-mini
+                </h4>
+                <div class='row'>
+                  <div class='col-md-4'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-mini btn-full-width' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-mini btn-full-width&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-small
+                </h4>
+                <div class='row'>
+                  <div class='col-md-4'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-small btn-full-width' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-small btn-full-width&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-large
+                </h4>
+                <div class='row'>
+                  <div class='col-md-4'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-large btn-full-width' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-large btn-full-width&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+                <h4>
+                  btn-extlarge
+                </h4>
+                <div class='row'>
+                  <div class='col-md-4'>
+                    <div>
+                      <a class='btn btn-secondary-gradient btn-extlarge btn-full-width' href='#'>
+                        Add a show
+                      </a>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <pre>&lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient btn-extlarge btn-full-width&quot;&gt;Add a show&lt;/a&gt;</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-md-2'>
+              <div class='panel panel-info affix' id='section-nav'>
+                <ul class='nav nav-pills nav-stacked'>
+                  <li>
+                    <a href='#btn-basic'>
+                      btn-basic
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-primary'>
+                      btn-primary
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-secondary'>
+                      btn-secondary
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-warning'>
+                      btn-warning
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-info'>
+                      btn-info
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-primary-gradient'>
+                      btn-primary-gradient
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-secondary-gradient'>
+                      btn-secondary-gradient
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-warning-gradient'>
+                      btn-warning-gradient
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#btn-full-width'>
+                      btn-full-width
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src='http://code.jquery.com/jquery.js' type='text/javascript'></script>
+    <script src='/javascripts/main.js' type='text/javascript'></script>
+  </body>
+</html>

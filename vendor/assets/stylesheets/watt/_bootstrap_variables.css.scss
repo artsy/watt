@@ -1,0 +1,48 @@
+// Global
+$font-family-sans-serif: $sans-serif;
+$font-family-serif: $serif;
+$font-family-base: $serif;
+$font-size-base: 15px;
+$brand-primary: #000;
+$input-border-focus: #999;
+$state-info-border: #DDD;
+
+// Alerts
+$alert-info-text: #000;
+$alert-info-bg: $warningcolor;
+$alert-info-border: $warningcolor;
+
+// Navbar
+$navbar-height: 55px;
+$navbar-default-bg: #E6E6E6;
+$navbar-default-border: #C9C9C9;
+$border-radius-base: 0px;
+$navbar-default-link-color: #000;
+$navbar-default-link-hover-color: #000;
+$navbar-default-link-hover-bg: #ccc;
+$navbar-default-link-active-color: $navbar-default-link-color;
+$navbar-default-link-active-bg: $navbar-default-link-hover-bg;
+//$navbar-default-toggle-hover-bg
+$navbar-default-toggle-icon-bar-bg: darken($navbar-default-link-hover-bg,25%);
+$navbar-default-toggle-border-color: $navbar-default-link-hover-bg;
+
+$dropdown-bg: $navbar-default-link-active-bg;
+$dropdown-border: $navbar-default-link-active-bg;
+$dropdown-fallback-border: $navbar-default-bg;
+$dropdown-caret-color: $navbar-default-link-color;
+$dropdown-header-color: $navbar-default-link-color;
+
+$dropdown-link-color: $navbar-default-link-color;
+$dropdown-link-hover-color: $navbar-default-link-hover-bg;
+
+$dropdown-link-hover-bg: $navbar-default-link-color;
+$dropdown-link-active-color: $navbar-default-link-active-color;
+$dropdown-link-active-bg: $navbar-default-link-active-bg;
+//$dropdown-link-disabled-color: $navbar-default-link-color;
+
+// Tabs
+$nav-tabs-border-color: #DDD;
+$nav-tabs-link-hover-border-color: #DDD;
+$nav-tabs-active-link-hover-color: #000;
+$nav-tabs-active-link-hover-bg: #FFF;
+$nav-tabs-justified-link-border-color: #DDD;
