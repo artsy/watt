@@ -1,0 +1,75 @@
+!!!
+%html{lang: 'en'}
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{http_equiv:"X-UA-Compatible", content:"IE=edge"}
+    %title= current_page.data.title || ''
+    %meta{name: 'description', content: ''}
+    %meta{name: 'author', content: ''}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    :plain
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    %link{href: '/stylesheets/style.css', type: 'text/css', rel: 'stylesheet' }
+    :javascript
+      //<![CDATA[
+        (function() {
+          var config = {
+            kitId: 'lep8qgg',
+            scriptTimeout: 3000
+          };
+          var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+        })();
+      //]]>
+  %body#rotation-app{ class: "interface_layout #{page_classes}" }
+    %header.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
+      .navbar-header
+        %button.navbar-toggle{data: {target: '.navbar-collapse', toggle: 'collapse'}, type: 'button'}
+          %span.sr-only
+            Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: '/'} Artsy
+      .navbar-collapse.collapse
+        %form#navbar-search.navbar-form.navbar-left{ role: "Search" }
+          .form-group
+            %input{ type: "text", class: "form-control", placeholder: "Search" }
+        %ul.nav.navbar-nav.visible-xs
+          - ['dashboard','artists','inventory','shows','orders'].each do |nav_item|
+            %li{class: ( 'active' if nav_item.include? 'artists' ) }
+              %a{ href: "/interface/items"}
+                = nav_item
+        %ul.nav.navbar-nav.navbar-right
+          %li.dropdown
+            %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'} }
+              Another Gallery <b class="caret"></b>
+            %ul.dropdown-menu
+              %li
+                %a{href: '/interface'} Interface
+              %li
+                %a{href: '/elements'} Elements
+        %ul.nav.navbar-nav
+
+    #interface-wrap
+      %section#sidebar
+        .navigation
+          %ul.nav.nav-pills.nav-stacked.sidebar-nav
+            - ['dashboard','artists','inventory','shows','orders'].each do |nav_item|
+              %li{class: ( 'active' if nav_item.include? 'artists' ) }
+                %a{ href: "/interface/items"}
+                  = nav_item
+        .sidebar-help
+          .help-image-link-wrap
+            %a{ href: '#', style: "background-image: url('http://static3.artsy.net/profile_icons/52d7fbd6c9dc248ee1000035/circle.png');" }
+              Need Help?
+      %section#primary
+        = yield
+
+    / Placed at the end of the document so the pages load faster
+    %script{type: 'text/javascript', src: 'http://code.jquery.com/jquery.js'}
+    %script{type: 'text/javascript', src: '/javascripts/main.js'}

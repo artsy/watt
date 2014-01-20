@@ -1,0 +1,62 @@
+---
+title: Partner Engineering Style Guide
+---
+#content-wrap
+  .container
+    .row
+      .col-md-10
+        .page-title.bordered
+          %h2 Buttons
+  .container
+    .row
+      .col-md-10
+        - ['btn-basic','btn-primary','btn-secondary','btn-warning','btn-info','btn-primary-gradient','btn-secondary-gradient','btn-warning-gradient'].each do |btn_class|
+          .unit{id: btn_class}
+            %h3
+              - if btn_class == 'btn-basic'
+                Basic (no class)
+              - else
+                = btn_class
+            - ['','btn-micro','btn-mini','btn-small', 'btn-large', 'btn-extlarge'].each do |btn_size|
+              %h4
+                - if btn_size.blank?
+                  Basic (no size class)
+                - else
+                  = btn_size
+              .row
+                %div{ class: "col-md-3" }
+                  %div
+                    %a{ href: "#", class: "btn #{btn_class} #{btn_size}" }
+                      Add a show
+                %div{ class: "col-md-9" }
+                  %pre
+                    - if btn_class == 'btn-basic'
+                      &lt;a href=&quot;#&quot; class=&quot;btn #{btn_size}&quot;&gt;Add a show&lt;/a&gt;
+                    - else
+                      &lt;a href=&quot;#&quot; class=&quot;btn #{btn_class} #{btn_size}&quot;&gt;Add a show&lt;/a&gt;
+        .unit{id: "btn-full-width"}
+          %h3
+            btn-full-width
+          - ['','btn-micro','btn-mini','btn-small', 'btn-large', 'btn-extlarge'].each do |btn_size|
+            %h4
+              - if btn_size.blank?
+                Basic (no size class)
+              - else
+                = btn_size
+            .row
+              %div{ class: "col-md-4" }
+                %div
+                  %a{ href: "#", class: "btn btn-secondary-gradient #{btn_size} btn-full-width" }
+                    Add a show
+              %div{ class: "col-md-8" }
+                %pre
+                  &lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient #{btn_size} btn-full-width&quot;&gt;Add a show&lt;/a&gt;
+
+
+      .col-md-2
+        .panel.panel-info.affix#section-nav
+          %ul.nav.nav-pills.nav-stacked
+            - ['btn-basic','btn-primary','btn-secondary','btn-warning','btn-info','btn-primary-gradient','btn-secondary-gradient','btn-warning-gradient','btn-full-width'].each do |btn_class|
+              %li
+                %a{ href: "##{btn_class}"}
+                  = btn_class

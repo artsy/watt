@@ -1,0 +1,76 @@
+---
+title: Partner Engineering Style Guide
+---
+.page-content.inset
+  .row
+    .col-md-12
+      .page-title.bordered
+        %h2 Artists
+  .row
+    .capped
+      - 1.times do |i|
+        .col-md-12
+          %div{ style: "padding:15px 0;" }
+            %a{ href: "/interface/item", class: 'btn btn-secondary-gradient btn-small btn-full-width' }
+              Add an artist
+  .row
+    .capped
+      .results-sorts.clearfix
+        .col-md-12
+          .pull-left
+            Viewing 1-20 of 24 artists
+          .pull-right.hidden-xs
+            Sorted by: A-Z / Recently Updated
+
+  - 20.times do |i|
+    .row
+      .capped
+        .col-md-12
+          .unit.bordered.clearfix
+            .col-xs-9
+              %div
+                %strong
+                  %a{ href: "/interface/item" }
+                    Simen Johan
+            .col-xs-3.index-action
+              %a{ href: "/interface/item" }
+                %span
+                  Add an artist
+
+  .row
+    .capped
+      .col-md-12
+        .custom-pagination
+          .col-xs-4.text-left.previous-arrow
+            %a{ href: "/interface/item" }
+              %span.previous-arrow-icon.pull-left
+                &laquo;
+              %span.hidden-xs.pull-left
+                Previous Page
+          .col-xs-4.text-center
+            Page 1 of 3
+          .col-xs-4.text-right.next-arrow
+            %a{ href: "/interface/item" }
+              %span.next-arrow-icon.pull-right
+                &raquo;
+              %span.hidden-xs.pull-right
+                Next Page
+
+
+  // .row
+  //   .capped
+  //     .col-md-12
+  //       %ul.pagination
+  //         %li.disabled
+  //           %a{ href: "/interface/item" }
+  //             &laquo;
+  //         %li.active
+  //           %a{ href: "/interface/item" }
+  //             1
+  //         %li
+  //           %a{ href: "/interface/item" }
+  //             2
+  //         %li
+  //           %a{ href: "/interface/item" }
+  //             &raquo;
+

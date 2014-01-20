@@ -1,0 +1,21 @@
+$serif: "adobe-garamond-pro", Georgia, Serif;
+$sans-serif: "AvantGardeGothicITCW01D", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+$purple:#6a0bc1;
+$white:#fff;
+$black:#000;
+$lightgrey:lighten($black, 75%);
+
+$buttonbackground   : $white;
+$buttonbordercolor  : $black;
+$buttoncolor        : $black;
+$buttonborderwidth  : 4px;
+$buttonborderstyle  : solid;
+
+$alertcolor   : rgb(252,248,227);
+$errorcolor   : #E51913;
+$infocolor    : #7f7f7f;
+$inverscolor  : rgb(65,65,65);
+$successcolor   : rgb(91,183,91);
+$warningcolor   : #F7ECD0;
+$deletecolor  : rgb(218,79,73);
