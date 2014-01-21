@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "artsy-watt"
   spec.version       = Artsy::Watt::VERSION
   spec.authors       = ["Artsy - Partner Engineering"]
-  spec.email         = ["dylan@artsymail.com"]
+  spec.email         = ["dev@artsymail.com"]
   spec.description   = %q{Watt is a shared asset library for Artsy Partner Engineering rails apps}
   spec.summary       = %q{Watt is a shared asset library for Artsy Partner Engineering rails apps}
   spec.homepage      = "https://github.com/artsy/watt"
