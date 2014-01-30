@@ -1,13 +1,38 @@
-// Watt Basics
+// Watt basics
 @import "watt/fonts";
 @import "watt/variables";
 @import "watt/mixins";
 @import "watt/buttons";
-@import "watt/modals";
-@import "watt/split";
-@import "watt/contents";
 
 // Bootstrap
 @import "watt/bootstrap_variables";
 @import "watt/bootstrap_base";
 @import "watt/bootstrap_overrides";
+
+// Watt extensions
+@import "watt/modals";
+@import "watt/contents";
+@import "watt/footer";
+@import "watt/split";
+
+// Watt responsives
+//// Medium devices (tiny screens in landscape, 420 and up)
+@media (min-width: $screen-xs-min) {
+
+}
+
+//// Medium devices (tablets, portrait, 768 and up) */
+@media (min-width: $screen-sm-min) {
+  @import "watt/split_small";
+}
+
+//// Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  @import "watt/split_medium";
+  @import "watt/footer_medium";
+}
+
+//// Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+  @import "watt/split_large";
+}

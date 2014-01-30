@@ -26,7 +26,7 @@ $navbar-default-link-active-bg: $navbar-default-link-hover-bg;
 $navbar-default-toggle-icon-bar-bg: darken($navbar-default-link-hover-bg,25%);
 $navbar-default-toggle-border-color: $navbar-default-link-hover-bg;
 
-$dropdown-bg: $navbar-default-link-active-bg;
+$dropdown-bg: #fff;
 $dropdown-border: $navbar-default-link-active-bg;
 $dropdown-fallback-border: $navbar-default-bg;
 $dropdown-caret-color: $navbar-default-link-color;

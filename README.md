@@ -47,7 +47,7 @@ TODO: More of a walkthrough in terms of how we update the style guide.
 
 ```middleman build```
 
-```AWS_SECRET= AWS_ACCESS_KEY= middleman s3_sync```
+```AWS_SECRET= AWS_ACCESS_KEY_ID= middleman s3_sync```
 
 
 ## Installation

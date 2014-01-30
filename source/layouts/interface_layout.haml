@@ -60,7 +60,7 @@
         .navigation
           %ul.nav.nav-pills.nav-stacked.sidebar-nav
             - ['dashboard','artists','inventory','shows','orders'].each do |nav_item|
-              %li{class: ( 'active' if nav_item.include? 'artists' ) }
+              %li{class: ( 'active' if nav_item.include? 'dashboard' ) }
                 %a{ href: "/interface/items"}
                   = nav_item
         .sidebar-help
@@ -69,6 +69,11 @@
               Need Help?
       %section#primary
         = yield
+
+    %footer
+      .footer-help
+        %a{ href: '#', style: "background-image: url('http://static3.artsy.net/profile_icons/52d7fbd6c9dc248ee1000035/circle.png');" }
+          Need Help?
 
     / Placed at the end of the document so the pages load faster
     %script{type: 'text/javascript', src: 'http://code.jquery.com/jquery.js'}
