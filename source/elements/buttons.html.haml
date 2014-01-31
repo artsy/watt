@@ -10,7 +10,7 @@ title: Partner Engineering Style Guide
   .container
     .row
       .col-md-10
-        - ['btn-basic','btn-primary','btn-secondary','btn-warning','btn-info','btn-primary-gradient','btn-secondary-gradient','btn-warning-gradient'].each do |btn_class|
+        - ['btn-basic','btn-primary','btn-secondary','btn-highlight','btn-welcome','btn-disabled','btn-delete','btn-primary-gradient','btn-secondary-gradient','btn-highlight-gradient','btn-welcome-gradient'].each do |btn_class|
           .unit{id: btn_class}
             %h3
               - if btn_class == 'btn-basic'
@@ -47,7 +47,7 @@ title: Partner Engineering Style Guide
               %div{ class: "col-md-4" }
                 %div
                   %a{ href: "#", class: "btn btn-secondary-gradient #{btn_size} btn-full-width" }
-                    Add a show
+                    Add a fair booth
               %div{ class: "col-md-8" }
                 %pre
                   &lt;a href=&quot;#&quot; class=&quot;btn btn-secondary-gradient #{btn_size} btn-full-width&quot;&gt;Add a show&lt;/a&gt;
@@ -56,7 +56,7 @@ title: Partner Engineering Style Guide
       .col-md-2
         .panel.panel-info.affix#section-nav
           %ul.nav.nav-pills.nav-stacked
-            - ['btn-basic','btn-primary','btn-secondary','btn-warning','btn-info','btn-primary-gradient','btn-secondary-gradient','btn-warning-gradient','btn-full-width'].each do |btn_class|
+            - ['btn-basic','btn-primary','btn-secondary','btn-highlight','btn-disabled','btn-delete','btn-primary-gradient','btn-secondary-gradient','btn-highlight-gradient','btn-welcome-gradient','btn-full-width'].each do |btn_class|
               %li
                 %a{ href: "##{btn_class}"}
                   = btn_class

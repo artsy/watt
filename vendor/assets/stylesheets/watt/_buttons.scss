@@ -1,5 +1,10 @@
+// Basic (no style cf artsy.net hero)
+// Primary (black with white text; hovers to purple with white text)
+// Secondary (grey with black text; hovers to purple with white text)
+// delete (thin grey border with black text; hovers to red border with red text; no gradient)
+// highlight (yellow background with black text; hovers to purple with white text)
+// welcome (purple background with white text; hovers to black with white text)
 
-/* Buttons =================================================== */
 
 input[type="submit"].btn,
 input[type="submit"].btn:visited,
@@ -9,10 +14,9 @@ input[type="submit"].btn:visited,
   /* IE7 inline-block hack */
   *zoom: 1;
 
-  padding: 14px 20px 11px 20px;
+  padding: 8px 20px 7px 20px;
   @include font-size(12);
   line-height: 12px;
-
   margin-bottom: 0;
   font: {
     weight: normal;
@@ -22,7 +26,7 @@ input[type="submit"].btn:visited,
   text-align: center;
   vertical-align: middle;
   background-color: $buttonbackground;
-  border-width: 4px;
+  border-width: 2px;
   border-style: solid;
   border-color: $buttonbordercolor;
   text-transform:uppercase;
@@ -66,11 +70,11 @@ input[type="submit"].btn:visited,
     weight: normal;
     family: $sans-serif;
   }
-  color: $warningcolor;
+  color: $highlightcolor;
   text-align: center;
   vertical-align: middle;
   background-color: $buttonbackground;
-  border-width: 4px;
+  border-width: 2px;
   border-style: solid;
   border-color: transparent;
   text-transform:uppercase;
@@ -83,29 +87,14 @@ input[type="submit"].btn:visited,
 
 input[type="submit"].btn.btn-disabled,
 a.btn.btn-disabled {
-  @include opacity(.25);
-  background-color: $white;
-  border-color: $buttonbordercolor;
-  color: $black;
+  background-color: lighten($black, 90%);
+  border-color: lighten($black, 90%);
+  color: $white;
 
   &:hover, &:visited {
     background-color: $white;
-    border-color: $buttonbordercolor;
-    color: $black;
-  }
-}
-
-input[type="submit"].btn.btn-error,
-a.btn.btn-error,
-.btn-error:visited {
-  background-color: $white;
-  border-color: $errorcolor;
-  color: $errorcolor;
-
-  &:hover {
-    background-color: $errorcolor;
-    border-color: $errorcolor;
-    color: $white;
+    background-color: lighten($black, 90%);
+    border-color: lighten($black, 90%);
   }
 }
 
@@ -146,9 +135,10 @@ a.btn.btn-secondary-gradient,
   @include vertical( lighten($black, 99%), lighten($black, 90%));
   padding-top:12px;
   padding-bottom:10px;
-  border: 1px solid #ddd;
+  border: 1px solid lighten($black, 75%);
   color: $black;
   &:hover {
+    border: 1px solid $purple;
     @include vertical( $purple, $purple);
     color: $white;
   }
@@ -160,7 +150,7 @@ a.btn.btn-secondary-gradient,
 input[type="submit"].btn.btn-secondary,
 a.btn.btn-secondary,
 .btn-secondary:visited {
-  background-color: $white;
+  background-color: lighten($black, 90%);
   border-color: lighten($black, 90%);
   color: $black;
 
@@ -171,61 +161,13 @@ a.btn.btn-secondary,
   }
 }
 
-// inverse
+// highlight
 
-input[type="submit"].btn.btn-inverse,
-a.btn.btn-inverse,
-.btn-inverse:visited {
-  background-color: $white;
-  border-color: $purple;
-  color: $black;
-
-  &:hover {
-    background-color:$purple;
-    border-color: $purple;
-    color: $white;
-  }
-}
-
-// info
-
-input[type="submit"].btn.btn-info,
-a.btn.btn-info,
-.btn-info:visited {
-  background-color: $white;
-  border-color: $infocolor;
-  color: $infocolor;
-
-  &:hover {
-    background-color:$infocolor;
-    border-color: $infocolor;
-    color: $white;
-  }
-}
-
-// success
-
-input[type="submit"].btn.btn-success,
-a.btn.btn-success,
-.btn-success:visited {
-  background-color: $white;
-  border-color: $successcolor;
-  color: $successcolor;
-
-  &:hover {
-    background-color:$successcolor;
-    border-color: $successcolor;
-    color: $white;
-  }
-}
-
-// warning
-
-input[type="submit"].btn.btn-warning,
-a.btn.btn-warning,
-.btn-warning:visited {
-  background-color: $warningcolor;
-  border-color: $warningcolor;
+input[type="submit"].btn.btn-highlight,
+a.btn.btn-highlight,
+.btn-highlight:visited {
+  background-color: $highlightcolor;
+  border-color: $highlightcolor;
   color: $black;
 
   &:hover {
@@ -235,17 +177,52 @@ a.btn.btn-warning,
   }
 }
 
-// warning-gradient
-input[type="submit"].btn.btn-warning-gradient,
-a.btn.btn-warning-gradient,
-.btn-warning-gradient:visited {
-  @include vertical( lighten($warningcolor, 5%), $warningcolor);
+// highlight-gradient
+input[type="submit"].btn.btn-highlight-gradient,
+a.btn.btn-highlight-gradient,
+.btn-highlight-gradient:visited {
+  @include vertical( lighten($highlightcolor, 5%), $highlightcolor);
   padding-top:12px;
   border:1px solid #ddd;
   padding-bottom:10px;
   color: $black;
   &:hover {
+    border: 1px solid $purple;
     @include vertical( $purple, $purple);
+    color: $white;
+  }
+}
+
+
+
+// welcome
+
+input[type="submit"].btn.btn-welcome,
+a.btn.btn-welcome,
+.btn-welcome:visited {
+  background-color: $purple;
+  border-color: $purple;
+  color: $white;
+
+  &:hover {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+  }
+}
+
+// welcome-gradient
+input[type="submit"].btn.btn-welcome-gradient,
+a.btn.btn-welcome-gradient,
+.btn-welcome-gradient:visited {
+  @include vertical( lighten($purple, 15%), $purple);
+  padding-top:12px;
+  border:1px solid $purple;
+  padding-bottom:10px;
+  color: $white;
+  &:hover {
+    border: 1px solid $black;
+    @include vertical( $black, $black);
     color: $white;
   }
 }
@@ -257,55 +234,67 @@ input[type="submit"].btn.btn-delete,
 a.btn.btn-delete,
 .btn-delete:visited {
   background-color: $white;
-  border-color: lighten($deletecolor,10%);
-  color: lighten($deletecolor,10%);
+  border-color: lighten($black, 90%);
+  color: $black;
 
   &:hover {
-    background-color: $deletecolor;
+    background-color: $white;
     border-color: $deletecolor;
-    color: $white;
+    color: $deletecolor;
   }
 }
 
 
 // sizes
-
-.btn-extlarge {
-  padding: 15px 24px 12px 24px;
-  @include font-size(18);
-  line-height: 18px;
-  border-width: 4px;
-}
-
-.btn-large {
-  padding: 11px 20px 9px 20px;
-  @include font-size(14);
-  line-height: 14px;
-  border-width: 4px;
-}
-
-.btn-small {
-  padding: 10px 14px 7px 14px;
-  @include font-size(11);
-  line-height: 11px;
-  border-width: 4px;
-}
-
-.btn-mini {
-  padding: 8px 12px 7px 12px;
-  @include font-size(10);
-  line-height: 10px;
+input[type="submit"].btn-extlarge,
+input[type="submit"].btn-extlarge:visited,
+.btn-extlarge, .btn-extlarge:visited {
+  padding: 14px 36px 11px 36px;
+  @include font-size(15px);
+  letter-spacing: 1px;
+  line-height: 15px;
   border-width: 3px;
 }
 
-.btn-micro {
+input[type="submit"].btn-large,
+input[type="submit"].btn-large:visited,
+.btn-large, .btn-large:visited {
+  padding: 12px 22px 10px 22px;
+  letter-spacing: 1px;
+  @include font-size(13);
+  line-height: 13px;
+  border-width: 3px;
+}
+
+input[type="submit"].btn-small,
+input[type="submit"].btn-small:visited,
+.btn-small, .btn-small:visited {
+  padding: 8px 12px 7px 12px;
+  @include font-size(11);
+  line-height: 11px;
+  border-width: 2px;
+}
+
+input[type="submit"].btn-mini,
+input[type="submit"].btn-mini:visited,
+.btn-mini, .btn-mini:visited {
+  padding: 8px 12px 7px 12px;
+  @include font-size(10);
+  line-height: 10px;
+  border-width: 2px;
+}
+
+input[type="submit"].btn-micro,
+input[type="submit"].btn-micro:visited,
+.btn-micro, .btn-micro:visited {
   padding: 6px 8px 5px 8px;
   @include font-size(9);
   line-height: 9px;
   border-width: 1px;
 }
 
-
+input[type="submit"].btn-full-width,
+input[type="submit"].btn-full-width:visited,
 .btn.btn-full-width {
   width: 100%;
   display: block;
