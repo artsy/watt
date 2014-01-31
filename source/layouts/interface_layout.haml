@@ -39,7 +39,7 @@
         %form#navbar-search.navbar-form.navbar-left{ role: "Search" }
           .form-group
             %input{ type: "text", class: "form-control", placeholder: "Search" }
-        %ul.nav.navbar-nav.visible-xs
+        %ul.nav.navbar-nav.hidden-md.hidden-lg
           - ['dashboard','artists','inventory','shows','orders'].each do |nav_item|
             %li{class: ( 'active' if nav_item.include? 'artists' ) }
               %a{ href: "/interface/items"}
