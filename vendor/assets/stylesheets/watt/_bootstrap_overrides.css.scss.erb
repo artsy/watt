@@ -37,6 +37,9 @@ body form {
     border-top: 2px solid #eee;
     padding:7px 0px 0 0;
   }
+  select {
+    max-width: 100%;
+  }
 }
 
 header.navbar .navbar-header {
@@ -76,15 +79,25 @@ header.navbar.navbar-inverse .navbar-header {
   height: 18px !important;
 }
 
-@media (min-width:768px) {
-  #navbar-search {
-    width: 400px;
-    input {
-      width: 400px;
-    }
+
+
+#navbar-search {
+  .form-inline .form-group, .navbar-form .form-group {
+    display: block;
   }
 }
+@media (min-width:768px) {
+  .form-inline .form-group, .navbar-form .form-group {
+    display: block;
+  }
+}
+header.navbar li a {
+  font-size: 13px;
+}
 @media (min-width:992px) {
+  header.navbar li a {
+    font-size: 13px;
+  }
   #navbar-search {
     width: 600px;
     input {
@@ -92,6 +105,7 @@ header.navbar.navbar-inverse .navbar-header {
     }
   }
 }
+
 
 
 // Alert overrides
