@@ -58,11 +58,23 @@ header.navbar .navbar-header {
   }
 }
 
-header.navbar.navbar-inverse .navbar-header {
-  a.navbar-brand {
-    background-image:url('<%= asset_url 'watt/artsy_mark_transparent_white-70x70.png' %>');
+header.navbar.navbar-inverse {
+  .application-home {
+    a {
+      font-family: $serif;
+      color: white;
+      text-transform: none;
+      font-size: 18px;
+    }
+  }
+  .navbar-header {
+    a.navbar-brand {
+      background-image:url('<%= asset_url 'watt/artsy_mark_transparent_white-70x70.png' %>');
+    }
   }
 }
+
+
 
 .page-title h2 a {
   background:transparent url('<%= asset_url 'watt/backarrow-34x23.png' %>') top left no-repeat !important;
@@ -79,8 +91,6 @@ header.navbar.navbar-inverse .navbar-header {
   height: 18px !important;
 }
 
-
-
 #navbar-search {
   .form-inline .form-group, .navbar-form .form-group {
     display: block;
@@ -92,8 +102,9 @@ header.navbar.navbar-inverse .navbar-header {
   }
 }
 header.navbar li a {
-  font-size: 13px;
+  font-size: 12px;
 }
+
 @media (min-width:992px) {
   header.navbar li a {
     font-size: 13px;

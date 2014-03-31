@@ -133,8 +133,6 @@ input[type="submit"].btn.btn-secondary-gradient,
 a.btn.btn-secondary-gradient,
 .btn-secondary-gradient:visited {
   @include vertical( lighten($black, 99%), lighten($black, 90%));
-  padding-top:12px;
-  padding-bottom:10px;
   border: 1px solid lighten($black, 75%);
   color: $black;
   &:hover {
