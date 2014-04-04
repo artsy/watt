@@ -1,0 +1,12 @@
+//
+// Styles for spinners.
+//
+
+.loading-spinner {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  background-image: url('/images/watt/bar_animation.gif') !important;
+}
