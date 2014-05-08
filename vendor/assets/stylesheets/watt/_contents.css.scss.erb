@@ -2,6 +2,32 @@ main.full-width {
   padding: 80px 0;
 }
 
+// TODO: Move to its own file
+// Chevron link component
+.chevron-link {
+  @include transition(background-color, 0.5s ease-in-out);
+  border-bottom: 1px solid $lightgrey;
+  display: block;
+  padding: 30px 20px;
+  &:first-of-type {
+    border-top: 1px solid $lightgrey;
+  }
+  &::after {
+    background-image: url('<%= asset_url 'watt/backarrow-34x23.png' %>');
+    content: '';
+  }
+  &:hover {
+    background-color: #eee;
+    text-decoration: none;
+  }
+}
+.chevron-link-label {
+  display: inline;
+  font-family: $sans-serif;
+  text-transform: uppercase;
+}
+// /chevron-link component
+
 main, section {
   .page-title.bordered {
     border-bottom: 1px solid #ddd;

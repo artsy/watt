@@ -4,13 +4,19 @@ WAT is Watt?  Watt is a shared js/css/img asset library for Artsy Partner Engine
 
 # On Bootstrap
 
-Ideally, Watt is a very thin layer on top of [Bootstrap](http://getbootstrap.com/) (3.0.3 at the moment). Bootstrap is primarily useful as a series of good defaults; there are many thousands of pretty smart people thinking about reasonable responsive breakpoints--we shouldn't force ourselves to re-invent triangular wheels. Lets be clear about what we are including (Grid &amp; navbar, for example) and lets clearly not include the bits of the framework we choose to not use in production (jumbotron, buttons, modals, carousels, et c).
+Ideally, Watt is a very thin layer on top of [Bootstrap](http://getbootstrap.com/) (3.0.3 at the moment). Bootstrap is primarily useful as a series of good defaults; there are many thousands of pretty smart people thinking about reasonable responsive breakpoints--we shouldn't force ourselves to re-invent triangular wheels. Let's be clear about what we are including (Grid &amp; navbar, for example) and lets clearly not include the bits of the framework we choose to not use in production (jumbotron, buttons, modals, carousels, et c).
 
 Watt's relationship to Bootstrap's Javascript and Stylesheet files should follow the same approach here. [_bootstrap_base.css.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_base.css.scss) is be a good example of removing the components we don't presently need.
 
 We'll additioanlly set global variable overrides in [_bootstrap_variables.css.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_variables.css.scss) and, predictably, [_bootstrap_overrides.css.scss.erb](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_overrides.css.scss.erb).
 
 All of three of these files are imported in [base.css.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/base.css.scss).
+
+# On Bourbon
+
+[Bourbon](http://bourbon.io/) is a [Thoughbot](http://thoughtbot.com/) [joint](https://github.com/thoughtbot).
+Bourbon is a library of SASS mixins that are authored solely with SASS. Unlike say, Compass, including Bourbon
+does not add complexity to asset compilation, or major weight to a project.
 
 
 # On Typekit
@@ -63,6 +69,75 @@ And then execute:
 ## Usage
 
 TODO: More about usage and how to setup a new project with Watt.
+
+## Authoring Styles
+
+Watt's goal is to maximize re-use of common UI components. To do this, we follow some core tenets. 
+See this excellent write up by Phillip Walton on 
+[CSS Architecture](http://philipwalton.com/articles/css-architecture/). While we don't expect to 
+be too rigid on the naming-schemes presented here, asking ourselves how we measure against the 
+following goals when adding CSS to Watt is a great start:
+
+- Predictable
+- Reusable
+- Maintainable
+- Scalable
+
+**Alphabetical ordering of style definition rules.** It's consistent and helps in quickly parsing
+what's included in a style.
+
+```scss
+.chevron-list-link {
+  
+}
+```
+
+**Namespacing instead of nesting for components.** There is a lengthy class name cost associated with this, but
+the benefit balance of maintainance and reuse tips the scales.
+May be my favorite CSS metaphor of all time: Grenande vs Sniper Rifle:
+
+```css
+/* Grenade */
+#main-nav ul li ul { }
+
+/* Sniper Rifle */
+.subnav { }
+
+/**
+ * Extend components with modifier class names (extend the namespace)
+ */
+/* Bad */
+.widget { }
+#sidebar .widget { }
+
+/* Good */
+.widget { }
+.widget-sidebar { }
+```
+(From [CSS Architecture](http://philipwalton.com/articles/css-architecture/) by Pillip Walton)
+
+
+```css
+.chevron-list { 
+  ...
+}
+.chevron-list-link { 
+  ...
+  &::after {
+    ...
+  }
+}
+.chevron-list-link-label { 
+  ...
+}
+.chevron-list-link-body { 
+  ...
+}
+
+/* 
+```
+Also note that tags are not included (again [CSS Architecture](http://philipwalton.com/articles/css-architecture/) by Pillip Walton) for wins on reuse and maintenance. This scales as the component does not rely on specific parents:
+
 
 ## Contributing
 

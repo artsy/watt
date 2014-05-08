@@ -6,12 +6,29 @@ body {
     font-family: $sans-serif;
   }
   .nav-tabs {
+    border-color: #cacaca;
     font-size:12px;
     text-transform: uppercase;
     font-family: $sans-serif;
+    &.active {
+      border-color: #cacaca;
+    }
     a {
-      background-color:#eee;
-      border-color: #ddd;
+    }
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 20px;
+  > li { 
+    &:first-of-type {
+      margin-left: 2px;
+    }
+    > a {
+      background-color:#E6E7E8;
+      border-color: #cacaca;
+      border-radius: 5px 5px 0 0;
+      margin-right: 4px;
       &:hover {
         background-color:white;
       }
