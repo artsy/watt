@@ -11,3 +11,4 @@ gem 'middleman-s3_sync'
 
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'bourbon'
