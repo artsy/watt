@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "railties", ">= 3.2"
   spec.add_dependency "sass-rails", ">= 3.2"
+  spec.add_dependency "bourbon", '~> 3.2.1'
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "bootstrap-sass", '~> 3.0.3.0'
