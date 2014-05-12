@@ -12,13 +12,15 @@ main.full-width {
   &:first-of-type {
     border-top: 1px solid $lightgrey;
   }
-  &::after {
-    background-image: url('<%= asset_url 'watt/backarrow-34x23.png' %>');
-    content: '';
-  }
   &:hover {
     background-color: #eee;
     text-decoration: none;
+  }
+  &::before {
+    color: $lightgrey;
+    float: right;
+    font-size: 24px;
+    margin-top: -4px;
   }
 }
 .chevron-link-label {

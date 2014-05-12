@@ -1,0 +1,82 @@
+@include font-face(artsy-pe-icons, '/fonts/watt/artsy-pe-icons', normal);
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'artsy-pe-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+	content: "\e600";
+}
+.icon-return-arrow:before {
+	content: "\e601";
+}
+.icon-remove-small:before {
+	content: "\e602";
+}
+.icon-private:before {
+	content: "\e603";
+}
+.icon-logotype:before {
+	content: "\e604";
+}
+.icon-logotype-unscaled:before {
+	content: "\e605";
+}
+.icon-logo:before {
+	content: "\e606";
+}
+.icon-logo-unscaled:before {
+	content: "\e607";
+}
+.icon-inquiry:before {
+	content: "\e608";
+}
+.icon-gear:before {
+	content: "\e609";
+}
+.icon-empty-artists:before {
+	content: "\e60a";
+}
+.icon-edit:before {
+	content: "\e60b";
+}
+.icon-close:before {
+	content: "\e60c";
+}
+.icon-chevron-up:before {
+	content: "\e60d";
+}
+.icon-chevron-small-up:before {
+	content: "\e60e";
+}
+.icon-chevron-small-right:before {
+	content: "\e60f";
+}
+.icon-chevron-small-left:before {
+	content: "\e610";
+}
+.icon-chevron-small-down:before {
+	content: "\e611";
+}
+.icon-chevron-right:before {
+	content: "\e612";
+}
+.icon-chevron-left:before {
+	content: "\e613";
+}
+.icon-chevron-down:before {
+	content: "\e614";
+}
+.icon-cart:before {
+	content: "\e615";
+}
