@@ -1,0 +1,88 @@
+/**
+ *  lists
+ *
+ *  Lists are typically bordered links with a chevron right arrow ">" and 
+ *  a hover state along running the full width of the largest page section.
+ *
+ *  Lists have supporting controls like
+ *    counts : "Viewing 1-20 of 213"
+ *    filters: dropdown or group of dropdowns
+ *    sorting: "Sorted by: A-Z / Recently Updated"
+ *    list-pager : "< Previous Page", "Page 1 of 11", "Next Page >"
+ */
+.list-group {
+  margin-bottom: 30px;
+  //max-width: $sm-screen;
+  &.is-notice {
+    background-color: $notice-color;
+  }
+}
+
+.list-group-item {
+  @include transition(background-color 0.5s ease-in-out);
+  border-bottom: 1px solid $light-gray;
+  display: block;
+  padding: 15px 0;
+  &:first-of-type {
+    border-top: 1px solid $light-gray;
+  }
+  &[href]:hover {
+    background-color: #eee;
+    text-decoration: none;
+  }
+  &::before {
+    color: $light-gray;
+    float: right;
+  }
+}
+
+.list-group-item-label {
+  @include avant-garde();
+  display: inline;
+} 
+
+.list-pager {
+  clear: both;
+  margin: 30px 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+.list-pager-prev, .list-pager-next {
+  @include avant-garde();
+  @include transition(color 0.25s ease-in-out);
+  display: inline-block;
+  width: 24%;
+  &:hover {
+    color: $purple;
+    text-decoration: none;
+    .icon-chevron-left::before,
+    .icon-chevron-right::before {
+      color: $purple;
+    }
+  }
+  .icon-chevron-left::before,
+  .icon-chevron-right::before {
+    @include transition(color 0.25s ease-in-out);
+    color: $light-gray;
+    // TODO: Fix this in the icon font
+    margin-left: -2px;
+  }
+  .icon-chevron-right::before {
+    margin-left: 0;
+    // TODO: Fix this in the icon font
+    margin-right: -2px;
+  }
+}
+.list-pager-pages {
+  @include garamond();
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  width: 49%;
+  .hide-xs {
+    display: none;
+  }
+}
+.list-pager-next {
+  text-align: right;
+}

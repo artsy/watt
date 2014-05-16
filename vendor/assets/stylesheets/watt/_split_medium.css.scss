@@ -69,3 +69,15 @@ body.interface_layout {
 
   }// section#sidebar
 }// body.interface_layout
+
+
+// Lists
+.list-group-item {
+  padding: 15px 20px;
+}
+.list-pager {
+  padding: 0;
+  .hide-xs {
+    display: inline;
+  }
+}

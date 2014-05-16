@@ -12,6 +12,9 @@ code {
   padding: 0 0.4em;
 }
 
-p a {
-  text-decoration: underline;
+p {
+  margin-bottom: 30px;  // *might* be a little heavy handed--on a trial
+  a {
+    text-decoration: underline;
+  }
 }
