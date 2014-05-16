@@ -28,6 +28,7 @@ page "/elements/typography.html", :layout => :guide_layout
 page "/elements/buttons.html", :layout => :guide_layout
 page "/elements/forms.html", :layout => :guide_layout
 page "/elements/panels.html", :layout => :guide_layout
+page "/elements/lists.html", :layout => :guide_layout
 
 ###
 # Page options, layouts, aliases and proxies

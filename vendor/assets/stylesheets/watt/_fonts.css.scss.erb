@@ -1,0 +1,32 @@
+// Fonts
+//
+// Can't use the mixin here because the custom AvantGarde has
+// a diffent file name for each font type.
+@font-face {
+  font-family: 'AvantGardeGothicITCW01D 731075';
+  src: url('<%= font_path('watt/b74e5f86-4477-435a-abdf-32d8215f21bc.eot') %>?#iefix') format('embedded-opentype'), url("/fonts/watt/c18aee57-7585-4a8b-9a1c-69d226301d73.woff") format("woff"), url('<%= font_path('watt/44ccbb2b-0fbc-4d95-b1da-0aa73bd26fb0.ttf') %>') format('truetype'), url('<%= font_path('watt/f2de529c-11d2-43b7-be7c-05c5aaeaf133.svg') %>') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Font Variables
+////////////////////////////////////////////////////////////////////////////////
+$serif: "adobe-garamond-pro", Georgia, Serif;
+$sans-serif: "AvantGardeGothicITCW01D 731075", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+
+// Mixins with font smoothing
+////////////////////////////////////////////////////////////////////////////////
+@mixin avant-garde() {
+  font-family: $sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+@mixin garamond() {
+  font-family: $serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

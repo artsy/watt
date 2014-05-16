@@ -22,26 +22,13 @@ title: Partner Engineering Style Guide
           .pull-right.hidden-xs
             Sorted by: A-Z / Recently Updated
 
-  // TODO: WIP
-  //.container-fluid
-  //  - 20.times do |i|
-  //    %a.chevron-link{ href: "/interface/item" }
-  //      .chevron-link-label Simen Johan
-
-  - 20.times do |i|
-    .row
-      .capped
-        .col-md-12
-          .unit.bordered.clearfix
-            .col-xl-9
-              %div
-                %strong
-                  %a{ href: "/interface/item" }
-                    Simen Johan
-            .col-xl-3.index-action
-              %a{ href: "/interface/item" }
-                %span
-                  Add an artist
+  .row
+    .capped
+      .col-md-12
+        .list-group
+          - 20.times do |i|
+            %a.list-group-item.icon-chevron-right{ href: "/interface/item" }
+              %span.list-group-item-label= ["Leonardo Davinci", "Simen Johan", "Jasper Johns"].sample
 
   .row
     .capped

@@ -12,45 +12,12 @@ title: Partner Engineering Style Guide
         .unit.padded-row
           %p
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        .row
-          .col-md-12
-            .unit.bordered.clearfix
-              .col-xs-9
-                %div
-                  %strong
-                    %a{ href: "/interface/items" }
-                      Index - A basic listing of records
-              .col-xs-3.index-action
-                %a{ href: "/interface/items" }
-                  %span
-                    View
-            .unit.bordered.clearfix
-              .col-xs-9
-                %div
-                  %strong
-                    %a{ href: "/interface/item" }
-                      Item - An individual record
-              .col-xs-3.index-action
-                %a{ href: "/interface/item" }
-                  %span
-                    View
-            .unit.bordered.clearfix
-              .col-xs-9
-                %div
-                  %strong
-                    %a{ href: "/interface/form" }
-                      Form - A typical form
-              .col-xs-3.index-action
-                %a{ href: "/interface/form" }
-                  %span
-                    View
-            .unit.bordered.clearfix
-              .col-xs-9
-                %div
-                  %strong
-                    %a{ href: "/interface/title_link" }
-                      Title link - An example of the pseudo-breadcrumb title link
-              .col-xs-3.index-action
-                %a{ href: "/interface/form" }
-                  %span
-                    View
+        .list-group
+          %a.list-group-item.icon-chevron-right{ href: "/interface/items" }
+            %span.list-group-item-label Index - A basic listing of records
+          %a.list-group-item.icon-chevron-right{ href: "/interface/item" }
+            %span.list-group-item-label Item - An individual record
+          %a.list-group-item.icon-chevron-right{ href: "/interface/form" }
+            %span.list-group-item-label Form - A typical form
+          %a.list-group-item.icon-chevron-right{ href: "/interface/title_link" }
+            %span.list-group-item-label Title link - An example of the pseudo-breadcrumb title link

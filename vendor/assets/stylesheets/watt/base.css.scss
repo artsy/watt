@@ -5,7 +5,6 @@
 @import "watt/fonts";
 @import "watt/icons";
 @import "watt/variables";
-@import "watt/mixins";
 
 // Bootstrap
 @import "watt/bootstrap_variables";
@@ -16,6 +15,7 @@
 @import "watt/typography";
 @import "watt/buttons";
 @import "watt/panels";
+@import "watt/lists";
 
 // Watt extensions
 @import "watt/pace";
