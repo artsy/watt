@@ -1,0 +1,17 @@
+// 
+// _typography
+// For basic elements, overrides, etc.
+// Will eventuall add more from bitters here.
+//
+code {
+  background-color: $lightest-gray;
+  border: 1px solid $medium-gray;
+  border-radius: 1em * 0.25;
+  color: $darker-gray;
+  font-size: 16px * 0.75;
+  padding: 0 0.4em;
+}
+
+p a {
+  text-decoration: underline;
+}

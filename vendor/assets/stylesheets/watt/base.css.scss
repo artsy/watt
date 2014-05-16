@@ -1,17 +1,21 @@
 // Bourbon (mixins for transitions, etc.)
 @import "bourbon";
 
-// Watt basics
+// Watt foundation
 @import "watt/fonts";
 @import "watt/icons";
 @import "watt/variables";
 @import "watt/mixins";
-@import "watt/buttons";
 
 // Bootstrap
 @import "watt/bootstrap_variables";
 @import "watt/bootstrap_base";
 @import "watt/bootstrap_overrides";
+
+// Watt basics
+@import "watt/typography";
+@import "watt/buttons";
+@import "watt/panels";
 
 // Watt extensions
 @import "watt/pace";

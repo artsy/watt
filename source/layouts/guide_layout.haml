@@ -54,6 +54,8 @@
             %a{href: '/elements/buttons'} Buttons
           %li{class: ( 'active' if current_page.path.include? 'forms' ) }
             %a{href: '/elements/forms'} Forms
+          %li{class: ( 'active' if current_page.path.include? 'panels' ) }
+            %a{href: '/elements/panels'} Panels
 
     %main.container.full-width
       = yield
