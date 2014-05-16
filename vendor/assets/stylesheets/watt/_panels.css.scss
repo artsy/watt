@@ -1,0 +1,13 @@
+//
+// Panels
+////////////////////////////////////////////////////////////////////////////////
+.panel {
+  border: 1px solid $base-border-color;
+  margin: 15px;
+  padding: 15px;
+
+  &.is-notice {
+    background-color: $notice-color;
+    border: none;
+  }
+}

@@ -1,19 +1,33 @@
+// Typography
+////////////////////////////////////////////////////////////////////////////////
 $serif: "adobe-garamond-pro", Georgia, Serif;
 $sans-serif: "AvantGardeGothicITCW01D 731075", "Helvetica Neue", Arial, Helvetica, sans-serif;
 
+// Colors
+////////////////////////////////////////////////////////////////////////////////
 $purple:#6a0bc1; // rgb(106, 11, 193)
 $white:#fff;
 $black:#000;
 $lightgrey:lighten($black, 75%);
+$darkest-gray       : #333;
+$darker-gray        : #666;
+$dark-gray          : #999;
+$medium-gray        : #ccc;
+$light-gray         : #dbdbdb;
+$lighter-gray       : #e5e5e5;
+$lightest-gray      : #efefef;
 
 $buttonbackground   : $white;
 $buttonbordercolor  : $black;
 $buttoncolor        : $black;
 
-$alertcolor   : rgb(252,248,227);
-$errorcolor   : #E51913;
-$infocolor    : #7f7f7f;
-$inverscolor  : rgb(65,65,65);
+$alertcolor     : rgb(252,248,227);
+$errorcolor     : #E51913;
+$infocolor      : #7f7f7f;
+$inverscolor    : rgb(65,65,65);
 $successcolor   : rgb(91,183,91);
-$highlightcolor   : #F7ECD0;
-$deletecolor  : rgb(218,79,73);
+$highlightcolor : #F7ECD0;
+$deletecolor    : rgb(218,79,73);
+
+$notice-color     : $highlightcolor;
+$base-border-color: $light-gray;
