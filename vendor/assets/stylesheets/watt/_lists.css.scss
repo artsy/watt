@@ -37,9 +37,18 @@
 }
 
 .list-group-item-label {
+  display: inline-block;
   @include avant-garde();
-  display: inline;
+  // Only add margin to info items if they follow a label
+  & + .list-group-item-info {
+    margin-top: 10px;
+  }
 } 
+
+.list-group-item-info {
+  display: block;
+  @include garamond();
+}
 
 .list-pager {
   clear: both;
