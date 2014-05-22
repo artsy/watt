@@ -1,5 +1,8 @@
 module Artsy
+  ###
+  # Watt is a shared asset library for Artsy Partner Engineering rails apps
+  ###
   module Watt
-    VERSION = "0.0.1"
+    VERSION = '0.0.1'
   end
 end
