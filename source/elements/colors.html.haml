@@ -1,0 +1,28 @@
+---
+title: Partner Engineering Style Guide
+---
+#content-wrap
+  .container
+    .row
+      .col-md-12
+        .page-title.bordered
+          %h2 Basic Colors
+  .container
+    .row
+      - ['gray-lightest: #efefef', 'gray-lighter: #dbdbdb', 'gray-light: #dbdbdb', 'gray: #cccccc', 'gray-dark: #999999', 'gray-darker: #666666',
+          'gray-darkest: #333333', 'purple-light: #b179d4', 'purple: #6a0bc1', 'red-light: #f4acb2', 'red: #cc3333',
+          'yellow-light: #f9f8d8', 'yellow: #ccc8a2', 'green-light: #b0d766', 'green: #4f8200', 'white: #fff', 'black: #000'].each do |color_string|
+        .col-md-12{ style: "background-color:" + color_string.split(':')[1] + ";" }
+          %h3
+            = color_string
+
+  .container
+    .row.section-header
+      .col-md-12.page-title
+        %h2 Basic Calculated Color Defenitions
+  .container
+    .row
+      - ['notice-color:yellow-light:#f9f8d8', 'base-border-color:gray:#cccccc'].each do |color_string|
+        .col-md-12{ style: "background-color:" + color_string.split(':')[2] + ";" }
+          %h3
+            = color_string.split(':')[0] + ' = $' + color_string.split(':')[1]
