@@ -1,0 +1,13 @@
+.section-header {
+  h3 {
+    @include margin(0 0 0 0);
+    @include padding(0 0 0 0);
+    float: left;
+  }
+  .section-actions {
+    float: right;
+    .btn {
+      display: inline;
+    }
+  }
+}

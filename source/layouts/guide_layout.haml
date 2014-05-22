@@ -58,6 +58,8 @@
             %a{href: '/elements/panels'} Panels
           %li{class: ( 'active' if current_page.path.include? 'lists' ) }
             %a{href: '/elements/lists'} Lists
+          %li{class: ( 'active' if current_page.path.include? 'section_headers' ) }
+            %a{href: '/elements/section_headers'} Section Headers
 
     %main.container.full-width
       = yield

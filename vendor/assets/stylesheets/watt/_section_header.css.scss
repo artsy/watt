@@ -1,0 +1,16 @@
+.section-header {
+  @include margin(0 0 15px 0);
+  @include padding(45px 0 7px 0);
+  @include border-width(null null 1px null);
+  @include border-style(null null solid null);
+  @include border-color(null null $light-gray null);
+  h3 {
+    @include margin(0 0 15px 0);
+    @include padding(0 0 0 0);
+  }
+  .btn {
+    width: 100%;
+    display: block;
+    @include margin(0 0 1px 0);
+  }
+}

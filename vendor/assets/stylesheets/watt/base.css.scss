@@ -24,17 +24,19 @@
 @import "watt/footer";
 @import "watt/split";
 @import "watt/typekit";
+@import "watt/section_header";
 @import "watt/spinners";
 
 // Watt responsives
-//// Medium devices (tiny screens in landscape, 420 and up)
+//// Extra small devices (tiny screens in landscape, 420 and up)
 @media (min-width: $screen-xs-min) {
 
 }
 
-//// Medium devices (tablets, portrait, 768 and up) */
+//// Small devices (tablets, portrait, 768 and up) */
 @media (min-width: $screen-sm-min) {
   @import "watt/split_small";
+  @import "watt/section_header_small";
 }
 
 //// Medium devices (desktops, 992px and up) */
