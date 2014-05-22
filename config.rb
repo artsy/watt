@@ -13,23 +13,22 @@ require 'bootstrap-sass'
 # Page options, layouts, aliases and proxies
 ###
 
-
 # in situ
 # page "/index.html", :layout => :full_width_layout
-page "/interface/index.html", :layout => :interface_layout
-page "/interface/items.html", :layout => :interface_layout
-page "/interface/item.html", :layout => :interface_layout
-page "/interface/form.html", :layout => :interface_layout
-page "/interface/title_link.html", :layout => :interface_layout
+page '/interface/index.html', layout: :interface_layout
+page '/interface/items.html', layout: :interface_layout
+page '/interface/item.html', layout: :interface_layout
+page '/interface/form.html', layout: :interface_layout
+page '/interface/title_link.html', layout: :interface_layout
 
 # elements
-page "/elements/index.html", :layout => :guide_layout
-page "/elements/typography.html", :layout => :guide_layout
-page "/elements/buttons.html", :layout => :guide_layout
-page "/elements/forms.html", :layout => :guide_layout
-page "/elements/panels.html", :layout => :guide_layout
-page "/elements/lists.html", :layout => :guide_layout
-page "/elements/section_headers.html", :layout => :guide_layout
+page '/elements/index.html', layout: :guide_layout
+page '/elements/typography.html', layout: :guide_layout
+page '/elements/buttons.html', layout: :guide_layout
+page '/elements/forms.html', layout: :guide_layout
+page '/elements/panels.html', layout: :guide_layout
+page '/elements/lists.html', layout: :guide_layout
+page '/elements/section_headers.html', :layout => :guide_layout
 
 ###
 # Page options, layouts, aliases and proxies
@@ -98,9 +97,10 @@ end
 
 # AWS_SECRET= AWS_ACCESS_KEY_ID= middleman s3_sync
 activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'partner-engineering-style-guide' # The name of the S3 bucket you are targetting. This is globally unique.
-  s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
+  # The name of the S3 bucket you are targetting. This is globally unique.
+  s3_sync.bucket                     = 'partner-engineering-style-guide'
+  # The AWS region for your bucket.
+  s3_sync.region                     = 'us-east-1'
   s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
   s3_sync.aws_secret_access_key      = ENV['AWS_SECRET']
 end
-

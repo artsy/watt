@@ -1,4 +1,4 @@
-require "artsy/watt/version"
+require 'artsy/watt/version'
 
 module Artsy
   module Watt
