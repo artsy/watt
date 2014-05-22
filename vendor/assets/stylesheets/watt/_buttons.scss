@@ -1,10 +1,12 @@
 // Basic (no style cf artsy.net hero)
+// Disabled (grey button; does not change on hover)
 // Primary (black with white text; hovers to purple with white text)
-// Secondary (grey with black text; hovers to purple with white text)
-// delete (thin grey border with black text; hovers to red border with red text; no gradient)
-// highlight (yellow background with black text; hovers to purple with white text)
-// welcome (purple background with white text; hovers to black with white text)
+// Secondary (follows basic button style)
+// Delete (follows basic style that hovers to red)
+// Add (prepends + to the button content)
+// Secondary-add (highlight background with no border, hovers to darker border)
 
+// basic
 
 input[type="submit"].btn,
 input[type="submit"].btn:visited,
@@ -22,13 +24,13 @@ input[type="submit"].btn:visited,
     weight: normal;
     family: $sans-serif;
   }
-  color: $buttoncolor;
+  color: $black;
   text-align: center;
   vertical-align: middle;
-  background-color: $buttonbackground;
+  background-color: transparent;
   border-width: 2px;
   border-style: solid;
-  border-color: $buttonbordercolor;
+  border-color: $base-border-color;
   text-transform:uppercase;
   font-weight:normal;
 
@@ -48,40 +50,13 @@ input[type="submit"].btn:visited,
   text-decoration: none;
 
   &:hover {
-    color: $white;
-    background-color: $purple;
-    border-color: $purple;
+    color: $purple;
     text-decoration: none;
   }
 }
 
-.selected-text-from-btn {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-
-  padding: 14px 20px 11px 20px;
-  font-size: 12px;
-  line-height: 12px;
-
-  margin-bottom: 0;
-  font: {
-    weight: normal;
-    family: $sans-serif;
-  }
-  color: $highlightcolor;
-  text-align: center;
-  vertical-align: middle;
-  background-color: $buttonbackground;
-  border-width: 2px;
-  border-style: solid;
-  border-color: transparent;
-  text-transform:uppercase;
-  font-weight:normal;
-}
-
 .btn:first-child { *margin-left: 0; }
+
 
 // disabled
 
@@ -98,46 +73,19 @@ a.btn.btn-disabled {
   }
 }
 
+
 // primary
 
 input[type="submit"].btn.btn-primary,
 a.btn.btn-primary,
 .btn-primary:visited {
   background-color: $black;
-  border-color: $buttonbordercolor;
+  border-color: $black;
   color: $white;
 
   &:hover {
     background-color: $purple;
     border-color: $purple;
-    color: $white;
-  }
-}
-
-// primary-gradient
-input[type="submit"].btn.btn-primary-gradient,
-a.btn.btn-primary-gradient,
-.btn-primary-gradient:visited {
-  @include linear-gradient(lighten($black, 35%), $black);
-  border: none;
-  color: $white;
-
-  &:hover {
-    @include linear-gradient($purple, $purple);
-    color: $white;
-  }
-}
-
-// secondary-gradient
-input[type="submit"].btn.btn-secondary-gradient,
-a.btn.btn-secondary-gradient,
-.btn-secondary-gradient:visited {
-  @include linear-gradient( lighten($black, 99%), lighten($black, 90%));
-  border: 1px solid lighten($black, 75%);
-  color: $black;
-  &:hover {
-    border: 1px solid $purple;
-    @include linear-gradient( $purple, $purple);
     color: $white;
   }
 }
@@ -148,81 +96,6 @@ a.btn.btn-secondary-gradient,
 input[type="submit"].btn.btn-secondary,
 a.btn.btn-secondary,
 .btn-secondary:visited {
-  background-color: lighten($black, 90%);
-  border-color: lighten($black, 90%);
-  color: $black;
-
-  &:hover {
-    background-color: $purple;
-    border-color: $purple;
-    color: $white;
-  }
-}
-
-// highlight
-
-input[type="submit"].btn.btn-highlight,
-a.btn.btn-highlight,
-.btn-highlight:visited {
-  background-color: $highlightcolor;
-  border-color: $highlightcolor;
-  color: $black;
-
-  &:hover {
-    background-color: $purple;
-    border-color: $purple;
-    color: $white;
-  }
-}
-
-// highlight-gradient
-input[type="submit"].btn.btn-highlight-gradient,
-a.btn.btn-highlight-gradient,
-.btn-highlight-gradient:visited {
-  @include linear-gradient( lighten($highlightcolor, 5%), $highlightcolor);
-  padding-top:12px;
-  border:1px solid #ddd;
-  padding-bottom:10px;
-  color: $black;
-  &:hover {
-    border: 1px solid $purple;
-    @include linear-gradient( $purple, $purple);
-    color: $white;
-  }
-}
-
-
-
-// welcome
-
-input[type="submit"].btn.btn-welcome,
-a.btn.btn-welcome,
-.btn-welcome:visited {
-  background-color: $purple;
-  border-color: $purple;
-  color: $white;
-
-  &:hover {
-    background-color: $black;
-    border-color: $black;
-    color: $white;
-  }
-}
-
-// welcome-gradient
-input[type="submit"].btn.btn-welcome-gradient,
-a.btn.btn-welcome-gradient,
-.btn-welcome-gradient:visited {
-  @include linear-gradient( lighten($purple, 15%), $purple);
-  padding-top:12px;
-  border:1px solid $purple;
-  padding-bottom:10px;
-  color: $white;
-  &:hover {
-    border: 1px solid $black;
-    @include linear-gradient( $black, $black);
-    color: $white;
-  }
 }
 
 
@@ -231,14 +104,39 @@ a.btn.btn-welcome-gradient,
 input[type="submit"].btn.btn-delete,
 a.btn.btn-delete,
 .btn-delete:visited {
-  background-color: $white;
-  border-color: lighten($black, 90%);
-  color: $black;
 
   &:hover {
     background-color: $white;
-    border-color: $deletecolor;
     color: $deletecolor;
+  }
+}
+
+
+// add
+
+input[type="submit"].btn.btn-add,
+a.btn.btn-add,
+.btn-add:visited {
+  &:before
+  {
+    content: "+ ";
+    position: relative;
+    top: -2px;
+  }
+}
+
+
+// secondary-add
+
+input[type="submit"].btn.btn-secondary-add,
+a.btn.btn-secondary-add,
+.btn-secondary-add:visited {
+  background-color: $highlightcolor;
+  border-color: $highlightcolor;
+  color: $black;
+
+  &:hover {
+    border-color: $dark-highlightcolor;
   }
 }
 
