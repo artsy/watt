@@ -10,6 +10,7 @@
 
 .color-sample {
   @include transition(color 0.25s);
+  color: $gray-dark;
   &:hover {
     color: $black;
   }
