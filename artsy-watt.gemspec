@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   spec.files         = Dir['{lib,vendor}/**/*'] + ['LICENSE.txt', 'README.md']
-  spec.require_paths = %w(lib, vendor)
+  spec.require_paths = %w(lib vendor)
 
   spec.add_dependency 'railties', '>= 3.2'
   spec.add_dependency 'sass-rails', '>= 3.2'
