@@ -7,3 +7,10 @@
 .index-action a {
   background-image:url('/images/watt/arrow-18x33.png') !important;
 }
+
+.color-sample {
+  @include transition(color 0.25s);
+  &:hover {
+    color: $black;
+  }
+}

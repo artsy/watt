@@ -6,12 +6,12 @@ body {
     font-family: $sans-serif;
   }
   .nav-tabs {
-    border-color: #cacaca;
+    border-color: $gray;
     font-size:12px;
     text-transform: uppercase;
     font-family: $sans-serif;
     &.active {
-      border-color: #cacaca;
+      border-color: $gray;
     }
     a {
     }
@@ -25,12 +25,12 @@ body {
       margin-left: 2px;
     }
     > a {
-      background-color:#E6E7E8;
-      border-color: #cacaca;
+      background-color: $gray-lighter;
+      border-color: $gray;
       border-radius: 5px 5px 0 0;
       margin-right: 4px;
       &:hover {
-        background-color:white;
+        background-color: $white;
       }
     }
   }
@@ -46,12 +46,12 @@ body form {
   }
   label {
     font-weight: normal;
-    span {
-      color: red;
+    span[title='required'] {
+      color: $red;
     }
   }
   .form-group.bordered {
-    border-top: 2px solid #eee;
+    border-top: 2px solid $gray-lightest;
     padding:7px 0px 0 0;
   }
   select {
