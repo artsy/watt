@@ -20,7 +20,7 @@ body {
 
 .nav-tabs {
   margin-bottom: 20px;
-  > li { 
+  > li {
     &:first-of-type {
       margin-left: 2px;
     }
@@ -88,23 +88,6 @@ header.navbar.navbar-inverse {
       color: $white;
     }
   }
-}
-
-
-
-.page-title h2 a {
-  background:transparent url('<%= asset_url 'watt/backarrow-34x23.png' %>') top left no-repeat !important;
-  background-position: 18px 18px !important;
-  background-repeat: no-repeat !important;
-  background-size: 17px 12px !important;
-}
-.index-action a {
-  background:transparent url('<%= asset_url 'watt/arrow-18x33.png' %>') top left no-repeat !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
-  width: 33px !important;
-  height: 18px !important;
 }
 
 #navbar-search {
