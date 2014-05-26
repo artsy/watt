@@ -1,14 +1,15 @@
 // Full listing here: https://github.com/twbs/bootstrap/blob/master/less/variables.less
 
 // Global
+$brand-primary: #000;
 $font-family-sans-serif: $sans-serif;
 $font-family-serif: $serif;
 $font-family-base: $serif;
 $font-size-base: 16px;
-$brand-primary: #000;
-$input-border-focus: #999;
-$state-info-border: #DDD;
 $grid-float-breakpoint: 992px;
+$input-border-focus: #999;
+$input-color: $black;
+$state-info-border: #DDD;
 $text-color: $black;
 
 // Alerts
