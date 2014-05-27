@@ -7,8 +7,8 @@
 // static.artsy.net or directly via S3 - gravity-production.s3.amazonaws.com
 @include font-face(artsy-pe-icons, '//d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/artsy-pe-icons', normal);
 
-@mixin watt-icon-font($font) {
-  font-family: $font;
+[class^="icon-"], [class*=" icon-"], .with-icon {
+  font-family: 'artsy-pe-icons';
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -20,10 +20,6 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"], [class*=" icon-"], .with-icon {
- @include watt-icon-font('artsy-pe-icons');
 }
 
 .icon-search:before {
