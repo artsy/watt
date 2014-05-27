@@ -80,14 +80,7 @@ It is basically split into two sections:
 * Interface - the UI in practice; find for example [a sample list of items here](http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/interface/items/)
 * Elements - the things broken down into components; find for example [a rundown of button styles here](http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/elements/buttons/)
 
-TODO: More of a walkthrough in terms of how we update the style guide.
-
-```middleman server```
-
-```middleman build```
-
-```AWS_SECRET= AWS_ACCESS_KEY_ID= middleman s3_sync```
-
+PRs merged to artsy/watt#master are automatically deployed to the ```partner-engineering-style-guide``` S3 bucket by [Semaphore](https://semaphoreapp.com/artsy/watt).
 
 ## Installation
 
