@@ -12,6 +12,10 @@ We'll additioanlly set global variable overrides in [_bootstrap_variables.css.sc
 
 All of three of these files are imported in [base.css.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/base.css.scss).
 
+### Bootstrap Variables
+It's often useful to reference global variables used by Bootstrap. [This file is the LESS flavor](https://github.com/twbs/bootstrap/blob/master/less/variables.less), but the same variable names are [overwritten by `bootstrap-sass`](https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss).
+
+
 # On Bourbon
 
 [Bourbon](http://bourbon.io/) is a [Thoughbot](http://thoughtbot.com/) [joint](https://github.com/thoughtbot).
