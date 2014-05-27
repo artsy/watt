@@ -4,8 +4,8 @@ title: Partner Engineering Style Guide
 #content-wrap
   .container
     .page-title
-      %h2 Partner Engineering Style Guide
-
+      %h2
+        Partner Engineering Style Guide
   .container
     %p Things are basically broken up into two parts.
     %ul
@@ -65,3 +65,8 @@ title: Partner Engineering Style Guide
             %a{ href: "/elements/lists", class: '' }
               %strong
                 Lists
+  .container
+    .unit.bordered.single-padding
+      Built on #{Time.now.to_formatted_s(:long)}
+      \/
+      = current_version.titlecase
