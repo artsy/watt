@@ -111,5 +111,3 @@ helpers do
     File.readlines("lib/artsy/watt/version.rb")[5]
   end
 end
-
-#@config ||= YAML.load(ERB.new(File.new(Rails.root.join("config/mandrill.yml")).read).result)[Rails.env].symbolize_keys
