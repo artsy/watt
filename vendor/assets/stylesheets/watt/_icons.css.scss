@@ -7,57 +7,61 @@
 // static.artsy.net or directly via S3 - gravity-production.s3.amazonaws.com
 @include font-face(artsy-pe-icons, '//d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/artsy-pe-icons', normal);
 
-[class^="icon-"], [class*=" icon-"], .with-icon {
-	font-family: 'artsy-pe-icons';
-	speak: none;
+@mixin watt-icon-font($font) {
+  font-family: $font;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
   overflow: hidden;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  speak: none;
+  text-transform: none;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"], [class*=" icon-"], .with-icon {
+ @include watt-icon-font('artsy-pe-icons');
 }
 
 .icon-search:before {
-	content: "\e600";
+  content: "\e600";
 }
 .icon-return-arrow:before {
-	content: "\e601";
+  content: "\e601";
 }
 .icon-remove:before {
-	content: "\e602";
+  content: "\e602";
 }
 .icon-private:before {
-	content: "\e603";
+  content: "\e603";
 }
 .icon-mark-large:before {
-	content: "\e604";
+  content: "\e604";
 }
 .icon-mark:before {
-	content: "\e605";
+  content: "\e605";
 }
 .icon-inquiry:before {
-	content: "\e606";
+  content: "\e606";
 }
 .icon-hamburger:before {
-	content: "\e607";
+  content: "\e607";
 }
 .icon-gear:before {
-	content: "\e608";
+  content: "\e608";
 }
 .icon-edit:before {
-	content: "\e609";
+  content: "\e609";
 }
 .icon-close:before {
-	content: "\e60a";
+  content: "\e60a";
 }
 .icon-chevron-right:before {
-	content: "\e60b";
+  content: "\e60b";
 }
 .icon-chevron-left:before {
-	content: "\e60c";
+  content: "\e60c";
 }
