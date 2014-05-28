@@ -25,11 +25,13 @@ title: Partner Engineering Style Guide
   .row
     .capped
       .col-md-12
-        .list-group
+        .list-group.list-group-valign-icon
           - 20.times do |i|
-            %a.list-group-item.icon-chevron-right{ href: "/interface/item" }
-              %span.list-group-item-label= ["Leonardo Davinci", "Simen Johan", "Jasper Johns"].sample
-              %span.list-group-item-info= ["1404 - 1457", "1939 - 1987"].sample
+            %a.list-group-item{ href: "/interface/item" }
+              %span.list-group-item-content
+                %span.list-group-item-label= ["Leonardo Davinci", "Simen Johan", "Jasper Johns"].sample
+                %span.list-group-item-info= ["1404 - 1457", "1939 - 1987"].sample
+              %span.icon-chevron-right
 
   .row
     .capped

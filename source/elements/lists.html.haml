@@ -8,6 +8,17 @@ title: Partner Engineering Style Guide
         .page-title.bordered
           %h2 Lists
 
+        %p In order to get vertically aligned icons, we need some extra mark up ¯\_(ツ)_/¯
+        %pre
+          :preserve
+            .list-group
+              %a.list-group-item{ href: '#' }
+                %span.list-group-item-content
+                  %span.list-group-item-label Andy Warhol
+                  %span.list-group-item-info 1928 &ndash; 1987
+                %span.icon-chevron-right
+        %br
+
         %h4 Default List Group
         .list-group
           .list-group-item Andy Warhol
@@ -25,14 +36,22 @@ title: Partner Engineering Style Guide
         %p
           These will usually get an icon treatment and some <code>:hover</code> hijinks.
         .list-group
-          %a.list-group-item.icon-chevron-right{ href: '#' }
-            %span.list-group-item-label Andy Warhol
-          %a.list-group-item.icon-chevron-right{ href: '#' }
-            %span.list-group-item-label Andy Warhol
-            %span.list-group-item-info
-              Some extra information in an element classed <code>.list-group-item-info</code>
-              and sibling to <code>.list-group-item.label</code>.
-          %a.list-group-item.icon-chevron-right{ href: '#' }
-            %span.list-group-item-label Andy Warhol
-          %a.list-group-item.icon-chevron-right{ href: '#' }
-            %span.list-group-item-label Andy Warhol
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+              %span.list-group-item-info
+                Some extra information in an element classed <code>.list-group-item-info</code>
+                and child to <code>.list-group-item-content</code>.
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
