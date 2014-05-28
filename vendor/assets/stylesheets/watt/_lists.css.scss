@@ -16,10 +16,17 @@
   &.is-notice {
     background-color: $notice-color;
   }
+  .icon-chevron-right {
+    color: $gray-light;
+    display: inline-block; 
+    margin-left: 10px;
+    vertical-align: middle;
+  }
 }
 
 .list-group-item {
   @include transition(background-color 0.5s ease-in-out);
+  align-self: auto;
   border-bottom: 1px solid $gray-light;
   display: block;
   padding: 15px 0;
@@ -30,14 +37,16 @@
     background-color: #eee;
     text-decoration: none;
   }
-  &::before {
-    color: $gray-light;
-    float: right;
-  }
+}
+
+.list-group-item-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 30px);
 }
 
 .list-group-item-label {
-  display: inline-block;
+  display: block;
   @include avant-garde();
   // Only add margin to info items if they follow a label
   & + .list-group-item-info {
