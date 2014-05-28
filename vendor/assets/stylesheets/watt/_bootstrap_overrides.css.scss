@@ -21,16 +21,17 @@ body {
 .nav-tabs {
   margin-bottom: 20px;
   > li {
-    &:first-of-type {
-      margin-left: 2px;
+    &:last-of-type {
+      margin-right: 0;
     }
     > a {
-      background-color: $gray-lighter;
+      color: $gray-dark;
+      background-color: $white;
       border-color: $gray;
-      border-radius: 5px 5px 0 0;
       margin-right: 4px;
       &:hover {
-        background-color: $white;
+        background-color: $gray-lightest;
+        color: $black;
       }
     }
   }
