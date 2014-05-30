@@ -1,11 +1,13 @@
 .section-header {
-  @include margin(0 0 15px 0);
-  @include padding(45px 0 7px 0);
+  @include margin(0 0 10px 0);
+  @include padding(45px 0 10px 0);
   @include border-width(null null 1px null);
   @include border-style(null null solid null);
   @include border-color(null null $gray null);
   h3 {
-    @include margin(0 0 15px 0);
+    font-size: 24px;
+    line-height: 28px;
+    @include margin(0 0 10px 0);
     @include padding(0 0 0 0);
   }
   .btn {

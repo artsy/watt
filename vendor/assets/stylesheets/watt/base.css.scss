@@ -36,13 +36,13 @@
 //// Small devices (tablets, portrait, 768 and up) */
 @media (min-width: $screen-sm-min) {
   @import "watt/split_small";
+  @import "watt/footer_small";
   @import "watt/section_header_small";
 }
 
 //// Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) {
   @import "watt/split_medium";
-  @import "watt/footer_medium";
 }
 
 //// Large devices (large desktops, 1200px and up) */

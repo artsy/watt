@@ -79,5 +79,9 @@ title: Partner Engineering Style Guide
                     %p Displaying the price on your work increases the likelyhood that inquiries will be high-quality.
           .row
             .col-md-12
-              .unit.bordered
-                %input.btn.btn-primary.btn-large.btn-full-width{ type: "submit", name: 'Save changes' }
+              .unit.single-padding.bordered
+                .row
+                  .col-md-8
+                    %input.btn.btn-primary.btn-small.btn-full-width{ type: "submit", value: 'Save changes' }
+                  .col-md-4
+                    %input.btn.btn-delete.btn-small.btn-full-width{ type: "submit", value: 'delete' }

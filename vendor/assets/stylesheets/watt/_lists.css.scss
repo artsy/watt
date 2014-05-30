@@ -18,7 +18,7 @@
   }
   .icon-chevron-right {
     color: $gray-light;
-    display: inline-block; 
+    display: inline-block;
     margin-left: 10px;
     vertical-align: middle;
   }
@@ -29,7 +29,7 @@
   align-self: auto;
   border-bottom: 1px solid $gray;
   display: block;
-  padding: 15px 0;
+  padding: 20px 0;
   &:first-of-type {
     border-top: 1px solid $gray;
   }
@@ -50,9 +50,9 @@
   @include avant-garde();
   // Only add margin to info items if they follow a label
   & + .list-group-item-info {
-    margin-top: 10px;
+    margin-top: 5px;
   }
-} 
+}
 
 .list-group-item-info {
   display: block;

@@ -15,10 +15,9 @@ input[type="submit"].btn:visited,
   *display: inline;
   /* IE7 inline-block hack */
   *zoom: 1;
-
-  padding: 8px 20px 7px 20px;
-  font-size: 12px;
-  line-height: 12px;
+  padding: 18px 30px 15px;
+  font-size: 13px;
+  line-height: 13px;
   margin-bottom: 0;
   font: {
     weight: normal;
@@ -27,19 +26,19 @@ input[type="submit"].btn:visited,
   color: $black;
   text-align: center;
   vertical-align: middle;
-  background-color: transparent;
-  border-width: 2px;
+  background-color: $gray-lightest;
+  border-width: 1px;
   border-style: solid;
-  border-color: $base-border-color;
+  border-color: $gray-lightest;
   text-transform:uppercase;
   font-weight:normal;
 
+  -webkit-font-smoothing: antialiased;
   -webkit-transition-property: box-shadow,border,color,background-color;
   -moz-transition-property: box-shadow,border,color,background-color;
   -ms-transition-property: box-shadow,border,color,background-color;
   -o-transition-property: box-shadow,border,color,background-color;
   transition-property: box-shadow,border,color,background-color;
-
   -webkit-transition-duration: 0.15s;
   -moz-transition-duration: 0.15s;
   -ms-transition-duration: 0.15s;
@@ -50,7 +49,8 @@ input[type="submit"].btn:visited,
   text-decoration: none;
 
   &:hover {
-    color: $purple;
+    background-color: $gray;
+    border-color: $gray;
     text-decoration: none;
   }
 }
@@ -96,6 +96,12 @@ a.btn.btn-primary,
 input[type="submit"].btn.btn-secondary,
 a.btn.btn-secondary,
 .btn-secondary:visited {
+    background-color: $white;
+    border-color: $gray;
+    &:hover {
+      background-color: $white;
+      color: $purple;
+    }
 }
 
 
@@ -104,10 +110,13 @@ a.btn.btn-secondary,
 input[type="submit"].btn.btn-delete,
 a.btn.btn-delete,
 .btn-delete:visited {
+  background-color: $white;
+  border-color: $gray;
+  color: $red;
 
   &:hover {
     background-color: $white;
-    color: $red;
+    color: $purple;
   }
 }
 
@@ -132,60 +141,32 @@ input[type="submit"].btn.btn-secondary-add,
 a.btn.btn-secondary-add,
 .btn-secondary-add:visited {
   background-color: $yellow-light;
-  border-color: $yellow-light;
+  border-color: $yellow;
   color: $black;
 
   &:hover {
+    background-color: $yellow;
     border-color: $yellow;
   }
 }
 
 
 // sizes
-input[type="submit"].btn-extlarge,
-input[type="submit"].btn-extlarge:visited,
-.btn-extlarge, .btn-extlarge:visited {
-  padding: 14px 36px 11px 36px;
-  font-size: 15px;
-  letter-spacing: 1px;
-  line-height: 15px;
-  border-width: 3px;
-}
-
-input[type="submit"].btn-large,
-input[type="submit"].btn-large:visited,
-.btn-large, .btn-large:visited {
-  padding: 12px 22px 10px 22px;
-  letter-spacing: 1px;
-  font-size: 13px;
-  line-height: 13px;
-  border-width: 3px;
-}
-
 input[type="submit"].btn-small,
 input[type="submit"].btn-small:visited,
 .btn-small, .btn-small:visited {
-  padding: 8px 12px 7px 12px;
+  padding: 10px 20px 8px;
   font-size: 11px;
   line-height: 11px;
-  border-width: 2px;
+  border-width: 1px;
 }
 
-input[type="submit"].btn-mini,
-input[type="submit"].btn-mini:visited,
-.btn-mini, .btn-mini:visited {
-  padding: 8px 12px 7px 12px;
-  font-size: 10px;
-  line-height: 10px;
-  border-width: 2px;
-}
-
-input[type="submit"].btn-micro,
-input[type="submit"].btn-micro:visited,
-.btn-micro, .btn-micro:visited {
-  padding: 6px 8px 5px 8px;
-  font-size: 9px;
-  line-height: 9px;
+input[type="submit"].btn-tiny,
+input[type="submit"].btn-tiny:visited,
+.btn-tiny, .btn-tiny:visited {
+  padding: 6px 12px 5px;
+  font-size: 11px;
+  line-height: 11px;
   border-width: 1px;
 }
 

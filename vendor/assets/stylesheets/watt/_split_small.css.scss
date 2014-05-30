@@ -1,3 +1,86 @@
 body.interface_layout {
+  #interface-wrap {
+    padding-left: 160px;
+  }
+  section#primary {
+  }// section#primary
+  section#sidebar {
+    display: block;
+    margin-left: -160px;
+    left: 160px;
+    width: 160px;
+    background-color: $white;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
 
+    // .navigation
+    .navigation {
+      position: absolute;
+      top: 56px;
+      bottom: 0;
+      width: 160px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-right: 1px solid $gray;
+      ul {
+        padding: 20px 0 30px 0;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        li {
+          margin: 0;
+          a {
+            font-size: 14px;
+            padding: 13px 15px 10px 15px;
+            color: $black;
+            background-color: $white;
+          }
+          a:hover {
+            background-color: $gray-lightest;
+          }
+        }
+        li.active {
+          a {
+            color: $purple;
+            background-color: $white;
+          }
+        }
+      }
+    }//.navigation
+
+    // .sidebar-help
+    .sidebar-help {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      width: 150px;
+      a {
+        height: 45px;
+        line-height: 45px;
+        display: block;
+        padding: 0 0 0 50px;
+        background-size: 45px 45px;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        font-size: 11px;
+      }
+    }// .sidebar-help
+
+  }// section#sidebar
+}// body.interface_layout
+
+
+// Lists
+.list-group-item {
+  padding: 15px 10px;
+}
+.list-pager {
+  padding: 0;
+  .hide-xs {
+    display: inline;
+  }
 }
