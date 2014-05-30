@@ -7,8 +7,6 @@ $font-family-serif: $serif;
 $font-family-base: $serif;
 $font-size-base: 16px;
 $grid-float-breakpoint: 768px;
-$input-border-focus: #999;
-$input-color: $black;
 $state-info-border: #DDD;
 $text-color: $black;
 
@@ -44,6 +42,12 @@ $dropdown-link-hover-bg: $navbar-default-link-color;
 $dropdown-link-active-color: $navbar-default-link-active-color;
 $dropdown-link-active-bg: $navbar-default-link-active-bg;
 //$dropdown-link-disabled-color: $navbar-default-link-color;
+
+// Forms
+$input-color: $black;
+$input-border: $gray-lighter;
+$input-border-focus: $purple;
+$input-color-placeholder: $gray-light;
 
 // Tabs
 $nav-tabs-border-color: #DDD;
