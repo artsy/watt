@@ -76,6 +76,16 @@ header.navbar .navbar-header {
   }
 }
 
+header.navbar.navbar-inverse .dropdown-menu {
+  background-color: $black;
+  border-color: $black;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  a {
+    color: $white;
+  }
+}
+
 header.navbar.navbar-inverse {
   .application-home {
     a {
