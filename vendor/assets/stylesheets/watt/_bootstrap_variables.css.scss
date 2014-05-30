@@ -6,7 +6,7 @@ $font-family-sans-serif: $sans-serif;
 $font-family-serif: $serif;
 $font-family-base: $serif;
 $font-size-base: 16px;
-$grid-float-breakpoint: 992px;
+$grid-float-breakpoint: 768px;
 $input-border-focus: #999;
 $input-color: $black;
 $state-info-border: #DDD;
@@ -31,7 +31,7 @@ $navbar-default-link-active-bg: $navbar-default-link-hover-bg;
 $navbar-default-toggle-icon-bar-bg: darken($navbar-default-link-hover-bg,25%);
 $navbar-default-toggle-border-color: $navbar-default-link-hover-bg;
 
-$dropdown-bg: #fff;
+$dropdown-bg: $white;
 $dropdown-border: $navbar-default-link-active-bg;
 $dropdown-fallback-border: $navbar-default-bg;
 $dropdown-caret-color: $navbar-default-link-color;

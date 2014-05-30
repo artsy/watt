@@ -29,6 +29,7 @@ body {
       background-color: $white;
       border-color: $gray;
       margin-right: 4px;
+      padding-bottom: 4px;
       &:hover {
         background-color: $gray-lightest;
         color: $black;
@@ -72,6 +73,16 @@ header.navbar .navbar-header {
     margin-right:15px;
     padding:0;
     width: 35px;
+  }
+}
+
+header.navbar.navbar-inverse .dropdown-menu {
+  background-color: $black;
+  border-color: $black;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  a {
+    color: $white;
   }
 }
 
