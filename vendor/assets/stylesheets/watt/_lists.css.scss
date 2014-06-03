@@ -104,3 +104,32 @@
 .list-pager-next {
   text-align: right;
 }
+
+.list-controls {
+  @include clearfix();
+}
+
+.list-controls-row {
+  @include make-row();
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+.list-control-filter {
+  @include make-md-column(4);
+}
+
+.list-control-counts,
+.list-control-sorting {
+  @include make-md-column(6);
+}
+
+.list-control-sorting {
+  text-align: right;
+  .active {
+    color: $purple;
+    text-decoration: underline;
+  }
+}
