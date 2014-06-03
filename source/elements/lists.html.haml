@@ -11,6 +11,13 @@ title: Partner Engineering Style Guide
         %p In order to get vertically aligned icons, we need some extra mark up ¯\_(ツ)_/¯
         %pre
           :preserve
+            .list-controls
+              .list-controls-row
+                .list-control-filter
+                  %select.form-control
+              .list-controls-row
+                .list-control-counts Viewing 1 - 5 of 37 Artists
+                .list-control-sorting Sorted by: Most Recent / A-Z
             .list-group
               %a.list-group-item{ href: '#' }
                 %span.list-group-item-content
@@ -46,6 +53,51 @@ title: Partner Engineering Style Guide
               %span.list-group-item-info
                 Some extra information in an element classed <code>.list-group-item-info</code>
                 and child to <code>.list-group-item-content</code>.
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+
+        %h4 Lists of links with controls
+        %p
+          Lists controls are usually on top of a list. They can be organized
+          into <code>.list-controls-row</code>s, and each control can adjust
+          the size, preferably by <code>make-md-column(n)</code> mixins, and
+          add additional styles.
+        .list-controls
+          .list-controls-row
+            .list-control-filter
+              %select.form-control
+                %option Filter by visibility
+                %option{ value: '1' } Visible
+                %option{ value: '0' } Invisible
+            .list-control-filter
+              %select.form-control
+                %option Filter by availability
+                %option{ value: '1' } Available
+                %option{ value: '0' } Unavailable
+          .list-controls-row
+            .list-control-counts
+              Viewing 1 - 5 of 37 Artists
+            .list-control-sorting
+              Sorted by: <a href="#" class="active">Most Recent</a> / <a href="#">A-Z</a>
+        .list-group
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
             %span.icon-chevron-right
           %a.list-group-item{ href: '#' }
             %span.list-group-item-content
