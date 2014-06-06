@@ -13,6 +13,7 @@ body.interface_layout {
     position: fixed;
     height: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     z-index: 1000;
 
     // .navigation
