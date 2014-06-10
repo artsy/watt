@@ -19,8 +19,13 @@ body {
   }
 }
 
+h1,h2,h3 {
+  @extend no-margin;
+  @extend no-padding;
+}
+
 .nav-tabs {
-  margin-bottom: 20px;
+  @extend .double-margin-bottom;
   > li {
     &:last-of-type {
       margin-right: 0;
@@ -41,11 +46,11 @@ body {
 
 body form {
   h5 {
+    @extend .double-margin-bottom;
+    @extend .no-padding;
     font-size:13px;
     text-transform: uppercase;
     font-family: $sans-serif;
-    margin:0 0 30px;
-    padding: 0;
   }
   label {
     font-weight: normal;
@@ -54,8 +59,8 @@ body form {
     }
   }
   .form-group.bordered {
+    @extend .two-third-padding-top;
     border-top: 2px solid $gray-lightest;
-    padding:7px 0px 0 0;
   }
   select {
     max-width: 100%;
@@ -66,13 +71,13 @@ header.navbar .navbar-header {
   a.navbar-brand {
     @extend .with-icon;
     @extend .icon-mark;
+    @extend .no-padding;
+    @extend .two-third-margin-top;
     color: $black;
     font-size: 35px;
     height: 35px;
-    margin-top:10px;
     margin-left:15px;
     margin-right:15px;
-    padding:0;
     width: 35px;
   }
 }
@@ -127,15 +132,4 @@ header.navbar li a {
       width: 600px;
     }
   }
-}
-
-
-
-// Alert overrides
-.alert-below-title {
-  margin: 15px 0 0 0;
-}
-
-.alert-below-tabs {
-  margin: 0 0 15px 0;
 }

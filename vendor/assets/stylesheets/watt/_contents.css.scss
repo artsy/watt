@@ -4,19 +4,16 @@ main.full-width {
 
 main, section {
   .page-title.bordered {
+    @extend .single-margin-bottom;
     border-bottom: 1px solid $gray;
-    margin: 0 0 15px 0;
   }
 
   .page-title {
-    padding: 0;
-    margin: 0;
+    @extend .single-padding;
     h2 {
       font-size:26px;
       line-height: 26px;
       font-family:$serif;
-      margin:20px 0 0 0;
-      padding:0 0 20px;
       text-align:left;
       color:black;
       font-weight:normal;
@@ -26,32 +23,15 @@ main, section {
   .capped {
     max-width: 798px;
   }
-  .results-sorts { padding: 0 0 30px 0; }
+  .results-sorts {
+    @extend .single-margin;
+  }
 
   .unit.bordered {
     border-top: 2px solid #eee;
   }
 
-  .padded-row {
-    margin: 0;
-    padding: 0 0 30px 0;
-  }
-
-  .unit.single-padding {
-    padding: 15px 0;
-  }
-
-  .unit.double-padding {
-    padding: 30px 0;
-  }
-
-  .unit.triple-padding-top {
-    padding-top: 45px !important;
-  }
-
   .unit {
-    margin: 0;
-    padding: 0;
     strong {
       font-weight: normal;
       font-family:$sans-serif;
@@ -68,10 +48,8 @@ main, section {
       *display: inline;
       /* IE7 inline-block hack */
       *zoom: 1;
-      padding: 0;
       font-size: 10px;
       line-height: 12px;
-      margin-bottom: 0;
       font: {
         weight: normal;
         family: $sans-serif;
@@ -88,9 +66,9 @@ main, section {
   }//#.unit
 
   .custom-pagination {
+    @extend .single-padding-top;
+    @extend .single-margin-top;
     border-top: 2px solid #ddd;
-    padding: 15px 0 0 0;
-    margin: 15px 0 0 0;
     .previous-arrow,
     .next-arrow {
       font-size: 12px;
