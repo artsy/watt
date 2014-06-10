@@ -1,10 +1,10 @@
 footer {
+  @extend .double-padding;
   background-color: #E6E6E6;
   border-top: 1px solid #C9C9C9;
-  padding: 30px 0;
   .footer-help {
+    @extend .no-padding;
     margin: 0 auto;
-    padding: 0;
     width: 150px;
     a {
       height: 45px;

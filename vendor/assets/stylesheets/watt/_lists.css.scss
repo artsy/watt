@@ -25,11 +25,11 @@
 }
 
 .list-group-item {
+  @extend .single-padding;
   @include transition(background-color 0.25s ease-in-out);
   align-self: auto;
   border-bottom: 1px solid $gray;
   display: block;
-  padding: 20px 0;
   &:first-of-type {
     border-top: 1px solid $gray;
   }
@@ -50,7 +50,7 @@
   @include avant-garde();
   // Only add margin to info items if they follow a label
   & + .list-group-item-info {
-    margin-top: 5px;
+    @extend .third-margin-top;
   }
 }
 
@@ -60,9 +60,9 @@
 }
 
 .list-pager {
+  @extend .double-margin;
+  @extend .no-padding;
   clear: both;
-  margin: 30px 0;
-  padding: 0;
   vertical-align: bottom;
 }
 .list-pager-prev, .list-pager-next {
@@ -111,9 +111,9 @@
 
 .list-controls-row {
   @include make-row();
-  margin-bottom: 15px;
+  @extend .single-margin-bottom;
   &:last-child {
-    margin-bottom: 10px;
+    @extend .two-third-margin-bottom;
   }
 }
 

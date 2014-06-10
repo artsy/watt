@@ -1,17 +1,19 @@
 .fancybox-wrap {
-  .unit { padding: 15px 0; }
+  .unit { 
+    @extend .single-padding;
+  }
 }
 
 .fancybox-inner {
   h2 {
-  	font-size:22px;
-  	line-height: 22px;
-    margin: 0 0 15px 0;
-    padding: 0 0 15px 0;
-  	font-family:$serif;
-  	text-align:left;
-  	color:black;
-  	font-weight:normal;
+    @extend .single-padding-bottom;
+    @extend .single-margin-bottom;
+    font-size:22px;
+    line-height: 22px;
+    font-family:$serif;
+    text-align:left;
+    color:black;
+    font-weight:normal;
     border-bottom: 1px solid #CACACA;
   }
   .row {
@@ -21,7 +23,7 @@
     }
   }
   .close-modal {
-  	float: right;
+    float: right;
     background-color: #fff;
     width: 22px;
     height: 22px;
@@ -42,4 +44,3 @@
   }
 
 }
-
