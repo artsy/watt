@@ -1,11 +1,15 @@
 .section-breadcrumb {
   border-bottom: 1px solid $base-border-color;
-  margin: -$spacing-unit 0 3*$spacing-unit 0;
+  margin: -1$spacing-unit 0 3*$spacing-unit 0;
   .section-breadcrumb-link,
   .section-breadcrumb-title,
   .section-breadcrumb-separator {
     float: left;
-    line-height: 45px;
+    line-height: 4.5*$spacing-unit;
+  }
+
+  .section-breadcrumb-separator {
+    font-size: 18px;
   }
 
   .section-breadcrumb-link,
@@ -14,7 +18,7 @@
   }
 
   .section-breadcrumb-link {
-    padding: $spacing-unit 0 12px $spacing-unit;
+    padding: $spacing-unit 0 1.2*$spacing-unit $spacing-unit;
     a {
       color: $gray-dark;
       text-decoration: none;
@@ -27,12 +31,10 @@
 
   .section-breadcrumb-separator {
     color: $gray;
-    float: left;
     padding: $spacing-unit 0 0 $spacing-unit;
-    line-height: 45px;
   }
   .section-breadcrumb-title {
     padding: $spacing-unit;
-    padding-bottom: 12px;
+    padding-bottom: 1.2*$spacing-unit;
   }
 } 
