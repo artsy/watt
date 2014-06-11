@@ -21,8 +21,27 @@ title: Partner Engineering Style Guide
             %a{href: '/interface/form'}
               Edit
   .row
-    .capped
-      .col-md-12
-        - 20.times do |o|
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .unit
+      .capped
+        .col-md-12
+          .unit.single-padding
+            = link_to "Add Works", '', class: 'btn btn-full-width btn-primary btn-add'
+          .unit.single-padding
+            .list-group
+              - 20.times do
+                .grid-item-artwork.grid-item{ href: "#", data: { artwork: "josef-hoflehner-trees-in-snow" } }
+                  .grid-item-artwork-image
+                    %img{ src: ['/images/trees_in_snow.png', '/images/cliff.png', '/images/hurricaneLXXXIV.png'].sample }
+                    .grid-item-artwork-low-res Add Higher Res Image
+                  %h3.grid-item-artwork-artist-name Josef Hoflehner
+                  %h3.grid-item-artwork-title Trees in Snow
+                  .grid-item-artwork-visibility{ data: { public: "public" } }
+                    %span.icon-private.grid-item-icon
+                    %span.grid-item-icon-label Visible on Artsy
+                  .grid-item-artwork-availability
+                    %span.icon-inquiry.grid-item-icon
+                    .grid-item-icon-label
+                      .grid-item-artwork-inquiry For Sale (via Inquiry)
+                      .grid-item-artwork-price{ data: { price: "$4,250" } } $4,250
+                      .grid-item-artwork-display-price{ data: { price: "$3,000 - $5,000" } } $3,000 - $5,000
+                  %a.btn-text.grid-action.grid-item-artwork-edit{ href: "#" } Edit

@@ -17,6 +17,7 @@
 @import "watt/buttons";
 @import "watt/panels";
 @import "watt/lists";
+@import "watt/grid";
 
 // Watt extensions
 @import "watt/pace";
@@ -47,7 +48,7 @@
   @import "watt/split_medium";
 }
 
-//// Large devices (large desktops, 1200px and up) */
+//// HD Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
   @import "watt/split_large";
 }
