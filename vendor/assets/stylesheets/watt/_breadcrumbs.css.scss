@@ -1,0 +1,40 @@
+.section-breadcrumb {
+  border-bottom: 1px solid $base-border-color;
+  margin: -1$spacing-unit 0 3*$spacing-unit 0;
+  .section-breadcrumb-link,
+  .section-breadcrumb-title,
+  .section-breadcrumb-separator {
+    float: left;
+    line-height: 4.5*$spacing-unit;
+  }
+
+  .section-breadcrumb-separator {
+    font-size: 18px;
+  }
+
+  .section-breadcrumb-link,
+  .section-breadcrumb-title {
+    font-size: 16px;
+  }
+
+  .section-breadcrumb-link {
+    padding: $spacing-unit 0 1.2*$spacing-unit $spacing-unit;
+    a {
+      color: $gray-dark;
+      text-decoration: none;
+      &:hover {
+        color: $purple;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .section-breadcrumb-separator {
+    color: $gray;
+    padding: $spacing-unit 0 0 $spacing-unit;
+  }
+  .section-breadcrumb-title {
+    padding: $spacing-unit;
+    padding-bottom: 1.2*$spacing-unit;
+  }
+} 
