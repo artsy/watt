@@ -4,12 +4,12 @@ main.full-width {
 
 main, section {
   .page-title.bordered {
-    @extend .single-margin-bottom;
+    @extend .double-margin-bottom;
     border-bottom: 1px solid $gray;
   }
 
   .page-title {
-    @extend .single-padding;
+    @extend .double-padding;
     h2 {
       font-size:26px;
       line-height: 26px;
@@ -24,7 +24,7 @@ main, section {
     max-width: 798px;
   }
   .results-sorts {
-    @extend .single-margin;
+    @extend .double-margin;
   }
 
   .unit.bordered {
