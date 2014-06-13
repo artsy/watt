@@ -11,3 +11,14 @@
     color: $black;
   }
 }
+
+.grid-item-artwork-low-res {
+  display: none;
+}
+.grid-item {
+  &:nth-of-type(5n-2) {
+    .grid-item-artwork-low-res {
+      display: block;
+    }
+  }
+}
