@@ -13,4 +13,5 @@ gem 'nokogiri', '1.6.1'
 
 gem 'haml', '4.0.5'
 gem 'bootstrap-sass', '~> 3.0.3.0'
-gem 'bourbon', '~> 3.2.1'
+gem 'bourbon', '~> 3.2'
+gem 'neat', '~> 1.5.1'

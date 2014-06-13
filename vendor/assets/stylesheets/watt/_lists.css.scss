@@ -8,7 +8,7 @@
  *    counts : "Viewing 1-20 of 213"
  *    filters: dropdown or group of dropdowns
  *    sorting: "Sorted by: A-Z / Recently Updated"
- *    list-pager : "< Previous Page", "Page 1 of 11", "Next Page >"
+ *    list-pager : "< Previous", "1 2 3 ... 10 11 12", "Next >"
  */
 .list-group {
   margin-bottom: 30px;
@@ -28,10 +28,10 @@
   @extend .single-padding;
   @include transition(background-color 0.25s ease-in-out);
   align-self: auto;
-  border-bottom: 1px solid $gray;
+  border-bottom: 1px solid $base-border-color;
   display: block;
   &:first-of-type {
-    border-top: 1px solid $gray;
+    border-top: 1px solid $base-border-color;
   }
   &[href]:hover {
     background-color: $gray-lightest;
@@ -62,47 +62,77 @@
 .list-pager {
   @extend .double-margin;
   @extend .no-padding;
-  clear: both;
-  vertical-align: bottom;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
 }
 .list-pager-prev, .list-pager-next {
-  @include avant-garde();
-  @include transition(color 0.125s ease-in-out);
+  @include garamond();
+  @include transition(background-color 0.25s ease-in-out);
+  border: 1px solid $base-border-color;
   display: inline-block;
-  width: 24%;
+  line-height: 4*$spacing-unit;
+  padding: 0 1.5*$spacing-unit;
+  text-align: center;
+  white-space: nowrap;
   &:hover {
-    color: $purple;
+    background-color: $gray-lightest;
     text-decoration: none;
-    .icon-chevron-left::before,
-    .icon-chevron-right::before {
-      color: $purple;
+  }
+  .icon-chevron-left, .icon-chevron-right {
+    position: relative;
+    margin-left: -5px;
+    top: 2px;
+    &::before {
+      color: $gray;
     }
   }
-  .icon-chevron-left::before,
-  .icon-chevron-right::before {
-    @include transition(color 0.125s ease-in-out);
-    color: $gray-light;
-    // TODO: Fix this in the icon font
-    margin-left: -2px;
-  }
-  .icon-chevron-right::before {
+  .icon-chevron-right {
     margin-left: 0;
-    // TODO: Fix this in the icon font
-    margin-right: -2px;
+    margin-right: -5px;
   }
 }
-.list-pager-pages {
-  @include garamond();
-  display: inline-block;
-  font-size: 18px;
-  text-align: center;
-  width: 49%;
-  .hide-xs {
-    display: none;
-  }
+.list-pager-prev {
+  @include align-self(flex-start);
 }
 .list-pager-next {
-  text-align: right;
+  @include align-self(flex-end);
+}
+.list-pager-pages {
+  display: none;
+  @include media($screen-sm-min) {
+    @include garamond();
+    @include display(flex);
+    @include justify-content(space-between);
+    font-size: 18px;
+    text-align: center;
+    margin: 0 2*$spacing-unit;
+  }
+}
+a.list-pager-page-link {
+  @include transition(background-color 0.25s ease-in-out);
+  cursor: pointer;
+  display: inline-block;
+  line-height: 4*$spacing-unit;
+  margin: 0;
+  padding: 0 1.5*$spacing-unit;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    background-color: $gray-lightest;
+  }
+  &.is-active {
+    background-color: $black;
+    color: $white;
+    cursor: default;
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+.list-pager-ellipsis {
+  display: inline-block;
+  line-height: 4*$spacing-unit;
 }
 
 .list-controls {

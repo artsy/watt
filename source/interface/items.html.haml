@@ -36,37 +36,18 @@ title: Partner Engineering Style Guide
   .row
     .capped
       .col-md-12
-        .custom-pagination
-          .col-xs-4.text-left.previous-arrow
-            %a{ href: "/interface/item" }
-              %span.previous-arrow-icon.pull-left
-                &laquo;
-              %span.hidden-xs.pull-left
-                Previous Page
-          .col-xs-4.text-center
-            Page 1 of 3
-          .col-xs-4.text-right.next-arrow
-            %a{ href: "/interface/item" }
-              %span.next-arrow-icon.pull-right
-                &raquo;
-              %span.hidden-xs.pull-right
-                Next Page
-
-
-  // .row
-  //   .capped
-  //     .col-md-12
-  //       %ul.pagination
-  //         %li.disabled
-  //           %a{ href: "/interface/item" }
-  //             &laquo;
-  //         %li.active
-  //           %a{ href: "/interface/item" }
-  //             1
-  //         %li
-  //           %a{ href: "/interface/item" }
-  //             2
-  //         %li
-  //           %a{ href: "/interface/item" }
-  //             &raquo;
-
+        .list-pager
+          %a.list-pager-prev{ href: "/interface/item" }
+            %span.icon-chevron-left
+            %span Previous
+          .list-pager-pages
+            %a.list-pager-page-link 1
+            %a.list-pager-page-link.is-active 2
+            %a.list-pager-page-link 3
+            .list-pager-ellipsis &hellip;
+            %a.list-pager-page-link 10
+            %a.list-pager-page-link 11
+            %a.list-pager-page-link 12
+          %a.list-pager-next{ href: "/interface/item" }
+            %span Next
+            %span.icon-chevron-right
