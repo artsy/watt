@@ -48,6 +48,10 @@
     text-align: center;
     vertical-align: middle;
   }
+  @include media($screen-md-min) {
+    height: 210px;
+    width: 210px;
+  }
 }
 .grid-item-artwork-low-res {
   @include avant-garde();
