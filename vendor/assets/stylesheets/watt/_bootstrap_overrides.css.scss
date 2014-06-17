@@ -6,17 +6,6 @@ body {
     font-family: $sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .nav-tabs {
-    border-color: $gray;
-    font-size:12px;
-    text-transform: uppercase;
-    font-family: $sans-serif;
-    &.active {
-      border-color: $gray;
-    }
-    a {
-    }
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +15,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-tabs {
   @extend .double-margin-bottom;
+  border-color: $gray;
+  font-size:12px;
+  &.active {
+    border-color: $gray;
+  }
   > li {
     &:last-of-type {
       margin-right: 0;
@@ -113,16 +107,34 @@ header.navbar.navbar-inverse {
     display: block;
   }
 }
-@media (min-width:768px) {
+@media (min-width: $screen-sm-min) {
   .form-inline .form-group, .navbar-form .form-group {
     display: block;
   }
 }
+@media (max-width: $screen-sm-min) {
+  .nav-tabs {
+    border-bottom: none;
+    li.active {
+      > a {
+        border-bottom-color: $gray;
+      }
+    }
+    > li {
+      > a {
+        padding-top: 6px;
+        margin-bottom: $spacing-unit;
+        margin-right: $spacing-unit;
+        border-radius: $spacing-unit*2;
+      }
+    }
+  }
+}
+
 header.navbar li a {
   font-size: 12px;
 }
-
-@media (min-width:992px) {
+@media (min-width: $screen-md-min) {
   header.navbar li a {
     font-size: 13px;
   }
