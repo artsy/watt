@@ -63,6 +63,32 @@ title: Partner Engineering Style Guide
               %span.list-group-item-label Andy Warhol
             %span.icon-chevron-right
 
+        %h4 Lists of links with artworks
+        %p
+          These will get an artwork image in each item with 1/3 width of the row. The width of the image will be set to fill the container, and the width/height will remain the same ratio.
+        .list-group
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-image
+              %img{ src: "/images/hurricaneLXXXIV.png" }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-image
+              %img{ src: "/images/cliff.png" }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+              %span.list-group-item-info
+                Some extra information in an element classed <code>.list-group-item-info</code>
+                and child to <code>.list-group-item-content</code>.
+            %span.icon-chevron-right
+          %a.list-group-item{ href: '#' }
+            %span.list-group-item-image
+              %img{ src: "/images/trees_in_snow.png" }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.icon-chevron-right
+
         %h4 Lists of links with controls
         %p
           Lists controls are usually on top of a list. They can be organized

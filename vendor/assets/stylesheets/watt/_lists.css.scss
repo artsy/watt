@@ -39,6 +39,18 @@
   }
 }
 
+.list-group-item-image {
+  display: inline-block;
+  width: 33.33%;
+  min-height: 100px;
+  padding-right: 20px;
+  vertical-align: middle;
+  > img { width: 100%; }
+  + .list-group-item-content {
+    width: calc(66.66% - 34px);
+  }
+}
+
 .list-group-item-content {
   display: inline-block;
   vertical-align: middle;
