@@ -66,6 +66,11 @@
   @include align-items(center);
   @include justify-content(space-between);
 }
+
+.list-pager-disabled {
+  visibility: hidden;
+}
+
 .list-pager-prev, .list-pager-next {
   @include garamond();
   @include transition(background-color 0.25s ease-in-out);
