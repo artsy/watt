@@ -5,6 +5,10 @@ title: Partner Engineering Style Guide
   .container
     .row
       .col-md-12
+        .bordered.page-title
+          %h2 Breadcrumbs
+    .row
+      .col-md-12
         .section-breadcrumb.clearfix
           .section-breadcrumb-link
             %a{ href: "#" } Home
@@ -12,10 +16,14 @@ title: Partner Engineering Style Guide
           .section-breadcrumb-link
             %a{ href: "#" } Section
           .section-breadcrumb-separator.icon-chevron-right-large
+          .section-breadcrumb-link
+            %a{ href: "#" } And Another Section
+          .section-breadcrumb-separator.icon-chevron-right-large
+          .section-breadcrumb-link
+            %a{ href: "#" } Even More Sections
+          .section-breadcrumb-separator.icon-chevron-right-large
           .section-breadcrumb-title Active Section
 
-        .page-title
-          %h2 Breadcrumbs
         %pre
           :preserve
             .row
