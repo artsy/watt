@@ -2,19 +2,19 @@
   .unit { 
     @extend .single-padding;
   }
+  .fancybox-inner { padding-top: 40px; }
 }
 
 .fancybox-inner {
   h2 {
     @extend .single-padding-bottom;
     @extend .single-margin-bottom;
-    font-size:22px;
-    line-height: 22px;
+    font-size: 26px;
+    line-height: 26px;
     font-family:$serif;
     text-align:left;
     color:black;
     font-weight:normal;
-    border-bottom: 1px solid #CACACA;
   }
   .row {
     margin: 0;
@@ -22,25 +22,39 @@
       text-decoration: underline;
     }
   }
-  .close-modal {
-    float: right;
-    background-color: #fff;
-    width: 22px;
-    height: 22px;
-    float: right;
+  .modal {
+    height: 100%;
+    overflow: auto;
+  }
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 26px;
     padding: 0;
     margin: 0;
-    overflow:hidden;
+    z-index: 3;
     a {
-      background:#fff url('<%= asset_url 'watt/x-44x44.png' %>') top left no-repeat;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 22px;
-      height: 22px;
-      float: right;
-      text-indent:-999px;
+      @extend .with-icon;
+      @extend .icon-close;
+      color: black;
+      font-size: 26px;
+      text-decoration: none;
     }
   }
-
+  .modal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    z-index: 2;
+  }
+  .modal-content {
+    overflow: hidden;
+  }
+  .modal-footer {
+  }
 }
