@@ -25,22 +25,17 @@
   .close-modal {
     float: right;
     background-color: #fff;
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     float: right;
     padding: 0;
     margin: 0;
-    overflow:hidden;
     a {
-      background:#fff url('<%= asset_url 'watt/x-44x44.png' %>') top left no-repeat;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 22px;
-      height: 22px;
-      float: right;
-      text-indent:-999px;
+      @extend .with-icon;
+      @extend .icon-close;
+      color: black;
+      font-size: 30px;
+      text-decoration: none;
     }
   }
-
 }
