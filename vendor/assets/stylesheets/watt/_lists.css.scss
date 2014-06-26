@@ -18,18 +18,18 @@
   }
   .icon-chevron-right {
     color: $gray-light;
-    display: inline-block;
     margin-left: 10px;
-    vertical-align: middle;
+    @include flex(0 16px);
   }
 }
 
 .list-group-item {
   @extend .single-padding;
   @include transition(background-color 0.25s ease-in-out);
+  @include display(flex);
+  @include align-items(center);
   align-self: auto;
   border-bottom: 1px solid $base-border-color;
-  display: block;
   &:first-of-type {
     border-top: 1px solid $base-border-color;
   }
@@ -37,24 +37,36 @@
     background-color: $gray-lightest;
     text-decoration: none;
   }
+  @include media(max-width $screen-xs-max) {
+    flex-flow: row wrap;
+  }
 }
 
 .list-group-item-image {
-  display: inline-block;
-  width: 33.33%;
+  @include flex(1 0px);
   min-height: 100px;
-  padding-right: 20px;
-  vertical-align: middle;
   > img { width: 100%; }
   + .list-group-item-content {
-    width: calc(66.66% - 34px);
+    @include flex(2 0px);
+    padding-left: 20px;
   }
 }
 
 .list-group-item-content {
-  display: inline-block;
-  vertical-align: middle;
-  width: calc(100% - 30px);
+  @include flex(1 auto);
+}
+
+.list-group-item-actions {
+  @include flex(0 0 auto);
+  padding-left: 20px;
+  @include media(max-width $screen-xs-max) {
+    @include flex(0 100%);
+    padding: 10px 0 0;
+    > .btn {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .list-group-item-label {

@@ -63,6 +63,37 @@ title: Partner Engineering Style Guide
               %span.list-group-item-label Andy Warhol
             %span.icon-chevron-right
 
+        %h4 Lists of items with actions
+        %p
+          These will have action links/buttons at the right, and will be in separate rows when the screen is too small.
+        .list-group
+          .list-group-item
+            %span.list-group-item-image
+              %img{ src: "/images/trees_in_snow.png" }
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.list-group-item-actions
+              %a.btn.btn-primary.btn-small Add a artist
+          .list-group-item
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+              %span.list-group-item-info
+                Some extra information in an element classed <code>.list-group-item-info</code>
+                and child to <code>.list-group-item-content</code>.
+            %span.list-group-item-actions
+              %a.btn.btn-primary.btn-small Add a artist
+              %a.btn.btn-primary.btn-small Delete a artist
+          .list-group-item
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.list-group-item-actions
+              %a.btn.btn-primary.btn-small Add a artist
+          .list-group-item
+            %span.list-group-item-content
+              %span.list-group-item-label Andy Warhol
+            %span.list-group-item-actions
+              %a.btn.btn-primary.btn-small Add a artist
+
         %h4 Lists of links with artworks
         %p
           These will get an artwork image in each item with 1/3 width of the row. The width of the image will be set to fill the container, and the width/height will remain the same ratio.
