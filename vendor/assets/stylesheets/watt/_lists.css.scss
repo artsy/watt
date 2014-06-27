@@ -53,18 +53,30 @@
 }
 
 .list-group-item-content {
-  @include flex(1 auto);
+  @include flex(1 1px);
 }
 
 .list-group-item-actions {
   @include flex(0 0 auto);
+  @include garamond();
+  text-align: center;
   padding-left: 20px;
   @include media(max-width $screen-xs-max) {
     @include flex(0 100%);
     padding: 10px 0 0;
-    > .btn {
+    > .btn,
+    > .link {
       display: block;
       margin-bottom: 10px;
+      &:last-child { margin-bottom: 0; }
+    }
+    > .link.link-edit {
+      // Convert an edit link to button-like link on xs devices.
+      // Unable to @extend stuff in a media query. Manually add .btn styles.
+      background-color: $gray-lightest;
+      padding: 10px 20px;
+      text-align: center;
+      color: $black;
     }
   }
 }
