@@ -1,0 +1,12 @@
+.link,
+.link:visited {}
+
+.link.link-edit,
+.link.link-edit:visited {
+  font-weight: bold;
+  color: $gray;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
