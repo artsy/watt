@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-tabs {
-  @extend .double-margin-bottom;
+  margin-bottom: $spacing-unit*2;
   border-color: $gray;
   font-size:12px;
   &.active {
