@@ -11,6 +11,7 @@
 input[type="submit"].btn,
 input[type="submit"].btn:visited,
 .btn, .btn:visited {
+  position: relative;
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -53,6 +54,17 @@ input[type="submit"].btn:visited,
     border-color: $gray;
     text-decoration: none;
   }
+
+  &[data-state='loading'],
+  &.is-loading {
+    background-color: $gray;
+    color: transparent;
+    &:after {
+      content: '';
+      display: block;
+      @include spinner(25px, 6px, $black);
+    }
+  }
 }
 
 .btn:first-child { *margin-left: 0; }
@@ -71,6 +83,12 @@ a.btn.btn-disabled {
     background-color: lighten($black, 90%);
     border-color: lighten($black, 90%);
   }
+
+  &[data-state='loading'],
+  &.is-loading {
+    color: $white;
+    &:after { display: none; }
+  }
 }
 
 
@@ -88,6 +106,17 @@ a.btn.btn-primary,
     border-color: $purple;
     color: $white;
   }
+
+  &[data-state='loading'],
+  &.is-loading {
+    background-color: $purple;
+    color: transparent;
+    &:after {
+      content: '';
+      display: block;
+      @include spinner(25px, 6px, white);
+    }
+  }
 }
 
 
@@ -96,12 +125,22 @@ a.btn.btn-primary,
 input[type="submit"].btn.btn-secondary,
 a.btn.btn-secondary,
 .btn-secondary:visited {
+  background-color: $white;
+  border-color: $gray;
+  &:hover {
     background-color: $white;
-    border-color: $gray;
-    &:hover {
-      background-color: $white;
-      color: $purple;
+    color: $purple;
+  }
+
+  &[data-state='loading'],
+  &.is-loading {
+    color: transparent;
+    &:after {
+      content: '';
+      display: block;
+      @include spinner(25px, 6px, $purple);
     }
+  }
 }
 
 
@@ -117,6 +156,16 @@ a.btn.btn-delete,
   &:hover {
     background-color: $white;
     color: $purple;
+  }
+
+  &[data-state='loading'],
+  &.is-loading {
+    color: transparent;
+    &:after {
+      content: '';
+      display: block;
+      @include spinner(25px, 6px, $red);
+    }
   }
 }
 
@@ -148,31 +197,56 @@ a.btn.btn-secondary-add,
     background-color: $yellow;
     border-color: $yellow;
   }
+
+  &[data-state='loading'],
+  &.is-loading {
+    background-color: $yellow;
+    color: transparent;
+    &:after {
+      content: '';
+      display: block;
+      @include spinner(25px, 6px, $black);
+    }
+  }
 }
 
 
 // sizes
-input[type="submit"].btn-small,
-input[type="submit"].btn-small:visited,
-.btn-small, .btn-small:visited {
+input[type="submit"].btn.btn-small,
+input[type="submit"].btn.btn-small:visited,
+a.btn.btn-small, a.btn.btn-small:visited {
   padding: 10px 20px 8px;
   font-size: 11px;
   line-height: 11px;
   border-width: 1px;
+
+  &[data-state='loading'],
+  &.is-loading {
+    &:after {
+      @include spinner(16px, 4px);
+    }
+  }
 }
 
-input[type="submit"].btn-tiny,
-input[type="submit"].btn-tiny:visited,
-.btn-tiny, .btn-tiny:visited {
+input[type="submit"].btn.btn-tiny,
+input[type="submit"].btn.btn-tiny:visited,
+a.btn.btn-tiny, a.btn.btn-tiny:visited {
   padding: 6px 12px 5px;
   font-size: 11px;
   line-height: 11px;
   border-width: 1px;
+
+  &[data-state='loading'],
+  &.is-loading {
+    &:after {
+      @include spinner(10px, 3px);
+    }
+  }
 }
 
-input[type="submit"].btn-full-width,
-input[type="submit"].btn-full-width:visited,
-.btn.btn-full-width {
+input[type="submit"].btn.btn-full-width,
+input[type="submit"].btn.btn-full-width:visited,
+a.btn.btn-full-width {
   width: 100%;
   display: block;
 }
