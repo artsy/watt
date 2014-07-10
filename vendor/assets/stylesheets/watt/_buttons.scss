@@ -55,7 +55,7 @@ input[type="submit"].btn:visited,
     text-decoration: none;
   }
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     background-color: $gray;
     color: transparent;
@@ -84,7 +84,7 @@ a.btn.btn-disabled {
     border-color: lighten($black, 90%);
   }
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     color: $white;
     &:after { display: none; }
@@ -107,7 +107,7 @@ a.btn.btn-primary,
     color: $white;
   }
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     background-color: $purple;
     color: transparent;
@@ -132,7 +132,7 @@ a.btn.btn-secondary,
     color: $purple;
   }
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     color: transparent;
     &:after {
@@ -158,7 +158,7 @@ a.btn.btn-delete,
     color: $purple;
   }
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     color: transparent;
     &:after {
@@ -198,7 +198,7 @@ a.btn.btn-secondary-add,
     border-color: $yellow;
   }
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     background-color: $yellow;
     color: transparent;
@@ -220,7 +220,7 @@ a.btn.btn-small, a.btn.btn-small:visited {
   line-height: 11px;
   border-width: 1px;
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     &:after {
       @include spinner(16px, 4px);
@@ -236,7 +236,7 @@ a.btn.btn-tiny, a.btn.btn-tiny:visited {
   line-height: 11px;
   border-width: 1px;
 
-  &[data-stete='loading'],
+  &[data-state='loading'],
   &.is-loading {
     &:after {
       @include spinner(10px, 3px);
