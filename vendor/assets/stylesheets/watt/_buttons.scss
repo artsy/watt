@@ -73,6 +73,7 @@ input[type="submit"].btn:visited,
 // disabled
 
 input[type="submit"].btn.btn-disabled,
+button.btn.btn-disabled,
 a.btn.btn-disabled {
   background-color: lighten($black, 90%);
   border-color: lighten($black, 90%);
@@ -95,6 +96,7 @@ a.btn.btn-disabled {
 // primary
 
 input[type="submit"].btn.btn-primary,
+button.btn.btn-primary,
 a.btn.btn-primary,
 .btn-primary:visited {
   background-color: $black;
@@ -123,6 +125,7 @@ a.btn.btn-primary,
 // secondary
 
 input[type="submit"].btn.btn-secondary,
+button.btn.btn-secondary,
 a.btn.btn-secondary,
 .btn-secondary:visited {
   background-color: $white;
@@ -147,6 +150,7 @@ a.btn.btn-secondary,
 // delete
 
 input[type="submit"].btn.btn-delete,
+button.btn.btn-delete,
 a.btn.btn-delete,
 .btn-delete:visited {
   background-color: $white;
@@ -173,6 +177,7 @@ a.btn.btn-delete,
 // add
 
 input[type="submit"].btn.btn-add,
+button.btn.btn-add,
 a.btn.btn-add,
 .btn-add:visited {
   &:before
@@ -187,6 +192,7 @@ a.btn.btn-add,
 // secondary-add
 
 input[type="submit"].btn.btn-secondary-add,
+button.btn.btn-secondary-add,
 a.btn.btn-secondary-add,
 .btn-secondary-add:visited {
   background-color: $yellow-light;
@@ -214,6 +220,7 @@ a.btn.btn-secondary-add,
 // sizes
 input[type="submit"].btn.btn-small,
 input[type="submit"].btn.btn-small:visited,
+button.btn.btn-small, button.btn.btn-small:visited {
 a.btn.btn-small, a.btn.btn-small:visited {
   padding: 10px 20px 8px;
   font-size: 11px;
@@ -230,6 +237,7 @@ a.btn.btn-small, a.btn.btn-small:visited {
 
 input[type="submit"].btn.btn-tiny,
 input[type="submit"].btn.btn-tiny:visited,
+button.btn.btn-tiny, button.btn.btn-tiny:visited,
 a.btn.btn-tiny, a.btn.btn-tiny:visited {
   padding: 6px 12px 5px;
   font-size: 11px;
@@ -246,6 +254,7 @@ a.btn.btn-tiny, a.btn.btn-tiny:visited {
 
 input[type="submit"].btn.btn-full-width,
 input[type="submit"].btn.btn-full-width:visited,
+button.btn.btn-full-width,
 a.btn.btn-full-width {
   width: 100%;
   display: block;
