@@ -1,0 +1,66 @@
+.toggle-label {
+  display: inline-block;
+  margin-left: 10px;
+  &:hover {
+    color: $purple;
+    cursor: pointer;
+  }
+}
+
+.toggle {
+  @include avant-garde();
+  background-color: white;
+  border: 2px solid $gray-lighter;
+  border-radius: 15px;
+  color: $gray;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 17px;
+  text-decoration: none;
+  transition: 'color, border-color' 0.2s;
+  width: 58px;
+  &:focus, &:hover {
+    @extend .toggle-label;
+    color: $purple;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+  &::after {
+    content: attr(data-state);
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-left: 0;
+    position: relative;
+    transition: margin-left 0.2s;
+    top: -2px;
+    width: 20px;
+  }
+  .toggle-dot {
+    display: inline;
+    font-size: 30px;
+    left: 2px;
+    position: relative;
+    top: 4px;
+    transition: left 0.2s;
+    &::after {
+      content: "\25CF";
+    }
+  }
+  &[data-state='on'],
+  &[data-state='yes'] {
+    background-color: $purple;
+    border-color: $purple;
+    .toggle-dot {
+      color: white;
+      left: 33px;
+    }
+    &::after {
+      color: white;
+      content: attr(data-state);
+      margin-left: -15px;
+    }
+  }
+}
