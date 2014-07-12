@@ -26,7 +26,7 @@
         })();
       //]]>
   %body#rotation-app{ class: "interface_layout #{page_classes}" }
-    %header.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
+    %header.navbar.navbar-default.navbar-fixed-top.navbar-inverse{role: 'navigation'}
       .navbar-header
         %button.navbar-toggle{data: {target: '.navbar-collapse', toggle: 'collapse'}, type: 'button'}
           %span.sr-only
@@ -39,7 +39,7 @@
         %form#navbar-search.navbar-form.navbar-left{ role: "Search" }
           .form-group
             %input{ type: "text", class: "form-control", placeholder: "Search" }
-        %ul.nav.navbar-nav.hidden-md.hidden-lg
+        %ul.nav.navbar-nav.hidden-lg.hidden-md.hidden-sm
           - ['dashboard','artists','inventory','shows','orders'].each do |nav_item|
             %li{class: ( 'active' if nav_item.include? 'artists' ) }
               %a{ href: "/interface/items"}
