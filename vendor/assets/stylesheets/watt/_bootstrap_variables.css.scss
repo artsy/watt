@@ -50,8 +50,10 @@ $input-border-focus: $purple;
 $input-color-placeholder: $gray-light;
 
 // Tabs
-$nav-tabs-border-color: #DDD;
-$nav-tabs-link-hover-border-color: #DDD;
-$nav-tabs-active-link-hover-color: #000;
-$nav-tabs-active-link-hover-bg: #FFF;
-$nav-tabs-justified-link-border-color: #DDD;
+$nav-tabs-border-color: $gray;
+$nav-tabs-link-hover-border-color: $gray;
+$nav-tabs-active-link-hover-bg: $white;
+$nav-tabs-active-link-hover-color: $black;
+$nav-tabs-active-link-hover-border-color: $gray;
+$nav-tabs-justified-link-border-color: $gray;
+$nav-tabs-justified-active-link-border-color: $gray;
