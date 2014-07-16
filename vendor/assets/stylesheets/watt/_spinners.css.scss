@@ -3,11 +3,11 @@
 //
 
 .loading-spinner {
-  @include spinner(25px, 6px);
+  @include spinner(25px, 6px, black);
 }
 
 .loading-spinner-small {
-  @include spinner(20px, 4px);
+  @include spinner(20px, 4px, black);
 }
 
 .loading-spinner-white {
