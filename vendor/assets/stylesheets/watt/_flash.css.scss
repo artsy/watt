@@ -1,0 +1,119 @@
+.flash-wrap {
+  @include transition(opacity 0.2s ease-in-out 0.2s);
+  cursor: pointer;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  &[data-state='closed'] {
+    opacity: 0;
+  }
+  &[data-state='open'] {
+    opacity: 1;
+  }
+  .flash-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    a {
+      @extend .with-icon;
+      @extend .icon-close;
+      text-decoration: none;
+    }
+  }
+}
+
+.flash-form {
+  .flash-wrap {
+    @include garamond();
+    @extend .double-margin-bottom;
+    position: relative;
+    .flash-contents {
+      font-size: 16px;
+      padding: 10px;
+      text-transform: none;
+    }
+    .flash-close {
+      width: 20px;
+      height: 20px;
+      a {
+        color: $white;
+        font-size: 20px;
+      }
+    }
+  }
+  .flash-wrap.flash-notice {
+    background-color: rgba($purple, 0.90);
+  }
+  .flash-wrap.flash-error {
+    background-color: rgba($red, 0.90);
+  }
+}
+
+.flash-async {
+  .flash-wrap {
+    @include garamond();
+    position: fixed;
+    min-height: 40px;
+    width: 320px;
+    right: 10px;
+    text-align: left;
+    top: 66px;
+    z-index: 998;
+    .flash-contents {
+      font-size: 16px;
+      max-width: 260px;
+      padding: 10px;
+      text-transform: none;
+    }
+    .flash-close {
+      width: 20px;
+      height: 20px;
+      z-index: 999;
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+  .flash-wrap.flash-notice {
+    background-color: rgba($purple, 0.90);
+  }
+  .flash-wrap.flash-error {
+    background-color: rgba($red, 0.90);
+  }
+}
+
+.flash-fullscreen {
+  .flash-wrap {
+    @include avant-garde();
+    background-color: rgba($black, 0.80);
+    bottom: 0;
+    font-size: 18px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 1050;
+    > .flash-contents {
+      left: 0%;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      width: 100%;
+    }
+    .flash-close {
+      width: 26px;
+      height: 26px;
+      a {
+        font-size: 26px;
+      }
+    }
+  }
+  .flash-wrap.flash-error .flash-contents a {
+    color: rgba($red, 0.90);
+  }
+}

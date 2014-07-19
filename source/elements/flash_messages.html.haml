@@ -1,0 +1,173 @@
+---
+title: Partner Engineering Style Guide
+---
+#content-wrap
+  .container
+    .row
+      .col-md-10
+        .page-title.bordered
+          %h2 Flash messages
+
+        %p This flash messages system has three different modes: Form, Fullscreen and Async.
+        %ul
+          %li <code>.flash-form</code> messages&mdash;typically used in/near forms.
+          %li <code>.flash-fullscreen</code> messages&mdash;used generally when the action is not "form-based" (successfully reordering contacts; selecting a featured show) or when the user is deleting a record.
+          %li <code>.flash-async</code> messages&mdash;used when providing notifications outside of the typical request/response cycle.
+
+        %p Each mode has two versions <code>.flash-notice</code> and <code>.flash-error</code>.
+
+        .unit.bordered.double-padding-top
+          %h4.single-padding-bottom Form notice
+
+          %a{ href: "#", class: "btn btn-primary btn-small flash-demo", data: { target: '.demo-notice-form' } }
+            Display message
+
+          .demo-notice-form.hidden
+            .flash-form
+              .flash-wrap{ class: 'flash-notice', data: { state: 'open' } }
+                .flash-close
+                  %a
+                .flash-contents
+                  %a
+                    Messages go here.
+
+          .unit.double-padding-top
+            %pre
+              :preserve
+                .flash-form
+                  .flash-wrap{ class: 'flash-notice', data: { state: 'open' } }
+                    .flash-close
+                      %a
+                    .flash-contents
+                      %a
+                        Messages go here.
+
+        .unit.bordered.double-padding-top
+          %h4.single-padding-bottom Form error
+
+          %a{ href: "#", class: "btn btn-primary btn-small flash-demo", data: { target: '.demo-error-form' } }
+            Display message
+
+          .demo-error-form.hidden
+            .flash-form
+              .flash-wrap{ class: 'flash-error', data: { state: 'open' } }
+                .flash-close
+                  %a
+                .flash-contents
+                  %a
+                    Messages go here.
+
+          .unit.double-padding-top
+            %pre
+              :preserve
+                .flash-form
+                  .flash-wrap{ class: 'flash-error', data: { state: 'open' } }
+                    .flash-close
+                      %a
+                    .flash-contents
+                      %a
+                        Messages go here.
+
+        .unit.bordered.double-padding-top
+          %h4.single-padding-bottom Fullscreen Notice
+
+          %a{ href: "#", class: "btn btn-primary btn-small flash-demo", data: { target: '.demo-notice-fullscreen' } }
+            Display message
+
+          .demo-notice-fullscreen.hidden
+            .flash-fullscreen
+              .flash-wrap{ class: 'flash-notice', data: { state: 'open' } }
+                .flash-close
+                  %a
+                .flash-contents
+                  %a
+                    Messages go here.
+
+          .unit.double-padding-top
+            %pre
+              :preserve
+                .flash-fullscreen
+                  .flash-wrap{ class: 'flash-notice', data: { state: 'open' } }
+                    .flash-close
+                      %a
+                    .flash-contents
+                      %a
+                        Messages go here.
+
+        .unit.bordered.double-padding-top
+          %h4.single-padding-bottom Fullscreen Error
+
+          %a{ href: "#", class: "btn btn-primary btn-small flash-demo", data: { target: '.demo-error-fullscreen' } }
+            Display message
+
+          .demo-error-fullscreen.hidden
+            .flash-fullscreen
+              .flash-wrap{ class: 'flash-error', data: { state: 'open' } }
+                .flash-close
+                  %a
+                .flash-contents
+                  %a
+                    Messages go here.
+
+          .unit.double-padding-top
+            %pre
+              :preserve
+                .flash-fullscreen
+                  .flash-wrap{ class: 'flash-error', data: { state: 'open' } }
+                    .flash-close
+                      %a
+                    .flash-contents
+                      %a
+                        Messages go here.
+
+        .unit.bordered.double-padding-top
+          %h4.single-padding-bottom Async notice
+
+          %a{ href: "#", class: "btn btn-primary btn-small flash-demo", data: { target: '.demo-notice-async' } }
+            Display message
+
+          .demo-notice-async.hidden
+            .flash-async.demo-notice-async.hidden
+              .flash-wrap{ class: 'flash-notice', data: { state: 'open' } }
+                .flash-close
+                  %a
+                .flash-contents
+                  %a
+                    Messages go here.
+
+          .unit.double-padding-top
+            %pre
+              :preserve
+                .flash-form
+                  .flash-wrap{ class: 'flash-notice', data: { state: 'open' } }
+                    .flash-close
+                      %a
+                    .flash-contents
+                      %a
+                        Messages go here.
+
+        .unit.bordered.double-padding-top
+          %h4.single-padding-bottom Async error
+
+          %a{ href: "#", class: "btn btn-primary btn-small flash-demo", data: { target: '.demo-error-async' } }
+            Display message
+
+          .demo-error-async.hidden
+            .flash-async
+              .flash-wrap{ class: 'flash-error', data: { state: 'open' } }
+                .flash-close
+                  %a
+                .flash-contents
+                  %a
+                    Messages go here.
+
+          .unit.double-padding-top
+            %pre
+              :preserve
+                .flash-form
+                  .flash-wrap{ class: 'flash-error', data: { state: 'open' } }
+                    .flash-close
+                      %a
+                    .flash-contents
+                      %a
+                        Messages go here.
