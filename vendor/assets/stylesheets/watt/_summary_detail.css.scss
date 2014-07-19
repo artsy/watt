@@ -1,0 +1,40 @@
+.summary-detail-cover-image img {
+  @extend .half-padding-bottom;
+  width: 100%;
+}
+.summary-detail-help a {
+  @extend .single-margin-top;
+  @extend .single-padding-top;
+  @extend .single-padding-bottom;
+  background-color: $gray-lightest;
+  border-top: 1px solid $gray;
+  color: $gray-darker;
+  display: block;
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+  text-decoration: none;
+  &:hover {
+    background-color: $purple;
+    color: $white;
+  }
+}
+.summary-detail {
+  @extend .single-margin-top;
+  @extend .single-padding-top;
+  border-top: 1px solid $gray;
+  &:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border: none;
+  }
+  .summary-detail-label {
+    @include avant-garde();
+    font-size: 12px;
+  }
+  .summary-detail-action {
+    @extend .half-padding-bottom;
+  }
+  .summary-detail-notice {
+    color: $gray-darker;
+  }
+}

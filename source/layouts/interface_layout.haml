@@ -44,16 +44,7 @@
             %li{class: ( 'active' if nav_item.include? 'artists' ) }
               %a{ href: "/interface/items"}
                 = nav_item
-        %ul.nav.navbar-nav.navbar-right
-          %li.dropdown
-            %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'} }
-              Another Gallery <b class="caret"></b>
-            %ul.dropdown-menu
-              %li
-                %a{href: '/interface'} Interface
-              %li
-                %a{href: '/elements'} Elements
-        %ul.nav.navbar-nav
+        = partial "layouts/nav"
 
     #interface-wrap
       %section#sidebar

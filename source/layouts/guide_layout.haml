@@ -26,7 +26,7 @@
         })();
       //]]>
   %body#rotation-app{ class: "#{page_classes}", data: { spy: "scroll", target: "#section-nav", offset: 70 } }
-    %header.navbar.navbar-inverse.navbar-fixed-top{role: 'navigation'}
+    %header.navbar.navbar-default.navbar-fixed-top.navbar-inverse{role: 'navigation'}
       .navbar-header
         %button.navbar-toggle{data: {target: '.navbar-collapse', toggle: 'collapse'}, type: 'button'}
           %span.sr-only
@@ -36,34 +36,8 @@
           %span.icon-bar
         %a.navbar-brand{href: '/'}
       .navbar-collapse.collapse
-        %ul.nav.navbar-nav.navbar-right
-          %li.dropdown
-            %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'} }
-              Style Guide <b class="caret"></b>
-            %ul.dropdown-menu
-              %li
-                %a{href: '/interface'} Interface
-              %li
-                %a{href: '/elements'} Elements
+        = partial "layouts/nav"
         %ul.nav.navbar-nav
-          %li{class: ( 'active' if current_page.path.include? 'index' ) }
-            %a{href: '/elements'} Index
-          %li{class: ( 'active' if current_page.path.include? 'typography' ) }
-            %a{href: '/elements/typography'} Typography
-          %li{class: ( 'active' if current_page.path.include? 'colors' ) }
-            %a{href: '/elements/colors'} Colors
-          %li{class: ( 'active' if current_page.path.include? 'buttons' ) }
-            %a{href: '/elements/buttons'} Buttons
-          %li{class: ( 'active' if current_page.path.include? 'forms' ) }
-            %a{href: '/elements/forms'} Forms
-          %li{class: ( 'active' if current_page.path.include? 'panels' ) }
-            %a{href: '/elements/panels'} Panels
-          %li{class: ( 'active' if current_page.path.include? 'lists' ) }
-            %a{href: '/elements/lists'} Lists
-          %li{class: ( 'active' if current_page.path.include? 'section_headers' ) }
-            %a{href: '/elements/section_headers'} Section Headers
-          %li{class: ( 'active' if current_page.path.include? 'breadcrumbs' ) }
-            %a{href: '/elements/breadcrumbs'} Breadcrumbs
 
     %main.container.full-width
       = yield

@@ -19,7 +19,6 @@ page '/interface/index.html', layout: :interface_layout
 page '/interface/items.html', layout: :interface_layout
 page '/interface/item.html', layout: :interface_layout
 page '/interface/form.html', layout: :interface_layout
-page '/interface/title_link.html', layout: :interface_layout
 
 # elements
 page '/elements/index.html', layout: :guide_layout
@@ -31,6 +30,7 @@ page '/elements/panels.html', layout: :guide_layout
 page '/elements/lists.html', layout: :guide_layout
 page '/elements/section_headers.html', layout: :guide_layout
 page '/elements/breadcrumbs.html', layout: :guide_layout
+page '/elements/flash_messages.html', layout: :guide_layout
 
 ###
 # Page options, layouts, aliases and proxies
@@ -109,6 +109,6 @@ end
 
 helpers do
   def current_version
-    File.readlines("lib/artsy/watt/version.rb")[5]
+    File.readlines('lib/artsy/watt/version.rb')[5]
   end
 end
