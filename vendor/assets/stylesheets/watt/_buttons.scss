@@ -79,6 +79,7 @@ a.btn.btn-disabled {
   background-color: lighten($black, 90%);
   border-color: lighten($black, 90%);
   color: $white;
+  cursor: default;
 
   &:hover, &:visited {
     background-color: $white;
