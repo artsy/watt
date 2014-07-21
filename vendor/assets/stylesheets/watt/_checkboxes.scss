@@ -1,19 +1,22 @@
 .artsy-checkbox {
-  background: $gray-lighter;
+  //background: $gray-lighter;
   display: inline-block;
   height: 20px;
   position: relative;
   user-select: none;
   width: 20px;
   label {
+    border: 2px solid $gray-lighter;
     background-color: $white;
     bottom: 2px;
     cursor: pointer;
+    height: 20px;
     left: 2px;
     margin-bottom: 0;
     position: absolute;
     right: 2px;
     top: 2px;
+    width: 20px;
     // Text label
     &:before {
       @include garamond();
@@ -40,12 +43,25 @@
       @include transition(opacity 0.25s);
       top: 3px;
     }
-    &:hover::after {
-      opacity: 0.1;
+    &:hover {
+      border-color: $purple;
+      &::after {
+        opacity: 0.1;
+      }
     }
   }
   input[type='checkbox'] {
-    visibility: hidden;
+    // keep this *sort of* visible so that users can tab / select
+    opacity: 0.1;
+    &:focus {
+      outline: none;
+      & + label {
+        border-color: $purple;
+        &:after {
+          opacity: 0.1;
+        }
+      }
+    }
     &:checked + label:after {
       opacity: 1;
     }
