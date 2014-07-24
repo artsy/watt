@@ -2,8 +2,8 @@ ul.ui-autocomplete {
   list-style: none;
   padding: 0;
   border: solid 1px #ccc;
+  border-top: none;
   cursor: default;
-  max-width:300px;
   -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
   -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
@@ -11,15 +11,16 @@ ul.ui-autocomplete {
     background-color: #FFF;
     border-top: solid 1px #ccc;
     margin: 0;
-    padding: 0;
     a {
       font-size: 16px;
       color: #000;
       display: block;
-      padding: 6px;
+      padding: 6px 13px;
+      &:hover { text-decoration: none; }
     }
-    a.ui-state-hover, a.ui-state-active {
-      background-color: #FFFCB2;
+    a.ui-state-hover, a.ui-state-focus {
+      background-color: $purple;
+      color: $white;
     }
   }
   li:hover {
