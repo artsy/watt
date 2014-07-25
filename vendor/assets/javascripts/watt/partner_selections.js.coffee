@@ -1,11 +1,16 @@
 $ ->
-  if $('#partner_search').length != 0
-    $('#partner_search').autocomplete(
+  updateSelectionsForm = (selection) ->
+    $( "#partner_selections_form #partner_id" ).val( selection.id )
+    $( "#partner_selections_form #partner_search" ).val( selection.name )
+
+  if $('#partner_selections_form').length != 0
+    $('#partner_selections_form #partner_search').autocomplete(
       source: "/partner_selections/match"
-      select: (event,ui) ->
-        $( "#partner_id" ).val( ui.item.id )
+      focus: (event, ui) ->
+        updateSelectionsForm(ui.item)
+        false
+      select: (event, ui) ->
+        updateSelectionsForm(ui.item)
         $('#partner_selections_form').submit()
-      ).data("ui-autocomplete")._renderItem = (ul, item) =>
-         $("<li><a>#{item.name}</a></li>")
-         .data("item.autocomplete", item)
-         .appendTo ul
+        false
+    )
