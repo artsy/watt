@@ -178,6 +178,9 @@ a.list-pager-page-link {
 
 .list-controls {
   @include clearfix();
+  & + .list-group:empty {
+    display: none;
+  }
 }
 
 .list-controls-row {
@@ -203,4 +206,15 @@ a.list-pager-page-link {
     color: $purple;
     text-decoration: underline;
   }
+}
+
+.list-group-empty-message {
+  display: none;
+}
+.list-group:empty + .list-group-empty-message {
+  @include avant-garde();
+  display: block;
+  padding: 100px 0;
+  text-align: center;
+  width: 100%;
 }
