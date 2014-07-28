@@ -178,9 +178,6 @@ a.list-pager-page-link {
 
 .list-controls {
   @include clearfix();
-  & + .list-group:empty {
-    display: none;
-  }
 }
 
 .list-controls-row {
