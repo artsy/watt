@@ -204,3 +204,14 @@ a.list-pager-page-link {
     text-decoration: underline;
   }
 }
+
+.list-group-empty-message {
+  display: none;
+}
+.list-group:empty + .list-group-empty-message {
+  @include avant-garde();
+  display: block;
+  padding: 100px 0;
+  text-align: center;
+  width: 100%;
+}

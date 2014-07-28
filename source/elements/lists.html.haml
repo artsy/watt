@@ -164,3 +164,28 @@ title: Partner Engineering Style Guide
             %span.list-group-item-content
               %span.list-group-item-label Andy Warhol
             %span.icon-chevron-right
+
+        .page-title.bordered
+          %h2 Empty Lists
+        %p
+          Sometimes lists are full. Sometimes lists are empty.
+          Add a <code>.list-group-empty-message</code> element as a sibling to
+          <code>.list-group</code> and CSS will take care of the rest.
+        %p
+          Note that <code>.list-controls</code> need to be hidden in view logic,
+          CSS can't go up the DOM tree.  &nbsp;&nbsp;: (
+        %pre
+          :preserve
+            .list-group 
+              <b># Note the emptiness!</b>
+            .list-group-empty-message
+              No list items here!
+              %p
+                .btn.btn-add.btn-full-width Add a List Item
+
+        %br
+        .list-group
+        .list-group-empty-message
+          No list items here!
+          %p
+            .btn.btn-add.btn-full-width Add a List Item
