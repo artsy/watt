@@ -178,14 +178,21 @@ title: Partner Engineering Style Guide
           :preserve
             .list-group 
               <b># Note the emptiness!</b>
-            .list-group-empty-message
-              No list items here!
-              %p
-                .btn.btn-add.btn-full-width Add a List Item
+            .list-group-empty-message[-bordered]
+              This show contains no documents.
 
+        %p For a single <code>list-group</code> on the page, use <code>list-group-empty-message</code>.
         %br
         .list-group
         .list-group-empty-message
-          No list items here!
-          %p
-            .btn.btn-add.btn-full-width Add a List Item
+          This show contains no documents.
+
+        %br
+        %p For one of many <code>list-group</code> sections use <code>list-group-emtpy-message-bordered</code>.
+        .clearfix.section-header
+          %h3 Press and Documents
+          .section-actions
+            %a.btn.btn-primary.btn-small.btn-add{ href: "" } Add a Document
+        .list-group
+        .list-group-empty-message-bordered
+          This show contains no documents.
