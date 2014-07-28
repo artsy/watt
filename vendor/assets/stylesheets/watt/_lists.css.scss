@@ -205,13 +205,24 @@ a.list-pager-page-link {
   }
 }
 
-.list-group-empty-message {
+// Empty list messages
+.list-group:empty,
+.list-group-empty-message,
+.list-group-empty-message-bordered {
   display: none;
 }
-.list-group:empty + .list-group-empty-message {
-  @include avant-garde();
+.list-group:empty + .list-group-empty-message,
+.list-group:empty + .list-group-empty-message-bordered {
+  @include garamond();
   display: block;
+  font-style: italic;
+}
+.list-group:empty + .list-group-empty-message {
+  font-size: 18px;
   padding: 100px 0;
   text-align: center;
-  width: 100%;
+}
+.list-group-empty-message-bordered {
+  border-bottom: 1px solid $base-border-color;
+  padding: 15px 10px;
 }
