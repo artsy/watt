@@ -98,24 +98,25 @@
 .list-pager {
   @extend .double-margin;
   @extend .no-padding;
-  @include display(flex);
   @include align-items(center);
   @include justify-content(space-between);
 }
 
 .list-pager-disabled {
-  visibility: hidden;
+  display: none;
+}
+
+.list-pager-prev, .list-pager-next, .list-pager-pages {
+  @include garamond();
+  @include transition(background-color 0.25s ease-in-out);
+  border: 2px solid $base-border-color;
+  float: left;
+  padding: $spacing-unit 1.5*$spacing-unit 0.5*$spacing-unit;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .list-pager-prev, .list-pager-next {
-  @include garamond();
-  @include transition(background-color 0.25s ease-in-out);
-  border: 1px solid $base-border-color;
-  display: inline-block;
-  line-height: 4*$spacing-unit;
-  padding: 0 1.5*$spacing-unit;
-  text-align: center;
-  white-space: nowrap;
   &:hover {
     background-color: $gray-lightest;
     text-decoration: none;
@@ -133,47 +134,39 @@
     margin-right: -5px;
   }
 }
+
 .list-pager-prev {
-  @include align-self(flex-start);
+  margin: 0 2*$spacing-unit 0 0;
 }
-.list-pager-next {
-  @include align-self(flex-end);
-}
+
 .list-pager-pages {
   display: none;
   @include media($screen-sm-min) {
-    @include garamond();
-    @include display(flex);
-    @include justify-content(space-between);
-    font-size: 18px;
-    text-align: center;
-    margin: 0 2*$spacing-unit;
+    display: block;
+    margin: 0 2*$spacing-unit 0 0;
+    padding: 0;
   }
 }
 a.list-pager-page-link {
+  @include garamond();
   @include transition(background-color 0.25s ease-in-out);
-  cursor: pointer;
-  display: inline-block;
-  line-height: 4*$spacing-unit;
-  margin: 0;
-  padding: 0 1.5*$spacing-unit;
+  border-left: 1px solid $gray-lightest;
+  float: left;
+  padding: $spacing-unit 1.5*$spacing-unit 0.5*$spacing-unit;
   text-align: center;
-  text-decoration: none;
+  white-space: nowrap;
+  &:first-of-type {
+    border: none;
+  }
   &:hover {
     background-color: $gray-lightest;
+    text-decoration: none;
   }
   &.is-active {
-    background-color: $black;
-    color: $white;
+    background-color: $gray-lightest;
+    color: $black;
     cursor: default;
-    &:hover {
-      background-color: $black;
-    }
   }
-}
-.list-pager-ellipsis {
-  display: inline-block;
-  line-height: 4*$spacing-unit;
 }
 
 .list-controls {
