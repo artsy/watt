@@ -57,3 +57,15 @@ $nav-tabs-active-link-hover-color: $black;
 $nav-tabs-active-link-hover-border-color: $gray;
 $nav-tabs-justified-link-border-color: $gray;
 $nav-tabs-justified-active-link-border-color: $gray;
+
+// Popovers
+$popover-bg: $white;
+$popover-max-width: 180px;
+$popover-border-color: $gray;
+$popover-fallback-border-color: $gray;
+$popover-title-bg: $gray-lightest;
+$popover-arrow-width: $spacing-unit;
+$popover-arrow-color: $white;
+$popover-arrow-outer-width: ($popover-arrow-width + 1);
+$popover-arrow-outer-color: $popover-border-color;
+$popover-arrow-outer-fallback-color: $popover-border-color;

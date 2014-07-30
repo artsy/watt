@@ -9,26 +9,27 @@ main, section {
   }
 
   .page-title {
-    @extend .double-padding;
+    @extend .single-padding-bottom;
     h2 {
-      font-size:26px;
+      font-size: 26px;
       line-height: 26px;
-      font-family:$serif;
-      text-align:left;
-      color:black;
-      font-weight:normal;
+      font-family: $serif;
+      text-align: left;
+      color: black;
+      font-weight: normal;
     }
   }
 
   .capped {
-    max-width: 798px;
+    max-width: 1400px;
   }
+
   .results-sorts {
     @extend .double-margin;
   }
 
   .unit.bordered {
-    border-top: 2px solid #eee;
+    border-top: 2px solid $gray-lightest;
   }
 
   .unit {

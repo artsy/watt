@@ -1,7 +1,7 @@
 /**
  *  lists
  *
- *  Lists are typically bordered links with a chevron right arrow ">" and 
+ *  Lists are typically bordered links with a chevron right arrow ">" and
  *  a hover state along running the full width of the largest page section.
  *
  *  Lists have supporting controls like
@@ -17,7 +17,7 @@
     background-color: $notice-color;
   }
   .icon-chevron-right {
-    color: $gray-light;
+    color: $gray;
     margin-left: 10px;
     @include flex(0 16px);
   }
@@ -29,13 +29,16 @@
   @include display(flex);
   @include align-items(center);
   align-self: auto;
-  border-bottom: 1px solid $base-border-color;
+  border-bottom: 1px solid $gray-lightest;
   &:first-of-type {
-    border-top: 1px solid $base-border-color;
+    border-top: 1px solid $gray-lightest;
   }
   &[href]:hover {
     background-color: $gray-lightest;
     text-decoration: none;
+    .icon-chevron-right {
+      color: $black;
+    }
   }
   @include media(max-width $screen-xs-max) {
     flex-flow: row wrap;
@@ -44,6 +47,7 @@
 
 .list-group-item-image {
   @include flex(1 0px);
+  max-width: 180px;
   min-height: 100px;
   > img { width: 100%; }
   + .list-group-item-content {
@@ -82,8 +86,10 @@
 }
 
 .list-group-item-label {
-  display: block;
   @include avant-garde();
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
   // Only add margin to info items if they follow a label
   & + .list-group-item-info {
     @extend .third-margin-top;
@@ -188,6 +194,7 @@ a.list-pager-page-link {
 .list-control-counts,
 .list-control-sorting {
   @include make-md-column(6);
+  @extend .half-padding;
 }
 
 .list-control-sorting {
@@ -219,3 +226,19 @@ a.list-pager-page-link {
   border-bottom: 1px solid $base-border-color;
   padding: 15px 10px;
 }
+
+// Multi-line list info
+.list-group-item-info ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    strong {
+      @include avant-garde();
+      line-height: 100%;
+    }
+  }
+}
+
