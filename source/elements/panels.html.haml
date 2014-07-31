@@ -10,16 +10,27 @@ title: Partner Engineering Style Guide
 
         %p A panel puts some content in a box.
         .panel
-          %h5 Heading
+          %h4 Heading
           %p
             Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-
+          %p
+            Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            %a{ href: "#" } et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        %p
+          Sometimes its nice to constrain the width of the content. It's classed with <code>.is-constrained</code>.
+        .panel.is-constrained
+          %p
+            Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            %a{ href: "#" } et dolore magna aliqua.
+          %p
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
         %p
           This panel serves as a notice. It's classed with <code>.is-notice</code>.
         .panel.is-notice
-          %h3 Complete these 5 Steps to upload a complete show.
+          %h4 Complete these 5 Steps to upload a complete show.
           %ol
             %li Upload the press release and other documents
             %li Add a description for this show
