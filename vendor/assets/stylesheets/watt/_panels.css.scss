@@ -2,12 +2,39 @@
 // Panels
 ////////////////////////////////////////////////////////////////////////////////
 .panel {
-  border: 1px solid $base-border-color;
-  margin: 0;
-  padding: $spacing-unit;
-
+  background-color: $gray-lightest;
+  border-left: 2px solid $purple;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  padding: 2*$spacing-unit;
+  h4, p, ol, ul, li {
+    color: $gray-darkest;
+  }
+  h4, p, ol, ul {
+    margin-bottom: $spacing-unit;
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: $purple;
+      }
+      &.btn {
+        text-decoration: none;
+      }
+    }
+  }
+  p, ol, ul {
+    &:last-child {
+      margin: 0;
+    }
+  }
   &.is-notice {
     background-color: $notice-color;
     border: none;
+  }
+  &.is-constrained {
+    h3, h4, p {
+      max-width: 440px;
+    }
   }
 }
