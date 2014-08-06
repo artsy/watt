@@ -1,0 +1,25 @@
+---
+title: Partner Engineering Style Guide
+---
+#content-wrap
+  .container
+    .row
+      .col-md-10
+        .page-title.bordered
+          %h2 Utilities
+
+        .unit.double-padding-top
+          %h4.single-padding-bottom Help Tooltip
+
+          %p
+            Help tooltips can be displayed inline with content. The default<span class="help-tooltip" data-message='Works in which the idea, planning, and production process are more important than the result. The term gained currency in the 1960s as a result of Sol LeWitt’s 1967 article "Paragraphs on Conceptual Art" in Artforum.'></span>style is anchored to the top-left.
+          %p
+            They can also be anchored to the top-right<span class="help-tooltip" data-message='Works in which the idea, planning, and production process are more important than the result. The term gained currency in the 1960s as a result of Sol LeWitt’s 1967 article "Paragraphs on Conceptual Art" in Artforum.' data-anchor="top-right"></span>The bottom-left<span class="help-tooltip" data-message='Works in which the idea, planning, and production process are more important than the result. The term gained currency in the 1960s as a result of Sol LeWitt’s 1967 article "Paragraphs on Conceptual Art" in Artforum.' data-anchor="bottom-left"></span>Or the bottom-right<span class="help-tooltip" data-message='Works in which the idea, planning, and production process are more important than the result. The term gained currency in the 1960s as a result of Sol LeWitt’s 1967 article "Paragraphs on Conceptual Art" in Artforum.' data-anchor="bottom-right"></span>.
+
+          .unit.double-padding-top
+            %pre
+              :preserve
+                %span.help-tooltip{ data: { message: 'Works in which the idea...' } }
+                %span.help-tooltip{ data: { message: 'Works in which the idea...', anchor: 'top-right' } }
+                %span.help-tooltip{ data: { message: 'Works in which the idea...', anchor: 'bottom-left' } }
+                %span.help-tooltip{ data: { message: 'Works in which the idea...', anchor: 'bottom-right' } }
