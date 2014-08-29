@@ -5,7 +5,7 @@
 // These font files live in the gravity-production bucket on S3.
 // We can refer to them via cloudfront (as below), via
 // static.artsy.net or directly via S3 - gravity-production.s3.amazonaws.com
-@include font-face(artsy-pe-icons, 'watt/artsy-pe-icons', normal);
+@include font-face(artsy-pe-icons, 'watt/artsy-pe-icons', normal, $asset-pipeline: true);
 
 // NOTE: We'll use this fallback font definition to accomodate the Middleman app
 // mounted INSIDE the artsy-watt gem.
