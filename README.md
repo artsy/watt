@@ -31,7 +31,7 @@ It would be very surprising if you don't find yourself needing, Avant Garde &/or
 
 Make sure to include the following in the head of your layout file. It ought to work in most development setups (localhost for Rails and 0.0.0.0 for middleman) and in production on *.artsy.net domains.
 
-Something like this should the trick (haml):
+Something like this should do the trick (haml):
 
 ```
 - unless Rails.env == 'test'
