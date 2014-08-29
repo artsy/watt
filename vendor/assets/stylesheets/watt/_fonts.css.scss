@@ -1,25 +1,12 @@
-// Fonts
+// Fonts from fonts.com
 //
-// Can't use the mixin here because the custom AvantGarde has
-// a diffent file name for each font type.
-// These font files live in the gravity-production bucket on S3.
-// We can refer to them via cloudfront (as below), via
-// static.artsy.net or directly via S3 - gravity-production.s3.amazonaws.com
-@font-face {
-  font-family: 'avant-garde-gothic-itc';
-  src: url('https://d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/b74e5f86-4477-435a-abdf-32d8215f21bc.eot');
-  src: url('https://d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/b74e5f86-4477-435a-abdf-32d8215f21bc.eot') format('embedded-opentype'),
-       url('https://d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/c18aee57-7585-4a8b-9a1c-69d226301d73.woff') format('woff'),
-       url('https://d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/44ccbb2b-0fbc-4d95-b1da-0aa73bd26fb0.ttf') format('truetype'),
-       url('https://d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/f2de529c-11d2-43b7-be7c-05c5aaeaf133.svg#avant-garde-gothic-itc') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+// Requires that you provide the following fonts.com script tag.
+// <script type="text/javascript" src="http://fast.fonts.net/jsapi/f7f47a40-b25b-44ee-9f9c-cfdfc8bb2741.js"></script>
 
 // Font Variables
 ////////////////////////////////////////////////////////////////////////////////
-$serif: "adobe-garamond-pro", Georgia, Serif;
-$sans-serif: "avant-garde-gothic-itc", "Helvetica Neue", Arial, Helvetica, sans-serif;
+$serif: "Adobe Garamond W08", Georgia, Serif;
+$sans-serif: "ITC Avant Garde Gothic W04", "Helvetica Neue", Arial, Helvetica, sans-serif;
 
 
 // Mixins with font smoothing

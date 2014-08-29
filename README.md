@@ -25,53 +25,25 @@ does not add complexity to asset compilation, or major weight to a project.
 
 # Fonts
 
-## TypeKit (Garamond)
+## Fonts.com (Avant Garde & Garamond)
 
-It would be very surprising if you don't find yourself needing, Garamond from [Typekit](http://typekit.com/). Make sure to include it in the head of your layout file. There is a specific Partner Engineering kit on Artsy's Typekit account. It ought to work in most development setups (localhost) and in production on heroku, aws domains and *.artsy.net.
+It would be very surprising if you don't find yourself needing, Avant Garde &/or Garamond from Fonts.com. We are using the "Art.sy" kit in the admin@artsymail.com account (password in 1password).
 
-Something like this should the trick (haml):
+Make sure to include the following in the head of your layout file. It ought to work in most development setups (localhost for Rails and 0.0.0.0 for middleman) and in production on *.artsy.net domains.
 
-```
-  :javascript
-    //<![CDATA[
-      (function() {
-        var config = {
-          kitId: 'lep8qgg',
-          scriptTimeout: 3000
-        };
-        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-      })();
-    //]]>
-```
-
-## Fonts.com (Avant Garde)
-
-We can't legally serve Avant Garde from the web and we use a custom version of the font, so
-it isn't available from a font hosting service. Our current solution is to serve the custom
-font and have fonts.com charge us for their hosted version. We do this by setting up a
-JavaScript beacon to count page loads. In order to stay on the right side of the law,
-include this with your TypeKit code from above (Note: **Production only** in the haml below):
+Something like this should do the trick (haml):
 
 ```
--if Rails.env.production? 
-  :javascript
-    //<![CDATA[
-      var MTIProjectId='f7f47a40-b25b-44ee-9f9c-cfdfc8bb2741';
-      (function() {
-        var mtiTracking = document.createElement('script');
-        mtiTracking.type='text/javascript';
-        mtiTracking.async='true';
-        mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.net/t/trackingCode.js';
-        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
-      })();
-    //]]>
+- unless Rails.env == 'test'
+  = javascript_include_tag "https://fast.fonts.net/jsapi/f7f47a40-b25b-44ee-9f9c-cfdfc8bb2741.js"
 ```
 
+Note that we shouldn't include the asset in Test mode for fear of incurring extra costs.
 
 ## Icon Font
 
 Like artsy.net projects, we host our own font for icons. This gives us vector graphics for sharp scaling
-and allows us to use CSS for colors and transitions just like any other typeface. 
+and allows us to use CSS for colors and transitions just like any other typeface.
 See the [Joule](https://github.com/artsy/joule) project for more details.
 
 
@@ -102,10 +74,10 @@ TODO: More about usage and how to setup a new project with Watt.
 
 ## Authoring Styles
 
-Watt's goal is to maximize re-use of common UI components. To do this, we follow some core tenets. 
-See this excellent write up by Phillip Walton on 
-[CSS Architecture](http://philipwalton.com/articles/css-architecture/). While we don't expect to 
-be too rigid on the naming-schemes presented here, asking ourselves how we measure against the 
+Watt's goal is to maximize re-use of common UI components. To do this, we follow some core tenets.
+See this excellent write up by Phillip Walton on
+[CSS Architecture](http://philipwalton.com/articles/css-architecture/). While we don't expect to
+be too rigid on the naming-schemes presented here, asking ourselves how we measure against the
 following goals when adding CSS to Watt is a great start:
 
 - Predictable
@@ -118,7 +90,7 @@ what's included in a style.
 
 ```scss
 .chevron-list-link {
-  
+
 }
 ```
 
@@ -148,23 +120,23 @@ May be my favorite CSS metaphor of all time: Grenande vs Sniper Rifle:
 
 
 ```css
-.chevron-list { 
+.chevron-list {
   ...
 }
-.chevron-list-link { 
+.chevron-list-link {
   ...
   &::after {
     ...
   }
 }
-.chevron-list-link-label { 
+.chevron-list-link-label {
   ...
 }
-.chevron-list-link-body { 
+.chevron-list-link-body {
   ...
 }
 
-/* 
+/*
 ```
 Also note that tags are not included (again [CSS Architecture](http://philipwalton.com/articles/css-architecture/) by Pillip Walton) for wins on reuse and maintenance. This scales as the component does not rely on specific parents:
 
