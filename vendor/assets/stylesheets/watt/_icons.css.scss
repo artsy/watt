@@ -14,7 +14,7 @@
   font-weight: normal;
   line-height: 1;
   overflow: hidden;
-  position: relative;
+  position: relative; // Note: This fixes the ghost inquiry icon bug!;
   speak: none;
   text-transform: none;
 
@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-inquiry:before {
+  content: "\e599";
+}
 .icon-search:before {
   content: "\e600";
 }
@@ -41,9 +44,6 @@
 .icon-mark:before {
   content: "\e606";
 }
-.icon-inquiry:before {
-  content: "\e599";
-}
 .icon-gear:before {
   content: "\e609";
 }
@@ -59,6 +59,18 @@
 .icon-chevron-left:before {
   content: "\e610";
 }
-.icon-chevron-right-large:before {
-  content: "\e612";
+.icon-artists:before {
+  content: "\e605";
+}
+.icon-dashboard:before {
+  content: "\e607";
+}
+.icon-inventory:before {
+  content: "\e608";
+}
+.icon-profile:before {
+  content: "\e60a";
+}
+.icon-shows:before {
+  content: "\e60d";
 }
