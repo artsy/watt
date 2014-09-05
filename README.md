@@ -62,7 +62,7 @@ PRs merged to artsy/watt#master are automatically deployed to the ```partner-eng
 
 Watt is a private gem and hosted on Github. To include Watt, add this line to your application's Gemfile, substituting ```USRNME:PSSWRD``` for the proper credentials:
 
-    gem 'artsy-watt', git: 'https://USRNME:PSSWRD@github.com/artsy/watt.git'
+    gem 'watt', git: 'https://USRNME:PSSWRD@github.com/artsy/watt.git'
 
 And then execute:
 

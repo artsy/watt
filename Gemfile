@@ -1,17 +1,27 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem "middleman", "~>3.1.4"
-gem 'middleman-sprockets', '3.1.4'
-gem 'whitespace', '2.0.4'
+# Declare your gem's dependencies in watt.gemspec.
+# Bundler will treat runtime dependencies like base dependencies, and
+# development dependencies will be added by default to the :development group.
+gemspec
 
-# Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0"
-gem "middleman-minify-html", '3.1.1'
-gem 'middleman-s3_sync', '3.0.25'
-gem 'fog', '1.21.0'
-gem 'nokogiri', '1.6.1'
+# Declare any dependencies that are still in development here instead of in
+# your gemspec. These might include edge Rails or gems from your path or
+# Git. Remember to move these dependencies to your gemspec before releasing
+# your gem to rubygems.org.
 
-gem 'haml', '4.0.5'
-gem 'bootstrap-sass', '~> 3.0.3.0'
-gem 'bourbon', '~> 3.2'
-gem 'neat', '~> 1.5.1'
+# To use a debugger
+# gem 'byebug', group: [:development, :test]
+
+gem 'rails'
+gem 'haml-rails', '0.5.3'
+
+group :development, :test do
+  gem 'byebug'
+  gem "rspec-rails"
+  gem 'capybara', '2.3.0'
+  gem 'shoulda-matchers', '2.6.1', require: false
+  gem 'guard-rspec', require: false
+  gem 'rubocop'
+  gem 'guard-rubocop'
+end
