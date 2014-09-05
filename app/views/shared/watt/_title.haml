@@ -1,0 +1,5 @@
+- if content_for?(:title)
+  .row
+    .col-md-12
+      .page-title.bordered
+        %h2= yield(:title)

@@ -1,0 +1,149 @@
+AllCops:
+  Exclude:
+    - tmp/**/*
+    - vendor/**/*
+    - bin/**
+    - Guardfile
+    - Rakefile
+
+LineLength:
+  Enabled: false
+
+SymbolProc:
+  Enabled: false
+
+PerceivedComplexity:
+  Enabled: false
+
+AssignmentInCondition:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+ColonMethodCall:
+  Enabled: false
+
+ClassLength:
+  Enabled: false
+
+SignalException:
+  # prefer raise to fail
+  EnforcedStyle: only_raise
+
+SingleLineBlockParams:
+  # name reduce arguments whatever you want
+  Enabled: false
+
+FileName:
+  # makes sure that Ruby source files have snake_case names.
+  Enabled: false
+
+Documentation:
+  # document classes
+  Enabled: false
+
+CollectionMethods:
+  # don't prefer map to collect, recuce to inject, etc.
+  Enabled: false
+
+WordArray:
+  # declare word arrays as word arrays
+  Enabled: false
+
+StringLiterals:
+  # use single or double-quoted strings, as you please
+  Enabled: false
+
+Encoding:
+  # no need to always specify encoding
+  Enabled: false
+
+ClassVars:
+  # TODO: review, these are things like @@configs ||= {}
+  Enabled: false
+
+PerlBackrefs:
+  # TODO: regular expression matching with $1, $2, etc.
+  Enabled: false
+
+AsciiComments:
+  Enabled: false
+
+AlignParameters:
+  # TODO: align to the left instead of to the indent
+  Enabled: false
+
+ClassAndModuleCamelCase:
+  # We have exceptions like Api_v1_...
+  Enabled: false
+
+RescueModifier:
+  # TODO: things like model = klass.constantize rescue nil
+  Enabled: false
+
+AlignHash:
+  # We rarely align params: and sort: in API declaration
+  Enabled: false
+
+Blocks:
+  # It's ok to chain multiline blocks.
+  Enabled: false
+
+MultilineBlockChain:
+  Enabled: false
+
+SpaceInsideBrackets:
+  # TODO: we consistently prefer spaces inside brackets, should write the opposite condition.
+  Enabled: false
+
+Lambda:
+  # TODO: replace all lambda with ->
+  Enabled: false
+
+RedundantSelf:
+  Enabled: false
+
+NumericLiterals:
+  # We deal with money, so most aren't separated on 3-digit intervals.
+  Enabled: false
+
+ParameterLists:
+  Max: 7
+
+RaiseArgs:
+  # Allow Exception.new
+  Enabled: false
+
+Void:
+  # specs, ==
+  Enabled: false
+
+ParenthesesAsGroupedExpression:
+  # see config/unicorn.rb
+  Enabled: false
+
+GlobalVars:
+  # we use !$rails_rake_task
+  Enabled: false
+
+BlockNesting:
+  # see config/initializers/downmark_it.rb
+  Max: 4
+
+BlockComments:
+  Enabled: false
+
+SpaceAfterNot:
+  Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
+
+PredicateName:
+  # allow is_valid? vs. valid?
+  Enabled: false
+
+AccessorMethodName:
+  # allow set_ methods
+  Enabled: false

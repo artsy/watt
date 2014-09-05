@@ -1,0 +1,20 @@
+@import "watt/base";
+
+.color-sample {
+  @include transition(color 0.25s);
+  color: $gray-dark;
+  &:hover {
+    color: $black;
+  }
+}
+
+.grid-item-artwork-low-res {
+  display: none;
+}
+.grid-item {
+  &:nth-of-type(5n-2) {
+    .grid-item-artwork-low-res {
+      display: block;
+    }
+  }
+}
