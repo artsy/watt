@@ -23,6 +23,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   config.include Watt::PaginationHelper
+  config.include Watt::FlashHelper
   config.include Haml, type: :helper
   config.include Haml::Helpers, type: :helper
   config.before(:each, type: :helper) do
