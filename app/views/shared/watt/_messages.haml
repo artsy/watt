@@ -1,0 +1,9 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    %div{ class: flash_view_context(name)}
+      .flash-wrap{ class: flash_type(name), data: { state: 'open' } }
+        .flash-close
+          %a{ data: { no_turbolink: true }}
+        .flash-contents
+          %a{ data: { no_turbolink: true }}
+            = msg
