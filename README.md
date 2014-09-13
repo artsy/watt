@@ -68,6 +68,14 @@ And then execute:
 
     $ bundle
 
+## Developing Locally With Middleman
+
+Run `middleman` to see your Watt changes locally:
+```
+cd style-guide
+bundle exec middleman server
+```
+
 ## Usage
 
 TODO: More about usage and how to setup a new project with Watt.
@@ -135,9 +143,8 @@ May be my favorite CSS metaphor of all time: Grenande vs Sniper Rifle:
 .chevron-list-link-body {
   ...
 }
-
-/*
 ```
+
 Also note that tags are not included (again [CSS Architecture](http://philipwalton.com/articles/css-architecture/) by Pillip Walton) for wins on reuse and maintenance. This scales as the component does not rely on specific parents:
 
 
