@@ -1,10 +1,15 @@
+$fixed-header-height: 40px;
+$fixed-footer-height: 70px;
+$modal-close-height: 26px;
+$modal-close-width: $modal-close-height;
+
 .fancybox-wrap {
-  .unit { 
+  .unit {
     @extend .single-padding;
   }
   .fancybox-inner {
-    padding-top: 40px;
-    padding-bottom: 70px;
+    padding-top: $fixed-header-height;
+    padding-bottom: $fixed-footer-height;
   }
 }
 
@@ -28,13 +33,28 @@
   .modal {
     height: 100%;
     overflow: auto;
+    &.no-fixed-header {
+      margin-top: -$fixed-header-height;
+      height: calc(100% + #{$fixed-header-height});
+      .modal-header, .modal-close { position: static; }
+      .modal-close { float: right; }
+      .modal-header { width: calc(100% - #{$modal-close-width}); }
+    }
+    &.no-fixed-footer {
+      margin-bottom: -$fixed-footer-height;
+      height: calc(100% + #{$fixed-footer-height});
+      .modal-footer { position: static; }
+    }
+    &.no-fixed-header.no-fixed-footer {
+      height: calc(100% + #{$fixed-header-height + $fixed-footer-height});
+    }
   }
   .modal-close {
     position: absolute;
     top: 0;
     right: 0;
-    width: 26px;
-    height: 26px;
+    width: $modal-close-width;
+    height: $modal-close-height;
     padding: 0;
     margin: 0;
     z-index: 3;
