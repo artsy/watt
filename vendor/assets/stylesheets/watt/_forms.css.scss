@@ -4,10 +4,21 @@
   box-shadow: none;
 }
 
-.form-horizontal .form-group label {
-  padding-top: 8px;
-}
-
 .form-horizontal {
   max-width: 1024px;
+
+  .help-block {
+    font-style: italic;
+    color: $gray-darker;
+  }
+
+  .form-group label {
+    padding-top: 8px;
+  }
+
+  .info-header {
+    border-top: 2px solid $black;
+    border-left: 2px solid $white;
+    border-bottom: 1px solid $gray-lightest;
+  }
 }
