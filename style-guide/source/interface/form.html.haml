@@ -20,68 +20,62 @@ title: Partner Engineering Style Guide
           %a{href: '/interface/form'}
             Edit
   .row
-    .capped
-      .col-md-12.double-padding-top
-        %form.form-horizontal{ role: 'form' }
+    .col-md-12
+      %form.form-horizontal{ role: 'form' }
+        .form-group
+          %label.col-sm-3{ for:'inputTitle' }
+            Title
+            %span{ title: 'required' }
+              *
+          .col-sm-9
+            %input{ type: "text", class: "form-control", id: "inputTitle", placeholder: "Title" }
+        .form-group
+          %label.col-sm-3{ for:'inputYear' }
+            Year
+          .col-sm-9
+            %input{ type: "text", class: "form-control", id: "inputYear", placeholder: "Year" }
+        .form-group
+          %label.col-sm-3{ for:'description' }
+            Description
+          .col-sm-9
+            %textarea.text.optional.form-control{ id: "description", placeholder: "Description of Simen Johan" }
+            %span.help-block Enter a two-sentence description
+
+        %h5.info-header.single-padding.triple-margin-top.double-margin-bottom Details
+
+        .form-group
+          %label.col-sm-3{ for:'pricing' }
+            Pricing
+          .col-sm-9
+            .form-group
+              .col-sm-10
+                %input{ type: "text", class: "string form-control", id: "price_num", placeholder: "Price" }
+              .col-sm-2
+                %select.form-control
+                  %option
+                    USD - US Dollar
+                  %option
+                    Euro
+                  %option
+                    Yen
+                  %option
+                    Whatever
+            .form-group
+              .col-sm-12
+                .radio
+                  %label.control-label{for:'optionsRadios1'}
+                    %input{ type: "radio", name: "optionsRadios-control", id: "optionsRadios1", value: "option1" }
+                      Dispay [Price Range] on Artsy
+                .radio
+                  %label.control-label{for:'optionsRadios2'}
+                    %input{ type: "radio", name: "optionsRadios-control", id: "optionsRadios2", value: "option2", checked: true}
+                      Display 'Contact for Price' on Artsy
+                .alert.alert-info
+                  %p Displaying the price on your work increases the likelyhood that inquiries will be high-quality.
+
+        .unit.double-padding.bordered
           .row
-            .col-md-12
-              .unit
-                .col-md-3
-                  %h5 Details
-                .col-md-9
-                  .form-group
-                    %label.col-sm-2.control-label{for:'inputTitle'}
-                      Title
-                      %span
-                        *
-                    .col-sm-10
-                      %input{ type: "text", class: "form-control", id: "inputTitle", placeholder: "Title" }
-                  .form-group
-                    %label.col-sm-2.control-label{for:'inputYear'}
-                      Year
-                    .col-sm-10
-                      %input{ type: "text", class: "form-control", id: "inputYear", placeholder: "Year" }
-          .row
-            .col-md-12
-              .unit.bordered.single-padding-top
-                .col-md-3
-                  %h5 Price
-                .col-md-9
-                  .form-group
-                    %label.col-sm-2.control-label{for:'inputText1'}
-                      Price
-                    .col-sm-10
-                      %input{ type: "text", class: "form-control", id: "inputText1", placeholder: "Price" }
-                  .form-group
-                    %label.col-sm-2.control-label{for:'inputSelect1'}
-                      Currency
-                    .col-sm-10
-                      %select.form-control
-                        %option
-                          USD - US Dollar
-                        %option
-                          Euro
-                        %option
-                          Yen
-                        %option
-                          Whatever
-                  .form-group.bordered
-                    .col-sm-12
-                      .radio
-                        %label.control-label{for:'optionsRadios1'}
-                          %input{ type: "radio", name: "optionsRadios-control", id: "optionsRadios1", value: "option1" }
-                            Dispay [Price Range] on Artsy
-                      .radio
-                        %label.control-label{for:'optionsRadios2'}
-                          %input{ type: "radio", name: "optionsRadios-control", id: "optionsRadios2", value: "option2", checked: true}
-                            Display 'Contact for Price' on Artsy
-                  .alert.alert-info
-                    %p Displaying the price on your work increases the likelyhood that inquiries will be high-quality.
-          .row
-            .col-md-12
-              .unit.single-padding.bordered
-                .row
-                  .col-md-8
-                    %input.btn.btn-primary.btn-small.btn-full-width{ type: "submit", value: 'Save changes' }
-                  .col-md-4
-                    %input.btn.btn-delete.btn-small.btn-full-width{ type: "submit", value: 'delete' }
+            .col-md-8
+              %input.btn.btn-primary.btn-small.btn-full-width{ type: "submit", value: 'Save changes' }
+            .col-md-4
+              %input.btn.btn-delete.btn-small.btn-full-width{ type: "submit", value: 'delete' }
