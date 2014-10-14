@@ -33,8 +33,11 @@
     border: none;
   }
   &.is-constrained {
-    h3, h4, p, div {
+    h3, h4, p {
       max-width: 440px;
     }
+  }
+  .width-constrained {
+    max-width: 660px;
   }
 }
