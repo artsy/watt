@@ -1,0 +1,98 @@
+$s: 768px;
+.tabs {
+  height: 50px;
+  margin: 0 0 2 * $spacing-unit 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  @include media($s) {
+    height: 53px;
+    margin: 0 0 3 * $spacing-unit 0;
+  }
+}
+.tabs-overflow {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  &::after, &::before {
+    background-image: none;
+    background-color: $gray;
+    content: '';
+    display: block;
+    height: 2px;
+    position: static;
+    width: auto;
+  }
+  &::before {
+    margin-bottom: -2px;
+  }
+  &::after {
+    margin-top: -9px;
+  }
+  @include media($s) {
+    &::before {
+      display: none;
+    }
+  }
+}
+.tabs-overflow-indicator-left,
+.tabs-overflow-indicator-right {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  @include media($s) {
+    display: none;
+  }
+}
+.tabs-overflow-indicator-right {
+  right: -50px;
+  @include linear-gradient(to right, transparent 0%, #ffffff 50%, $fallback: transparent);
+  @include transition(right 0.25s);
+  &.is-active {
+    right: -20px;
+  }
+}
+.tabs-overflow-indicator-left {
+  left: -50px;
+  @include linear-gradient(to left, transparent 0%, #ffffff 50%);
+  @include transition(left 0.25s);
+  &.is-active {
+    left: -20px;
+  }
+}
+.tab-item {
+  @include avant-garde();
+  display: inline-block;
+  font-size: 10px;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+  &.is-active {
+    a {
+      border-color: $black;
+      color: $black;
+    }
+  }
+  a {
+    border: solid $gray;
+    border-width: 2px 0;
+    color: $gray-dark;
+    display: block;
+    padding: 16px;
+    &:focus, &:hover {
+      border-color: $purple;
+      color: $purple;
+      outline: none;
+      text-decoration: none;
+      @include transition(color 0.25s ease-in-out, border-color 0.25s ease-in-out);
+    }
+  }
+  @include media($s) {
+    font-size: 12px;
+    a { border-top: none; }
+  }
+}
