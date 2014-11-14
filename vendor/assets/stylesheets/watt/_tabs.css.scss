@@ -50,7 +50,7 @@ $s: 768px;
 }
 .tabs-overflow-indicator-right {
   right: -50px;
-  @include linear-gradient(to right, transparent 0%, #ffffff 50%, $fallback: transparent);
+  @include linear-gradient(to right, rgba(255,255,255,0) 0%, #ffffff 50%, $fallback: transparent);
   @include transition(right 0.25s);
   &.is-active {
     right: -20px;
@@ -58,7 +58,7 @@ $s: 768px;
 }
 .tabs-overflow-indicator-left {
   left: -50px;
-  @include linear-gradient(to left, transparent 0%, #ffffff 50%);
+  @include linear-gradient(to left, rgba(255,255,255,0) 0%, #ffffff 50%);
   @include transition(left 0.25s);
   &.is-active {
     left: -20px;
@@ -78,6 +78,7 @@ $s: 768px;
     }
   }
   a {
+    background-color: $white;
     border: solid $gray;
     border-width: 2px 0;
     color: $gray-dark;
