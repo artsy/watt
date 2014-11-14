@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+.relative {
+  position: relative;
+}
+
 .nav-tabs {
   margin-bottom: $spacing-unit*2;
   border-color: $gray;

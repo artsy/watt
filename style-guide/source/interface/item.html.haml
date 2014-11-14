@@ -7,25 +7,25 @@ title: Partner Engineering Style Guide
       .page-title
         %h2
           Simen Johan
+
   .row
     .col-md-12
-      .padded-row
-        %ul.nav.nav-tabs
-          %li
-            %a{href: '/interface/item'}
-              Overview
-          %li.active
-            %a{href: '/interface/item'}
-              Artworks
-          %li
-            %a{href: '/interface/form'}
-              Edit
-          %li
-            %a{href: '#'}
-              Documents
-          %li
-            %a{href: '#'}
-              Install Shots
+      .padded-row.relative
+        .tabs-overflow-indicator-left
+        .tabs
+          %ul.tabs-overflow><
+            %li.tab-item><
+              %a{href: '/interface/item'}< Overview
+            %li.tab-item><
+              %a{href: '/interface/form'}< Artists
+            %li.tab-item.is-active><
+              %a{href: '/interface/item'}< Artworks
+            %li.tab-item><
+              %a{href: '/interface/form'}< Install Shots
+            %li.tab-item><
+              %a{href: '/interface-form'}< Documents
+        .tabs-overflow-indicator-right
+
   .row
     .unit
       .capped
