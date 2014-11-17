@@ -1,16 +1,19 @@
 $s: 768px;
 .tabs {
+  content: '&nbsp;';
   height: 50px;
   margin: 0 0 2 * $spacing-unit 0;
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
+  -webkit-overflow-scrolling: touch;
   @include media($s) {
     height: 53px;
     margin: 0 0 3 * $spacing-unit 0;
   }
 }
 .tabs-overflow {
+  height: 50px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -22,19 +25,15 @@ $s: 768px;
     content: '';
     display: block;
     height: 2px;
-    position: static;
-    width: auto;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
   }
-  &::before {
-    margin-bottom: -2px;
-  }
-  &::after {
-    margin-top: -9px;
-  }
+  &::before { top: 0; }
+  &::after { top: 48px; }
   @include media($s) {
-    &::before {
-      display: none;
-    }
+    &::before { display: none; }
+    &::after { top: 49px; }
   }
 }
 .tabs-overflow-indicator-left,
@@ -53,7 +52,7 @@ $s: 768px;
   @include linear-gradient(to right, rgba(255,255,255,0) 0%, #ffffff 50%, $fallback: transparent);
   @include transition(right 0.25s);
   &.is-active {
-    right: -20px;
+    right: -10px;
   }
 }
 .tabs-overflow-indicator-left {
@@ -61,7 +60,7 @@ $s: 768px;
   @include linear-gradient(to left, rgba(255,255,255,0) 0%, #ffffff 50%);
   @include transition(left 0.25s);
   &.is-active {
-    left: -20px;
+    left: -10px;
   }
 }
 .tab-item {
