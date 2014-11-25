@@ -1,4 +1,7 @@
 $s: 768px;
+.tabs-wrap {
+  overflow: hidden;
+}
 .tabs {
   height: 50px;
   margin: 0 0 2 * $spacing-unit 0;
