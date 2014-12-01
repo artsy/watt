@@ -4,15 +4,15 @@ module Watt
       # calculate the total number of pages
       total_pages_count = (total_items_count.to_f / per_page.to_f).ceil
       paginate = total_items_count > per_page
-      uri = URI::parse(base_url)
+      uri = URI.parse(base_url)
       query_params = Rack::Utils.parse_query(uri.query)
 
       # build previous_url
-      uri.query = current_page == 1 ? uri.query : query_params.merge!("page" => current_page - 1).to_query
+      uri.query = current_page == 1 ? uri.query : query_params.merge!('page' => current_page - 1).to_query
       previous_url = uri.to_s
 
       # build next_url
-      uri.query = current_page == total_pages_count ? query_params.merge!("page" => current_page).to_query : query_params.merge!("page" => current_page + 1).to_query
+      uri.query = current_page == total_pages_count ? query_params.merge!('page' => current_page).to_query : query_params.merge!('page' => current_page + 1).to_query
       next_url = uri.to_s
 
       # build pages array
@@ -103,7 +103,7 @@ module Watt
 
       page_numbers.each do |i|
         page_context = i
-        uri.query = query_params.merge!("page" => page_context).to_query
+        uri.query = query_params.merge!('page' => page_context).to_query
         pages << { page: page_context, url: uri.to_s }
       end
 

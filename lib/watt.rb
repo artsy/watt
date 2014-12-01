@@ -1,4 +1,4 @@
-require "watt/engine"
+require 'watt/engine'
 
 module Watt
 end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 module Watt
   RSpec.describe PaginationHelper, type: :helper do
-    describe "#build_paginator" do
+    describe '#build_paginator' do
       before(:each) do
         @per_page = 10
         @base_url = '/partner_artists?page=1'
@@ -15,28 +15,28 @@ module Watt
             @current_page = 1
             @paginator = build_paginator(@total_items_count, @items_count, @per_page, @current_page, @base_url)
           end
-          it ":paginate should be false" do
+          it ':paginate should be false' do
             expect(@paginator[:paginate]).to be false
           end
-          it ":current_page should be @current_page" do
+          it ':current_page should be @current_page' do
             expect(@paginator[:current_page]).to be @current_page
           end
-          it ":previous_url should be @base_url" do
+          it ':previous_url should be @base_url' do
             expect(@paginator[:previous_url]).to eq @base_url
           end
-          it ":next_url should be @base_url" do
+          it ':next_url should be @base_url' do
             expect(@paginator[:next_url]).to eq '/partner_artists?page=1'
           end
-          it ":display_leading_ellipse should be false" do
+          it ':display_leading_ellipse should be false' do
             expect(@paginator[:display_leading_ellipse]).to be false
           end
-          it ":display_trailing_ellipse should be false" do
+          it ':display_trailing_ellipse should be false' do
             expect(@paginator[:display_trailing_ellipse]).to be false
           end
-          it ":items_count should be @items_count" do
+          it ':items_count should be @items_count' do
             expect(@paginator[:items_count]).to eq @items_count
           end
-          it ":total_pages_count should be correct" do
+          it ':total_pages_count should be correct' do
             expect(@paginator[:total_pages_count]).to be (@total_items_count.to_f / @per_page.to_f).ceil
           end
         end
@@ -49,30 +49,30 @@ module Watt
             @current_page = i
             @paginator = build_paginator(@total_items_count, @items_count, @per_page, @current_page, @base_url)
           end
-          it ":paginate should be false" do
+          it ':paginate should be false' do
             expect(@paginator[:paginate]).to be true
           end
-          it ":current_page should be @current_page" do
+          it ':current_page should be @current_page' do
             expect(@paginator[:current_page]).to be @current_page
           end
-          it ":previous_url should be @base_url" do
+          it ':previous_url should be @base_url' do
             expect(@paginator[:previous_url]).to eq @base_url if @current_page == 1
             expect(@paginator[:previous_url]).to eq "/partner_artists?page=#{@current_page - 1}" if @current_page > 1
           end
-          it ":next_url should be @base_url" do
+          it ':next_url should be @base_url' do
             expect(@paginator[:next_url]).to eq "/partner_artists?page=#{@current_page}" if @current_page == 6
             expect(@paginator[:next_url]).to eq "/partner_artists?page=#{@current_page + 1}" if @current_page < 6
           end
-          it ":display_leading_ellipse should be false" do
+          it ':display_leading_ellipse should be false' do
             expect(@paginator[:display_leading_ellipse]).to be false
           end
-          it ":display_trailing_ellipse should be false" do
+          it ':display_trailing_ellipse should be false' do
             expect(@paginator[:display_trailing_ellipse]).to be false
           end
-          it ":items_count should be @items_count" do
+          it ':items_count should be @items_count' do
             expect(@paginator[:items_count]).to eq @items_count
           end
-          it ":total_pages_count should be correct" do
+          it ':total_pages_count should be correct' do
             expect(@paginator[:total_pages_count]).to be (@total_items_count.to_f / @per_page.to_f).ceil
           end
         end
@@ -85,44 +85,44 @@ module Watt
             @current_page = i
             @paginator = build_paginator(@total_items_count, @items_count, @per_page, @current_page, @base_url)
           end
-          it ":paginate should be false" do
+          it ':paginate should be false' do
             expect(@paginator[:paginate]).to be true
           end
-          it ":current_page should be @current_page" do
+          it ':current_page should be @current_page' do
             expect(@paginator[:current_page]).to be @current_page
           end
-          it ":previous_url should be @base_url" do
+          it ':previous_url should be @base_url' do
             expect(@paginator[:previous_url]).to eq @base_url if @current_page == 1
             expect(@paginator[:previous_url]).to eq "/partner_artists?page=#{@current_page - 1}" if @current_page > 1
           end
-          it ":next_url should be @base_url" do
+          it ':next_url should be @base_url' do
             expect(@paginator[:next_url]).to eq "/partner_artists?page=#{@current_page}" if @current_page == 8
             expect(@paginator[:next_url]).to eq "/partner_artists?page=#{@current_page + 1}" if @current_page < 8
           end
-          it ":display_leading_ellipse should be correct" do
+          it ':display_leading_ellipse should be correct' do
             if [5, 6, 7, 8].include? @current_page
               expect(@paginator[:display_leading_ellipse]).to be true
             else
               expect(@paginator[:display_leading_ellipse]).to be false
             end
           end
-          it ":display_trailing_ellipse should be correct" do
+          it ':display_trailing_ellipse should be correct' do
             if [1, 2, 3, 4, 5].include? @current_page
               expect(@paginator[:display_trailing_ellipse]).to be true
             else
               expect(@paginator[:display_trailing_ellipse]).to be false
             end
           end
-          it ":items_count should be @items_count" do
+          it ':items_count should be @items_count' do
             expect(@paginator[:items_count]).to eq @items_count
           end
-          it ":total_pages_count should be correct" do
+          it ':total_pages_count should be correct' do
             expect(@paginator[:total_pages_count]).to be (@total_items_count.to_f / @per_page.to_f).ceil
           end
         end
       end
-      context ":page_groups" do
-        context "with one page" do
+      context ':page_groups' do
+        context 'with one page' do
           before(:each) do
             @total_items_count = 10
             @items_count = @per_page
@@ -135,7 +135,7 @@ module Watt
             expect(@paginator[:page_groups][:third].map { |x| x[:page] }).to eq []
           end
         end
-        context "on the first of six total pages" do
+        context 'on the first of six total pages' do
           before(:each) do
             @total_items_count = 60
             @items_count = @per_page
@@ -148,7 +148,7 @@ module Watt
             expect(@paginator[:page_groups][:third].map { |x| x[:page] }).to eq []
           end
         end
-        context "on the first of eight total pages" do
+        context 'on the first of eight total pages' do
           before(:each) do
             @total_items_count = 80
             @items_count = @per_page
@@ -161,7 +161,7 @@ module Watt
             expect(@paginator[:page_groups][:third].map { |x| x[:page] }).to eq []
           end
         end
-        context "somewhere in the middle of 12 total pages" do
+        context 'somewhere in the middle of 12 total pages' do
           before(:each) do
             @total_items_count = 120
             @items_count = @per_page
@@ -174,7 +174,7 @@ module Watt
             expect(@paginator[:page_groups][:third].map { |x| x[:page] }).to eq [12]
           end
         end
-        context "on the last of eight total pages" do
+        context 'on the last of eight total pages' do
           before(:each) do
             @total_items_count = 120
             @items_count = @per_page
