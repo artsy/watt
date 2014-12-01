@@ -87,17 +87,23 @@
 
 .list-group-item-label {
   display: block;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 20px;
   // Only add margin to info items if they follow a label
   & + .list-group-item-info {
     @extend .third-margin-top;
   }
 }
 
+.list-group-item-artist-name {
+  @include avant-garde();
+  font-size: 15px;
+  line-height: 15px;
+}
+
 .list-group-item-info {
   display: block;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .list-pager {
