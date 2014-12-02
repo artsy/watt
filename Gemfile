@@ -22,6 +22,6 @@ group :development, :test do
   gem 'capybara', '2.3.0'
   gem 'shoulda-matchers', '2.6.1', require: false
   gem 'guard-rspec', require: false
-  gem 'rubocop'
-  gem 'guard-rubocop'
+  gem 'rubocop', '0.21.0'
+  gem 'guard-rubocop', '1.1.0'
 end

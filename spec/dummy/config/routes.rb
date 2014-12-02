@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Watt::Engine => "/watt"
+  mount Watt::Engine => '/watt'
 end
