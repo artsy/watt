@@ -10,6 +10,7 @@ $s: 768px;
   position: relative;
   -webkit-overflow-scrolling: touch;
   @include media($s) {
+    overflow-x: hidden;
     height: 53px;
     margin: 0 0 3 * $spacing-unit 0;
   }
