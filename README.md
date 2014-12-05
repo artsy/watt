@@ -1,6 +1,15 @@
 # Watt
 
-Watt is a shared js/css/img asset library for Artsy Partner Engineering Ruby apps (tested with Rails and with Middleman for static sites).
+Watt is a shared js/css/img asset library for some Artsy ruby apps.
+
+Meta
+---
+
+* __State:__ production (in [Volt](https://github.com/artsy/volt/), [Ohm](https://github.com/artsy/ohm/), [Induction](https://github.com/artsy/induction/), [Lattice](https://github.com/artsy/lattice/), [Helix](https://github.com/artsy/helix/), & [Vibrations](https://github.com/artsy/vibrations/))
+* __Style Guide:__ [http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/](http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/)
+* __Github:__ [https://github.com/artsy/watt/](https://github.com/artsy/watt/)
+* __CI:__ [Semaphore](https://semaphoreapp.com/artsy/watt/) (such as it is)
+* __Point People:__ [@oxaudo](https://github.com/oxaudo), [@gib](https://github.com/gib)
 
 # On Bootstrap
 
