@@ -1,0 +1,28 @@
+.search-component {
+  position: relative;
+  .search-submit {
+    border-left: 1px solid $gray-lightest;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    background-color: $white;
+    height: 24px;
+    width: 30px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    svg {
+      path {
+        @include transition(color 0.25s ease-in-out);
+        fill: $gray-dark;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $black;
+        }
+      }
+    }
+  }
+}
