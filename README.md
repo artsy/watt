@@ -15,11 +15,11 @@ Meta
 
 Ideally, Watt is a very thin layer on top of [Bootstrap](http://getbootstrap.com/) (3.0.3 at the moment). Bootstrap is primarily useful as a series of good defaults; there are many thousands of pretty smart people thinking about reasonable responsive breakpoints--we shouldn't force ourselves to re-invent triangular wheels. Let's be clear about what we are including (Grid &amp; navbar, for example) and lets clearly not include the bits of the framework we choose to not use in production (jumbotron, buttons, modals, carousels, et c).
 
-Watt's relationship to Bootstrap's Javascript and Stylesheet files should follow the same approach here. [_bootstrap_base.css.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_base.css.scss) is be a good example of removing the components we don't presently need.
+Watt's relationship to Bootstrap's Javascript and Stylesheet files should follow the same approach here. [_bootstrap_base.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_base.scss) is be a good example of removing the components we don't presently need.
 
-We'll additioanlly set global variable overrides in [_bootstrap_variables.css.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_variables.css.scss) and, predictably, [_bootstrap_overrides.css.scss.erb](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_overrides.css.scss.erb).
+We'll additioanlly set global variable overrides in [_bootstrap_variables.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_variables.scss) and, predictably, [_bootstrap_overrides.scss.erb](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/_bootstrap_overrides.scss.erb).
 
-All of three of these files are imported in [base.css.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/base.css.scss).
+All of three of these files are imported in [base.scss](https://github.com/dylanfareed/watt/blob/with-bootstrap-and-middleman/vendor/assets/stylesheets/watt/base.scss).
 
 ### Bootstrap Variables
 It's often useful to reference global variables used by Bootstrap. [This file is the LESS flavor](https://github.com/twbs/bootstrap/blob/master/less/variables.less), but the same variable names are [overwritten by `bootstrap-sass`](https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss).
