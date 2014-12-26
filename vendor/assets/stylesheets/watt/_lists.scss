@@ -56,6 +56,12 @@
   }
 }
 
+// Constrain list group item image widths when the image
+// is enclosed in an anchor tag.
+.list-group-item-image a img {
+  width: 100%;
+}
+
 .list-group-item-content {
   @include garamond();
   @include flex(1 1px);
