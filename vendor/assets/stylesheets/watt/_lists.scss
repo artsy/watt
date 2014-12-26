@@ -50,16 +50,11 @@
   max-width: 180px;
   min-height: 100px;
   > img { width: 100%; }
+  > a img { width: 100%; }
   + .list-group-item-content {
     @include flex(2 0px);
     padding-left: 2*$spacing-unit;
   }
-}
-
-// Constrain list group item image widths when the image
-// is enclosed in an anchor tag.
-.list-group-item-image a img {
-  width: 100%;
 }
 
 .list-group-item-content {
