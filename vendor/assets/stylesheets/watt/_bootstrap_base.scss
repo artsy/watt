@@ -1,6 +1,10 @@
 //
 // Bootstrap
-// NOTE: For new components, create them in watt leveraging neat & bourbon mixins
+// Our goal should be to remove rather than add bootstrap references in this file.
+// For new components, create them in watt leveraging neat & bourbon mixins.
+// If an existing bootstrap file is required for a project using watt, they
+// can be included within the project:
+// `@import "boostrap/jumbotron"`
 //
 
 // Core variables and mixins
