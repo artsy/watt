@@ -1,0 +1,82 @@
+$s: 768px;
+.progress-bar-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.progress-bar {
+  margin: 0 0 2 * $spacing-unit 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  @include media($s) {
+    overflow-x: hidden;
+    margin: 0 0 3 * $spacing-unit 0;
+  }
+}
+.progress-bar-overflow {
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  @include display(flex);
+  @include align-items(flex-end);
+}
+.progress-bar-item {
+  @include avant-garde();
+  @include flex(1 1);
+  display: inline-block;
+  font-size: 9px;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+  margin-right: 5px;
+  min-width: 120px;
+  &.is-active {
+    span {
+      border-color: $purple;
+      color: $purple;
+    }
+  }
+  &:last-child { margin-right: 0; }
+  span {
+    background-color: $white;
+    border: solid $gray;
+    border-width: 0 0 5px 0;
+    color: $gray-dark;
+    display: block;
+    padding: 8px 0;
+  }
+  @include media($s) {
+    font-size: 11px;
+    min-width: initial;
+    span { border-width: 0 0 8px 0; }
+  }
+}
+.progress-bar-overflow-indicator-left,
+.progress-bar-overflow-indicator-right {
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  @include media($s) {
+    display: none;
+  }
+}
+.progress-bar-overflow-indicator-right {
+  right: -48px;
+  @include linear-gradient(to right, rgba(255,255,255,0) 0%, #ffffff 50%, $fallback: transparent);
+  @include transition(right 0.25s);
+  &.is-active {
+    right: -10px;
+  }
+}
+.progress-bar-overflow-indicator-left {
+  left: -48px;
+  @include linear-gradient(to left, rgba(255,255,255,0) 0%, #ffffff 50%);
+  @include transition(left 0.25s);
+  &.is-active {
+    left: -10px;
+  }
+}
