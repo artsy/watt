@@ -1,10 +1,10 @@
-header {
+header.navigation {
   background-color: black;
   position: fixed;
   width: 100%;
   z-index: 10;
 }
-header a.brand {
+header.navigation a.brand {
   display: inline-block;
   svg {
     display: inline-block;
