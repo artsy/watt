@@ -29,6 +29,19 @@
   }
 }
 
+.artwork-image-low-res {
+  @include avant-garde();
+  background-color: $black;
+  bottom: 0;
+  color: $white;
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  z-index: 1;
+}
+
 // Artwork Grid Items
 .artwork-grid-item {
   float: left;
@@ -75,18 +88,6 @@
       width: 100%;
     }
   }
-  .artwork-grid-item-low-res {
-    @include avant-garde();
-    background-color: $black;
-    bottom: 0;
-    color: $white;
-    font-size: 12px;
-    padding: 5px;
-    position: absolute;
-    right: 0px;
-    text-align: center;
-    z-index: 1;
-  }
   .artwork-grid-item-artist-name {
     @include avant-garde();
     @include ellipsis();
@@ -114,10 +115,12 @@
     padding-top: $spacing-unit;
   }
   .artwork-grid-action {
+    @include avant-garde();
     color: $gray-darker;
+    float: left;
     font-size: 12px;
     margin-right: $spacing-unit;
-    float: left;
+    text-decoration: none;
   }
   .grid-item-artwork-view,
   .grid-item-artwork-quick-edit {
