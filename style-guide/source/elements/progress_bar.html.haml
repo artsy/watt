@@ -1,0 +1,86 @@
+---
+title: Partner Engineering Style Guide
+---
+#content-wrap
+  .container
+    .row
+      .col-md-12
+        .bordered.page-title
+          %h2 Progress Bar
+        
+        %p A progress bar displays steps in equal width and highlights the active one. Similar to the tabs component, it becomes horizontally scrollable on smaller viewports (width &lt; 768px), and tries to center the active item. Reload the page on smaller viewports to see it in action.
+    .row
+      .col-md-12
+        .progress-bar-wrap
+          .progress-bar-overflow-indicator-left
+          .progress-bar
+            %ul.progress-bar-overflow
+              %li.progress-bar-item.is-active
+                %span Select an artist
+              %li.progress-bar-item
+                %span Upload images
+              %li.progress-bar-item
+                %span Add artwork metadata
+              %li.progress-bar-item
+                %span Add to shows
+          .progress-bar-overflow-indicator-right
+
+        .progress-bar-wrap
+          .progress-bar-overflow-indicator-left
+          .progress-bar
+            %ul.progress-bar-overflow
+              %li.progress-bar-item
+                %span Select an artist
+              %li.progress-bar-item.is-active
+                %span Upload images
+              %li.progress-bar-item
+                %span Add artwork metadata
+              %li.progress-bar-item
+                %span Add to shows
+          .progress-bar-overflow-indicator-right
+
+        .progress-bar-wrap
+          .progress-bar-overflow-indicator-left
+          .progress-bar
+            %ul.progress-bar-overflow
+              %li.progress-bar-item
+                %span Select an artist
+              %li.progress-bar-item
+                %span Upload images
+              %li.progress-bar-item.is-active
+                %span Add artwork metadata
+              %li.progress-bar-item
+                %span Add to shows
+          .progress-bar-overflow-indicator-right
+
+        .progress-bar-wrap
+          .progress-bar-overflow-indicator-left
+          .progress-bar
+            %ul.progress-bar-overflow
+              %li.progress-bar-item
+                %span Select an artist
+              %li.progress-bar-item
+                %span Upload images
+              %li.progress-bar-item
+                %span Add artwork metadata
+              %li.progress-bar-item.is-active
+                %span Add to shows
+          .progress-bar-overflow-indicator-right
+
+        %pre
+          :preserve
+            .row
+              .col-md-12
+                .progress-bar-wrap
+                  .progress-bar-overflow-indicator-left
+                  .progress-bar
+                    %ul.progress-bar-overflow
+                      %li.progress-bar-item.is-active
+                        %span Select an artist
+                      %li.progress-bar-item
+                        %span Upload images
+                      %li.progress-bar-item
+                        %span Add artwork metadata
+                      %li.progress-bar-item
+                        %span Add to shows
+                  .progress-bar-overflow-indicator-right
