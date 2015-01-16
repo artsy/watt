@@ -20,11 +20,8 @@ header.navigation {
   }
 }
 
-
-
 .dropdown-toggle {
   &:after {
-    content: '▼';
     content: '\25be';
   }
   &:hover {

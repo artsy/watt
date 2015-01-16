@@ -1,5 +1,5 @@
 header.navigation {
-  background-color: black;
+  background-color: $black;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -10,7 +10,7 @@ header.navigation a.brand {
     display: inline-block;
     margin: 10px 0 0 10px;
     g {
-      fill: white;
+      fill: $white;
     }
   }
 }
