@@ -54,6 +54,7 @@
     margin-bottom: $spacing-unit;
     position: relative;
     text-align: center;
+    font-size: 0;
     &:before {
       content: '';
       display: inline-block;
