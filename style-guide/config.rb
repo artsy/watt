@@ -12,25 +12,7 @@ require 'bootstrap-sass'
 ###
 # Page options, layouts, aliases and proxies
 ###
-
-# in situ
-# # page "/index.html", :layout => :full_width_layout
-# page '/interface/index.html', layout: :layout
-# page '/interface/items.html', layout: :layout
-# page '/interface/item.html', layout: :layout
-# page '/interface/form.html', layout: :layout
-
-# # elements
-# page '/elements/index.html', layout: :layout
-# page '/elements/typography.html', layout: :layout
-# page '/elements/colors.html'
-# page '/elements/buttons.html', layout: :layout
-# page '/elements/forms.html', layout: :layout
-# page '/elements/panels.html', layout: :layout
-# page '/elements/lists.html', layout: :layout
-# page '/elements/section_headers.html', layout: :layout
-# page '/elements/breadcrumbs.html', layout: :layout
-# page '/elements/flash_messages.html', layout: :layout
+# page "/index.html", :layout => :full_width_layout
 
 ###
 # Page options, layouts, aliases and proxies
