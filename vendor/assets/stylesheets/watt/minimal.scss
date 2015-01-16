@@ -1,3 +1,12 @@
+@import "bourbon";
+@import "neat";
+@import "watt/fonts";
+@import "watt/colors";
+@import "watt/icons";
+@import "watt/spaces";
+@import "watt/bootstrap_variables";
+@import "watt/bootstrap_base";
+@import "watt/bootstrap_overrides";
 @font-face {
   font-family: artsy-pe-icons;
   font-weight: normal;
@@ -5,57 +14,5 @@
   src: url("//d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/artsy-pe-icons.eot");
   src: url("//d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/artsy-pe-icons.eot?#iefix") format("embedded-opentype"), url("//d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/artsy-pe-icons.woff") format("woff"), url("//d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/artsy-pe-icons.ttf") format("truetype"), url("//d1ycxz9plii3tb.cloudfront.net/partner-engineering/assets/fonts/artsy-pe-icons.svg#artsy-pe-icons") format("svg");
 }
-header {
-  background-color: black;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
-header a.brand {
-  color: white;
-  display: block;
-  font-family: 'artsy-pe-icons';
-  font-size: 32px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  float: left;
-  line-height: 32px;
-  overflow: hidden;
-  padding: 10px;
-  position: relative;
-  speak: none;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-header a.brand:before {
-  content: "\e606";
-}
-header .nav li {
-  color: $white;
-  display: block;
-  @include avant-garde();
-  font-size: 12px;
-  font-weight: normal;
-  float: right;
-  line-height: 32px;
-  margin-left: 10px;
-  padding: 10px 0;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  a {
-    color: $white;
-    padding: 10px;
-  }
-}
-header .nav li a:hover {
-  text-decoration: underline;
-}
-
-section#main {
-  margin: auto;
-  max-width: 1024px;
-  padding: 100px 20px;
-}
+@import "watt/layout";
+@import "watt/nav";

@@ -1,0 +1,56 @@
+header.navigation {
+  background-color: $black;
+  clear: both;
+  .nav, a {
+    @include avant-garde();
+    color: $white;
+    font-size: 12px;
+    line-height: 32px;
+  }
+}
+
+.nav {
+  float: right;
+  > a, .dropdown-toggle {
+    display: inline-block;
+    padding: 10px;
+  }
+  li {
+    list-style: none;
+  }
+}
+
+
+
+.dropdown-toggle {
+  &:after {
+    content: '▼';
+    content: '\25be';
+  }
+  &:hover {
+    text-decoration: none;
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.dropdown-menu {
+  float: none;
+  background-color: $black;
+  display: none;
+  margin: 0;
+  min-width: 100px;
+  padding: 0;
+  position: absolute;
+  &[data-anchor='right'] {
+    right: 0;
+  }
+  > li {
+    display: block;
+    margin: 0;
+  }
+  a {
+    padding: 10px;
+  }
+}

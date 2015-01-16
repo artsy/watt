@@ -23,7 +23,7 @@ title: Partner Engineering Style Guide
             %li.tab-item><
               %a{href: '/interface/form'}< Install Shots
             %li.tab-item><
-              %a{href: '/interface-form'}< Documents
+              %a{href: '/interface/form'}< Documents
         .tabs-overflow-indicator-right
 
   .row
@@ -35,19 +35,31 @@ title: Partner Engineering Style Guide
           .unit.single-padding
             .list-group
               - 20.times do
-                .grid-item-artwork.grid-item{ href: "#", data: { artwork: "josef-hoflehner-trees-in-snow" } }
-                  .grid-item-artwork-image
-                    %img{ src: ['/images/trees_in_snow.png', '/images/cliff.png', '/images/hurricaneLXXXIV.png'].sample }
-                    .grid-item-artwork-low-res Add Higher Res Image
-                  %h3.grid-item-artwork-artist-name Josef Hoflehner
-                  %h3.grid-item-artwork-title Trees in Snow
-                  .grid-item-artwork-visibility{ data: { public: "public" } }
-                    %span.icon-private.grid-item-icon
-                    %span.grid-item-icon-label Visible on Artsy
-                  .grid-item-artwork-availability
-                    %span.icon-inquiry.grid-item-icon
-                    .grid-item-icon-label
-                      .grid-item-artwork-inquiry For Sale (via Inquiry)
-                      .grid-item-artwork-price{ data: { price: "$4,250" } } $4,250
-                      .grid-item-artwork-display-price{ data: { price: "$3,000 - $5,000" } } $3,000 - $5,000
-                  %a.btn-text.grid-action.grid-item-artwork-edit{ href: "#" } Edit
+                .artwork-grid-item.grid-item{ href: "#", data: { artwork: "artwork-slug-here" } }
+                  .artwork-grid-item-image-data
+                    .artwork-grid-item-image
+                      %img{ src: ['/images/trees_in_snow.png', '/images/cliff_sq.png', '/images/hurricaneLXXXIV_sq.png'].sample }
+                      .artwork-grid-item-low-res Low-Res
+                    %h3.artwork-grid-item-artist-name Josef Hoflehner
+                    %h3.artwork-grid-item-title
+                      %a{ href: "#" } Trees in Snow
+
+                    .artwork-grid-item-display-data
+                      %span.data-label Visibility
+                      %span.visiblity= ['Visible', 'Private'].sample
+                    .artwork-grid-item-display-data
+                      %span.data-label Availability
+                      %span.availability= ['For Sale', 'Not For Sale', 'Sold'].sample
+                    .artwork-grid-item-display-data
+                      %span.data-label Price
+                      %span.price= ['Contact For Price', "$5,000"].sample
+
+                  .artwork-grid-actions
+                    %a.bstooltip.artwork-grid-action.artwork-grid-action-remove{ href: '#', data: { toggle: 'tooltip', placement: 'top', pinned_label: 'Delete' } }
+                      = partial 'svgs/circle_delete'
+                    %a.bstooltip.artwork-grid-action.artwork-grid-action-save{ href: '#', data: { toggle: 'tooltip', placement: 'top', pinned_label: 'Save to your shortlist.' } }
+                      = partial 'svgs/circle_pin'
+                    %a.bstooltip.artwork-grid-action.artwork-grid-action-edit{ href: '#', data: { toggle: 'tooltip', placement: 'top', pinned_label: 'Edit' } }
+                      = partial 'svgs/circle_edit'
+
+                  %a.btn-text.artwork-grid-action.grid-item-artwork-view{ href: '#' } View
