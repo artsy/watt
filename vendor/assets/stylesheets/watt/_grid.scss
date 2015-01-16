@@ -1,6 +1,7 @@
 .list-group {
   @include clearfix();
 }
+
 .grid-item {
   float: left;
   padding: 20px 0;
@@ -28,41 +29,272 @@
   }
 }
 
-.grid-item-artwork-image {
-  display: inline-block;
-  height: 260px;
-  margin-bottom: 20px;
-  text-align: center;
-  width: 260px;
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
+// Artwork Grid Items
+.artwork-grid-item {
+  float: left;
+  display: block;
+  border: 1px solid $gray-lightest;
+  padding: $spacing-unit $spacing-unit 0.5*$spacing-unit $spacing-unit;
+  background-color: $white;
+  &:hover {
+    border: 1px solid $gray;
+    cursor: pointer;
+    .artwork-grid-actions {
+      border-top: 1px solid $gray;
+      .grid-item-icon, a {
+        color: $black;
+        &:hover {
+          color: $purple;
+        }
+      }
+    }
   }
-  img {
+  .artwork-grid-item-image {
     display: inline-block;
-    max-height: 100%;
-    max-width: 100%;
+    margin-bottom: $spacing-unit;
+    position: relative;
     text-align: center;
-    vertical-align: middle;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.3em; /* Adjusts for spacing */
+    }
+    div, img {
+      display: inline-block;
+      max-height: 100%;
+      max-width: 100%;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .image-is-processing,
+    .image-is-errored,
+    .image-is-blank {
+      width: 100%;
+    }
   }
-  @include media($screen-md-min) {
-    height: 210px;
-    width: 210px;
+  .artwork-grid-item-low-res {
+    @include avant-garde();
+    background-color: $black;
+    bottom: 0;
+    color: $white;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    z-index: 1;
+  }
+  .artwork-grid-item-artist-name {
+    @include avant-garde();
+    @include ellipsis();
+    display: block;
+    font-size: 14px;
+    margin: $spacing-unit 0 0.5*$spacing-unit 0;
+  }
+  .artwork-grid-item-title {
+    @include ellipsis();
+    display: block;
+    font-style: italic;
+    font-size: 15px;
+    margin: 0 0 $spacing-unit 0;
+  }
+  .artwork-grid-item-display-data {
+    font-size: 14px;
+    span.data-label {
+      @include avant-garde();
+      font-size: 11px;
+    }
+  }
+  .artwork-grid-actions {
+    border-top: 1px solid $gray-lightest;
+    margin-top: $spacing-unit;
+    padding-top: $spacing-unit;
+  }
+  .artwork-grid-action {
+    color: $gray-darker;
+    font-size: 12px;
+    margin-right: $spacing-unit;
+    float: left;
+  }
+  .grid-item-artwork-view,
+  .grid-item-artwork-quick-edit {
+    line-height: 24px;
+  }
+  .artwork-grid-action-edit,
+  .artwork-grid-action-save,
+  .artwork-grid-action-remove {
+    float: right;
+    margin: 0 0 0 0.5*$spacing-unit;
+    padding: 0;
+    a { float: right; }
+    svg {
+      circle, path {
+        @include transition(fill 0.25s);
+      }
+    }
+  }
+  .artwork-grid-action-edit svg,
+  .artwork-grid-action-remove svg {
+    circle {
+      fill: $gray-lightest;
+    }
+    path {
+      fill: $gray-dark;
+    }
+  }
+  .artwork-grid-action-edit svg {
+    &:hover {
+      circle {
+        fill: $black;
+      }
+      path {
+        fill: $white;
+      }
+    }
+  }
+  .artwork-grid-action-remove svg {
+    &:hover {
+      circle {
+        fill: $red;
+      }
+      path {
+        fill: $white;
+      }
+    }
+  }
+  .artwork-grid-action-save {
+    &.active svg {
+      circle {
+        fill: $purple;
+      }
+      path {
+        fill: $white;
+      }
+      &:hover {
+        circle {
+          fill: $purple;
+        }
+        path {
+          fill: $white;
+        }
+      }
+    }
+    svg {
+      circle {
+        fill: $gray-lightest;
+      }
+      path {
+        fill: $gray-dark;
+      }
+      &:hover {
+        circle {
+          fill: $black;
+        }
+        path {
+          fill: $white;
+        }
+      }
+    }
   }
 }
-.grid-item-artwork-low-res {
-  @include avant-garde();
-  background-color: $yellow-light;
-  font-size: 14px;
-  margin-top: -30px;
-  padding: 5px;
-  position: relative;
-  text-align: center;
-  z-index: 1;
+.artwork-grid-item-modal .btn-full-width {
+  margin-bottom: 1px;
 }
+.artwork-grid-item {
+  margin-bottom: 2*$spacing-unit;
+  margin-right: 0;
+  width: 260px;
+  .artwork-grid-item-image-data {
+    height: 390px;
+  }
+  .artwork-grid-item-image {
+    height: 240px;
+    width: 240px;
+    .image-is-processing,
+    .image-is-errored,
+    .image-is-blank {
+      height: 240px;
+    }
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  .artwork-grid-item {
+    margin-right: $spacing-unit;
+    width: 195px;
+    .artwork-grid-item-image-data {
+      height: 320px;
+    }
+    .artwork-grid-item-image {
+      height: 170px;
+      width: 170px;
+      .image-is-processing,
+      .image-is-errored,
+      .image-is-blank {
+        height: 170px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .artwork-grid-item {
+    margin-right: 15px;
+    width: 170px;
+    .artwork-grid-item-image-data {
+      height: 300px;
+    }
+    .artwork-grid-item-image {
+      height: 150px;
+      width: 150px;
+      .image-is-processing,
+      .image-is-errored,
+      .image-is-blank {
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .artwork-grid-item {
+    margin-right: 2*$spacing-unit;
+    width: 173px;
+    .artwork-grid-item-image-data {
+      height: 300px;
+    }
+    .artwork-grid-item-image {
+      height: 153px;
+      width: 153px;
+      .image-is-processing,
+      .image-is-errored,
+      .image-is-blank {
+        height: 153px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .artwork-grid-item {
+    width: 215px;
+    .artwork-grid-item-image-data {
+      height: 340px;
+    }
+    .artwork-grid-item-image {
+      height: 195px;
+      width: 195px;
+      .image-is-processing,
+      .image-is-errored,
+      .image-is-blank {
+        width: 195px;
+      }
+    }
+  }
+}
+
 .grid-item-artwork-artist-name {
   @include avant-garde();
   @include ellipsis();

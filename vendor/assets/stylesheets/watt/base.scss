@@ -14,12 +14,14 @@
 @import "watt/bootstrap_overrides";
 
 // Watt basics
+@import "watt/layout";
 @import "watt/animations";
 @import "watt/typography";
 @import "watt/links";
 @import "watt/buttons";
 @import "watt/panels";
 @import "watt/lists";
+@import "watt/nav";
 @import "watt/grid";
 @import "watt/breadcrumbs";
 @import "watt/tabs";

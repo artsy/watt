@@ -14,23 +14,23 @@ require 'bootstrap-sass'
 ###
 
 # in situ
-# page "/index.html", :layout => :full_width_layout
-page '/interface/index.html', layout: :interface_layout
-page '/interface/items.html', layout: :interface_layout
-page '/interface/item.html', layout: :interface_layout
-page '/interface/form.html', layout: :interface_layout
+# # page "/index.html", :layout => :full_width_layout
+# page '/interface/index.html', layout: :layout
+# page '/interface/items.html', layout: :layout
+# page '/interface/item.html', layout: :layout
+# page '/interface/form.html', layout: :layout
 
-# elements
-page '/elements/index.html', layout: :guide_layout
-page '/elements/typography.html', layout: :guide_layout
-page '/elements/colors.html', layout: :guide_layout
-page '/elements/buttons.html', layout: :guide_layout
-page '/elements/forms.html', layout: :guide_layout
-page '/elements/panels.html', layout: :guide_layout
-page '/elements/lists.html', layout: :guide_layout
-page '/elements/section_headers.html', layout: :guide_layout
-page '/elements/breadcrumbs.html', layout: :guide_layout
-page '/elements/flash_messages.html', layout: :guide_layout
+# # elements
+# page '/elements/index.html', layout: :layout
+# page '/elements/typography.html', layout: :layout
+# page '/elements/colors.html'
+# page '/elements/buttons.html', layout: :layout
+# page '/elements/forms.html', layout: :layout
+# page '/elements/panels.html', layout: :layout
+# page '/elements/lists.html', layout: :layout
+# page '/elements/section_headers.html', layout: :layout
+# page '/elements/breadcrumbs.html', layout: :layout
+# page '/elements/flash_messages.html', layout: :layout
 
 ###
 # Page options, layouts, aliases and proxies
