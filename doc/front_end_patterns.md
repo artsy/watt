@@ -29,5 +29,25 @@ On Volt's welcome page, we render the partner stats via [front-end callbacks](ht
 As demonstrated in the screencast, displaying a loading spinner initially and replacing it with fetched content provides a good user experience.
 
 ## Remote Animation
+|||
+|----|---|
+|**source**|[vendor/assets/javascripts/watt/remote_animation.js.coffee](../vendor/assets/javascripts/watt/remote_animation.js.coffee)|
 
-TODO
+We display a loading spinner to indicate a page is in the middle of processing something (e.g. making AJAX calls), and give users good feedback. Typically in Watt's client apps, AJAX calls are triggered by sumitting a form or clicking a link/button marked with `data-remote` attribute, and [UJS](https://github.com/rails/jquery-ujs/wiki/ajax) does the submission and fires custom events behind the scene. We are able to use the events to automatically show the loading spinners while making AJAX calls, i.e. links/buttons marked with `data-remote` attribute will get a loading spinner when they are making AJAX calls.
+
+#### Usage
+Make sure the form or link/button has the `data-remote` attribute set, and it should get the loading spinner for free!
+
+```haml
+ = simple_form_for :match, :url => artists_url, remote: true, :method => :get do |f|
+   //...
+```
+
+```haml
+= link_to '', partner_shows_url, method: :get, remote: true
+```
+
+_Note: If you just want the loading spinner CSS styles, you can use the `is-loading` class defined in [Watt](https://github.com/artsy/watt/blob/78b4fa2e46c70e97a969dd965f457b9125d03707/vendor/assets/stylesheets/watt/_buttons.scss#L59-L60) directly._
+
+#### Example
+![](images/remote_animation.gif)
