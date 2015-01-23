@@ -3,15 +3,20 @@ header.navigation {
   position: fixed;
   width: 100%;
   z-index: 10;
-}
-header.navigation a.brand {
-  display: inline-block;
-  svg {
+  a.brand {
     display: inline-block;
-    margin: 10px 0 0 10px;
-    g {
-      fill: $white;
+    svg {
+      display: inline-block;
+      margin: 10px 10px 0 10px;
+      g {
+        fill: $white;
+      }
     }
+  }
+  .nav-application-name {
+    display: inline-block;
+    position: relative;
+    top: -$spacing-unit;
   }
 }
 section#main {

@@ -1,0 +1,119 @@
+---
+title: Partner Engineering Style Guide - Navigation
+---
+.page-title
+  %h2 Navigation
+
+%article.sg-component
+  %h4 Header Nav Bar
+  .sg-component-rendered
+    %header.navigation
+      %a.brand{ href: '/' }= partial 'svgs/mark'
+      %a.nav-application-name Style Guide
+      .nav
+        .dropdown-toggle
+          Dropdown |
+          %ul.dropdown-menu
+            %li
+              %a{ href: '/elements/navigation' } Dropdown Item
+            %li
+              %a{ href: '/elements/navigation' } Dropdown Item
+        %a{ href: '/elements/navigation' } Link Item
+        .dropdown-toggle
+          Dropdown Right |
+          %ul.dropdown-menu{ data: { anchor: 'right' } }
+            %li
+              %a{ href: '/elements/navigation' } Dropdown Item
+            %li
+              %a{ href: '/elements/navigation' } Dropdown Item
+
+  %pre
+    :preserve
+      %header.navigation
+        %a.brand{ href: '/' }= partial 'svgs/mark'
+        %a.nav-application-name Style Guide
+        .nav
+          .dropdown-toggle
+            Dropdown |
+            %ul.dropdown-menu
+              %li
+                %a{ href: '/elements/navigation' } Dropdown Item
+              %li
+                %a{ href: '/elements/navigation' } Dropdown Item
+          %a{ href: '/elements/navigation' } Link Item
+          .dropdown-toggle
+            Dropdown Right |
+            %ul.dropdown-menu{ data: { anchor: 'right' } }
+              %li
+                %a{ href: '/elements/navigation' } Dropdown Item
+              %li
+                %a{ href: '/elements/navigation' } Dropdown Item
+
+%article.sg-component
+  %h4 Tabs
+  .sg-component-rendered
+    .tabs-overflow-indicator-left
+    .tabs
+      %ul.tabs-overflow><
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Overview
+        %li.tab-item.is-active><
+          %a{href: '/elements/navigation'}< Artworks
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Locations
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Documents
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Contacts
+    .tabs-overflow-indicator-right
+  %pre
+    :preserve
+      .tabs-overflow-indicator-left // (optional)
+      .tabs
+      %ul.tabs-overflow><
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Overview
+        %li.tab-item.is-active><
+          %a{href: '/elements/navigation'}< Artworks
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Locations
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Documents
+        %li.tab-item><
+          %a{href: '/elements/navigation'}< Contacts
+      .tabs-overflow-indicator-right // (optional)
+
+
+%article.sg-component
+  %h4 Breadcrumbs
+  .sg-component-rendered
+    .section-breadcrumb.clearfix
+      .section-breadcrumb-link
+        %a{ href: "#" } Home
+      .section-breadcrumb-separator.icon-chevron-right
+      .section-breadcrumb-link
+        %a{ href: "#" } Section
+      .section-breadcrumb-separator.icon-chevron-right
+      .section-breadcrumb-link
+        %a{ href: "#" } And Another Section
+      .section-breadcrumb-separator.icon-chevron-right
+      .section-breadcrumb-link
+        %a{ href: "#" } Even More Sections
+      .section-breadcrumb-separator.icon-chevron-right
+      .section-breadcrumb-title Active Section
+  %pre
+    :preserve
+      .section-breadcrumb.clearfix
+        .section-breadcrumb-link
+          %a{ href: "#" } Home
+        .section-breadcrumb-separator.icon-chevron-right
+        .section-breadcrumb-link
+          %a{ href: "#" } Section
+        .section-breadcrumb-separator.icon-chevron-right
+        .section-breadcrumb-link
+          %a{ href: "#" } And Another Section
+        .section-breadcrumb-separator.icon-chevron-right
+        .section-breadcrumb-link
+          %a{ href: "#" } Even More Sections
+        .section-breadcrumb-separator.icon-chevron-right
+        .section-breadcrumb-title Active Section

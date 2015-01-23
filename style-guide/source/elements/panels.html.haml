@@ -1,47 +1,96 @@
 ---
-title: Partner Engineering Style Guide
+title: Partner Engineering Style Guide - Panels
 ---
-#content-wrap
-  .container
-    .row
-      .container
-        .page-title.is-bordered
-          %h2 Panels
+.page-title
+  %h2 Panels
 
-        %p A panel puts some content in a box.
-        .panel
-          %h4 Heading
-          %p
-            Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-          %p
-            Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            %a{ href: "#" } et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+%article.sg-component
+  %h4 Panel
+  .sg-component-rendered
+    .panel
+      %h4 Heading
+      %p
+        Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      %p
+        Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        %a{ href: "#" } et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+  %pre
+    :preserve
+      .panel
+        %h4 Heading
         %p
-          Sometimes its nice to constrain the width of the content. It's classed with <code>.is-constrained</code>.
-        .panel.is-constrained
-          %p
-            Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            %a{ href: "#" } et dolore magna aliqua.
-          %p
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
         %p
-          This panel serves as a notice. It's classed with <code>.is-notice</code>.
-        .panel.is-notice
-          %h4 Complete these 5 Steps to upload a complete show.
-          %ol
-            %li Upload the press release and other documents
-            %li Add a description for this show
-            %li Add artworks to this show
-            %li Add install shots (these can be added later)
-            %li Select a cover for this show
+          Lorem ipsum dolor sit amet,
+          %a{ href: "#" } et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 
+%article.sg-component
+  %h4 Panel Constrained
+  .sg-component-rendered
+    .panel.is-constrained
+      %p
+        Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      %p
+        Lorem ipsum dolor sit amet,
+        %a{ href: "#" } et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+  %pre
+    :preserve
+      .panel.is-constrained
         %p
-          This panel is a notice and centered with <code>.text-center</code>.
-        .panel.is-notice.text-center
-          %p The featured show on your profile is out of date.
-          %p
-            %a.btn.btn-large.btn-secondary-add{ href: "#" } Update Profile Feature
-          %p <em>You can always update this under <a href="#">'Shows & Fairs'</a></em>.
+          Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        %p
+          Lorem ipsum dolor sit amet,
+          %a{ href: "#" } et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+%article.sg-component
+  %h4 Panel Notice
+  .sg-component-rendered
+    .panel.is-notice
+      %h4 Complete these 5 Steps to upload a complete show.
+      %ol
+        %li Upload the press release and other documents
+        %li Add a description for this show
+        %li Add artworks to this show
+        %li Add install shots (these can be added later)
+        %li Select a cover for this show
+  %pre
+    :preserve
+      .panel.is-notice
+        %h4 Complete these 5 Steps to upload a complete show.
+        %ol
+          %li Upload the press release and other documents
+          %li Add a description for this show
+          %li Add artworks to this show
+          %li Add install shots (these can be added later)
+          %li Select a cover for this show
+
+%article.sg-component
+  %h4 Panel Notice Centered
+  .sg-component-rendered
+    .panel.is-notice.text-center
+      %p The featured show on your profile is out of date.
+      %p
+        %a.btn.btn-large.btn-secondary-add{ href: "#" } Update Profile Feature
+      %p <em>You can always update this under <a href="#">'Shows & Fairs'</a></em>.
+  %pre
+    :preserve
+      .panel.is-notice.text-center
+        %p The featured show on your profile is out of date.
+        %p
+          %a.btn.btn-large.btn-secondary-add{ href: "#" } Update Profile Feature
+        %p
+          %em You can always update this under
+          %a{ href: '#' }< 'Shows & Fairs'
+          .
