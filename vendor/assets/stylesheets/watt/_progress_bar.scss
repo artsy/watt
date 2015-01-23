@@ -59,7 +59,7 @@ $s: 768px;
   width: 48px;
   position: absolute;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   @include media($s) {
     display: none;
   }

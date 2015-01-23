@@ -4,6 +4,7 @@ header.navigation {
   .nav, a {
     @include avant-garde();
     color: $white;
+    cursor: pointer;
     font-size: 12px;
     line-height: 32px;
   }
@@ -21,6 +22,7 @@ header.navigation {
 }
 
 .dropdown-toggle {
+  cursor: pointer;
   &:after {
     content: '\25be';
   }
@@ -36,11 +38,12 @@ header.navigation {
   float: none;
   background-color: $black;
   display: none;
-  margin: 0;
+  margin: 10px 0 0 -10px;
   min-width: 100px;
   padding: 0;
   position: absolute;
   &[data-anchor='right'] {
+    margin-left: 0;
     right: 0;
   }
   > li {

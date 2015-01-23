@@ -12,7 +12,6 @@
  */
 .list-group {
   margin-bottom: 30px;
-  //max-width: $sm-screen;
   &.is-notice {
     background-color: $notice-color;
   }
@@ -41,7 +40,13 @@
     }
   }
   @include media(max-width $screen-xs-max) {
-    flex-flow: row wrap;
+    @include flex-wrap(wrap);
+    &.list-group-item-with-icons {
+      @include flex-wrap(nowrap);
+      .list-group-item-content {
+        @include flex(1);
+      }
+    }
   }
 }
 
@@ -153,7 +158,7 @@
 
 .list-pager-pages {
   display: none;
-  @include media($screen-sm-min) {
+  @include media(max-width $screen-xs-max) {
     display: block;
     margin: 0 2*$spacing-unit 0 0;
     padding: 0;
@@ -244,6 +249,51 @@ a.list-pager-page-link {
     strong {
       @include avant-garde();
       line-height: 100%;
+    }
+  }
+}
+
+.list-group-item-action {
+  display: inline-block;
+}
+.list-group-item-icons {
+  @include media(min-width $screen-xs-min) {
+    .btn { display: inline-block; }
+    .btn-icon { display: none; }
+  }
+  @include media(max-width $screen-xs-max) {
+    .btn { display: none; }
+    .btn-icon { display: inline-block; }
+  }
+}
+.list-group-item-download {
+  .btn-icon {
+    border: 1px solid $gray;
+    border-radius: 16px;
+    height: 32px;
+    text-align: center;
+    width: 32px;
+  }
+  svg {
+    position: relative;
+    top: 0;
+    left: -3px;
+  }
+}
+.list-group-item-edit {
+  svg {
+    position: relative;
+    top: 3px;
+    left: -5px;
+    margin-left: $spacing-unit;
+    @include transform(scale(1.4));
+    padding: 1px;
+    circle {
+      fill: $white;
+      stroke: $gray;
+    }
+    path {
+      fill: $black;
     }
   }
 }

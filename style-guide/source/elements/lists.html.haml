@@ -1,204 +1,298 @@
 ---
-title: Partner Engineering Style Guide
+title: Partner Engineering Style Guide - Lists
 ---
-#content-wrap
-  .container
-    .row
-      .col-md-10
-        .page-title.bordered
-          %h2 Lists
 
-        %p In order to get vertically aligned icons, we need some extra mark up ¯\_(ツ)_/¯
-        %pre
-          :preserve
-            .list-controls
-              .list-controls-row
-                .list-control-filter
-                  %select.form-control
-              .list-controls-row
-                .list-control-counts Viewing 1 - 5 of 37 Artists
-                .list-control-sorting Sorted by: Most Recent / A-Z
-            .list-group
-              %a.list-group-item{ href: '#' }
-                %span.list-group-item-content
-                  %span.list-group-item-label Andy Warhol
-                  %span.list-group-item-info 1928 &ndash; 1987
-                %span.icon-chevron-right
-        %br
+.page-title.bordered
+  %h2 Lists
 
-        %h4 Default List Group Items
-        .list-group
-          .list-group-item Andy Warhol
-          .list-group-item Andy Warhol
-          .list-group-item Andy Warhol
+%p.double-margin-bottom
+  List styles do not explicity require <code>ul</code> and <code>li</code> |
+  elements, but can be composed with them. Anything should work: |
+  <code>div</code>s, <code>div</code> and <code>a</code>s, <code>nav</code> |
+  and <code>a</code>s, etc.
 
-        %h4 List Group Notice
-        %p Classed with <code>.is-notice</code>.
-        .list-group.is-notice
-          .list-group-item Andy Warhol
-          .list-group-item Andy Warhol
-          .list-group-item Andy Warhol
+%article.sg-component
+  %h4 Basic
+  .sg-component-rendered
+    .list-group
+      .list-group-item Andy Warhol,&nbsp; <em>Soup Can, Vegetarian Vegetable</em>, 1964
+      .list-group-item Jim Houser,&nbsp; <em>GNRS</em>, 2013
+      .list-group-item Souther Salazar,&nbsp; <em>6-Legged Octopus Tower</em>, 2009
+  %pre
+    :preserve
+      .list-group
+        .list-group-item Andy Warhol, Soup Can, Vegetarian Vegetable, 1964
+        .list-group-item Jim Houser, GNRS, 2013
+        .list-group-item Souther Salazar, 6-Legged Octopus Tower, 2009
 
-        %h4 Lists of links
-        %p
-          These will usually get an icon treatment and some <code>:hover</code> hijinks.
-        .list-group
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Chris Harnden
-              .list-group-item-info
-                CHarnden@thepacegallery.com
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Samanthe Lobosco
-              .list-group-item-info
-                SLobisco@pacegallery.com
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Aimee Drummey
-              %span.list-group-item-info
-                aimeed@pacegallery.com
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Some Name
-              %span.list-group-item-info
-                Some extra information in an element classed <code>.list-group-item-info</code>
-                and child to <code>.list-group-item-content</code>.
-            %span.icon-chevron-right
+%article.sg-component
+  %h4 Notice
+  .sg-component-rendered
+    .list-group.is-notice
+      .list-group-item Andy Warhol,&nbsp; <em>Soup Can, Vegetarian Vegetable</em>, 1964
+      .list-group-item Jim Houser,&nbsp; <em>GNRS</em>, 2013
+      .list-group-item Souther Salazar,&nbsp; <em>6-Legged Octopus Tower</em>, 2009
+  %pre
+    :preserve
+      .list-group.is-notice
+        .list-group-item Andy Warhol, Soup Can, Vegetarian Vegetable, 1964
+        .list-group-item Jim Houser, GNRS, 2013
+        .list-group-item Souther Salazar, 6-Legged Octopus Tower, 2009
 
-        %h4 Lists of items with actions
-        %p
-          These will have action links/buttons at the right, and will be in separate rows when the screen is too small.
-        .list-group
-          .list-group-item
-            %span.list-group-item-image
-              %img{ src: "/images/trees_in_snow.png" }
-            %span.list-group-item-content
-              %span.list-group-item-label.list-group-item-artist-name Andy Warhol
-            %span.list-group-item-actions
-              %a.btn.btn-primary.btn-small Add an artwork
-          .list-group-item
-            %span.list-group-item-content
-              %span.list-group-item-label.list-group-item-artist-name Andy Warhol
-              %span.list-group-item-info
-                Some extra information in an element classed <code>.list-group-item-info</code>
-                and child to <code>.list-group-item-content</code>.
-            %span.list-group-item-actions
-              %a.btn.btn-primary.btn-small Add an artist
-              %a.btn.btn-primary.btn-small Delete an artist
-          .list-group-item
-            %span.list-group-item-content
-              %span.list-group-item-label.list-group-item-artist-name Andy Warhol
-            %span.list-group-item-actions
-              %a.btn.btn-primary.btn-small Add an artist
-          .list-group-item
-            %span.list-group-item-content
-              %span.list-group-item-label.list-group-item-artist-name Andy Warhol
-            %span.list-group-item-actions
-              %a.btn.btn-primary.btn-small Add an artist
+%article.sg-component
+  %h4 Links
+  .sg-component-rendered
+    .list-group
+      %a.list-group-item{ href: '#' }
+        .list-group-item-content
+          Andy Warhol, <em>Soup Can, Vegetarian Vegetable</em>, 1964
+        .icon-chevron-right
+      %a.list-group-item{ href: '#' }
+        .list-group-item-content
+          Jim Houser, <em>GNRS</em>, 2013
+        .icon-chevron-right
+      %a.list-group-item{ href: '#' }
+        .list-group-item-content
+          Souther Salazar, <em>6-Legged Octopus Tower</em>, 2009
+        .icon-chevron-right
+  %pre
+    :preserve
+      .list-group
+        %a.list-group-item{ href: '#' }
+          .list-group-item-content Andy Warhol, Soup Can, Vegetarian Vegetable, 1964
+          .icon-chevron-right
+        %a.list-group-item{ href: '#' }
+          .list-group-item-content Jim Houser, GNRS, 2013
+          .icon-chevron-right
+        %a.list-group-item{ href: '#' }
+          .list-group-item-content Souther Salazar, 6-Legged Octopus Tower, 2009
+          .icon-chevron-right
 
-        %h4 Lists of links with artworks
-        %p
-          These will get an artwork image in each item with 1/3 width of the row. The width of the image will be set to fill the container, and the width/height will remain the same ratio.
-        .list-group
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-image
-              %img{ src: "/images/hurricaneLXXXIV.png" }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-image
-              %img{ src: "/images/cliff.png" }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-              %span.list-group-item-info
-                Some extra information in an element classed <code>.list-group-item-info</code>
-                and child to <code>.list-group-item-content</code>.
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-image
-              %img{ src: "/images/trees_in_snow.png" }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-            %span.icon-chevron-right
+%article.sg-component
+  %h4 List Formatted Content
+  .sg-component-rendered
+    .list-group
+      %a.list-group-item{ href: '#' }
+        .list-group-item-content
+          .list-group-item-artist-name Andy Warhol
+          .list-group-item-info <em>Soup Can, Vegetarian Vegetable</em>, 1964
+        .icon-chevron-right
+      %a.list-group-item{ href: '#' }
+        .list-group-item-content
+          .list-group-item-label Andy Warhol
+          .list-group-item-info <em>Soup Can, Vegetarian Vegetable</em>, 1964
+        .icon-chevron-right
+  %pre
+    :preserve
+      / Note the formatting differences between .list-group-item-label and
+      / .list-group-item-artist-name
+      .list-group
+        %a.list-group-item{ href: '#' }
+          .list-group-item-content
+            .list-group-item-artist-name Andy Warhol
+            .list-group-item-info <em>Soup Can, Vegetarian Vegetable</em>, 1964
+          .icon-chevron-right
+        %a.list-group-item{ href: '#' }
+          .list-group-item-content
+            .list-group-item-label Andy Warhol
+            .list-group-item-info <em>Soup Can, Vegetarian Vegetable</em>, 1964
+          .icon-chevron-right
 
-        %h4 Lists of links with controls
-        %p
-          Lists controls are usually on top of a list. They can be organized
-          into <code>.list-controls-row</code>s, and each control can adjust
-          the size, preferably by <code>make-md-column(n)</code> mixins, and
-          add additional styles.
-        .list-controls
-          .list-controls-row
-            .list-control-filter
-              %select.form-control
-                %option Filter by visibility
-                %option{ value: '1' } Visible
-                %option{ value: '0' } Invisible
-            .list-control-filter
-              %select.form-control
-                %option Filter by availability
-                %option{ value: '1' } Available
-                %option{ value: '0' } Unavailable
-          .list-controls-row
-            .list-control-counts
-              Viewing 1 - 5 of 37 Artists
-            .list-control-sorting
-              Sorted by: <a href="#" class="active">Most Recent</a> / <a href="#">A-Z</a>
-        .list-group
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-            %span.icon-chevron-right
-          %a.list-group-item{ href: '#' }
-            %span.list-group-item-content
-              %span.list-group-item-label Andy Warhol
-            %span.icon-chevron-right
+%article.sg-component
+  %h4 Images
+  .sg-component-rendered
+    .list-group
+      %a.list-group-item{ href: '#' }
+        .list-group-item-image
+          %img{ src: "/images/hurricaneLXXXIV.png" }
+        .list-group-item-content
+          .list-group-item-artist-name Clifford Ross
+          .list-group-item-info Hurricane LXXXIV, 2008
+        .icon-chevron-right
+      %a.list-group-item{ href: '#' }
+        .list-group-item-image
+          %img{ src: "/images/cliff.png" }
+        .list-group-item-content
+          .list-group-item-artist-name Hiroshi Senju
+          .list-group-item-info Cliff, 2013
+        .icon-chevron-right
+      %a.list-group-item{ href: '#' }
+        .list-group-item-image
+          %img{ src: "/images/trees_in_snow.png" }
+        .list-group-item-content
+          .list-group-item-artist-name Josef Hoflehner
+          .list-group-item-info Trees in Snow, 2005
+        .icon-chevron-right
+  %pre
+    :preserve
+      .list-group
+        %a.list-group-item{ href: '#' }
+          .list-group-item-image
+            %img{ src: "/images/hurricaneLXXXIV.png" }
+          .list-group-item-content
+            .list-group-item-artist-name Clifford Ross
+            .list-group-item-info Hurricane LXXXIV, 2008
+          .icon-chevron-right
+        %a.list-group-item{ href: '#' }
+          .list-group-item-image
+            %img{ src: "/images/cliff.png" }
+          .list-group-item-content
+            .list-group-item-artist-name Hiroshi Senju
+            .list-group-item-info Cliff, 2013
+          .icon-chevron-right
+        %a.list-group-item{ href: '#' }
+          .list-group-item-image
+            %img{ src: "/images/trees_in_snow.png" }
+          .list-group-item-content
+            .list-group-item-artist-name Josef Hoflehner
+            .list-group-item-info Trees in Snow, 2005
+          .icon-chevron-right
 
-        .page-title.bordered
-          %h2 Empty Lists
-        %p
-          Sometimes lists are full. Sometimes lists are empty.
-          Add a <code>.list-group-empty-message</code> element as a sibling to
-          <code>.list-group</code> and CSS will take care of the rest.
-        %p
-          Note that <code>.list-controls</code> need to be hidden in view logic,
-          CSS ca not go up the DOM tree.  &nbsp;&nbsp;: (
-        %pre
-          :preserve
-            .list-group 
-              <b># Note the emptiness!</b>
-            .list-group-empty-message[-bordered]
-              This show contains no documents.
+%article.sg-component
+  %h4 Single Action
+  .sg-component-rendered
+    .list-group
+      .list-group-item
+        .list-group-item-content
+          .list-group-item-label Andy Warhol
+          .list-group-item-info <em>Soup Can, Vegetarian Vegetable</em>, 1964
+        .list-group-item-actions
+          %a.btn.btn-primary.btn-small Edit
+  %pre
+    :preserve
+      .list-group
+        .list-group-item
+          .list-group-item-content
+            .list-group-item-label Andy Warhol
+            .list-group-item-info Soup Can, Vegetarian Vegetable, 1964
+          .list-group-item-actions
+            %a.btn.btn-primary.btn-small Edit
 
-        %p For a single <code>list-group</code> on the page, use <code>list-group-empty-message</code>.
-        %br
-        .list-group
-        .list-group-empty-message
-          This show contains no documents.
+%article.sg-component
+  %h4 Grouped Actions
+  .sg-component-rendered
+    .list-group
+      .list-group-item
+        .list-group-item-content
+          .list-group-item-label Andy Warhol
+          .list-group-item-info <em>Soup Can, Vegetarian Vegetable</em>, 1964
+        .list-group-item-actions
+          %a.btn.btn-primary.btn-small Edit
+          %a.btn.btn-secondary.btn-delete.btn-small Delete
+  %pre
+    :preserve
+      .list-group
+        .list-group-item
+          .list-group-item-content
+            .list-group-item-label Andy Warhol
+            .list-group-item-info Soup Can, Vegetarian Vegetable, 1964
+          .list-group-item-actions
+            %a.btn.btn-primary.btn-small Edit
+            %a.btn.btn-secondary.btn-delete.btn-small Delete
 
-        %br
-        %p For one of many <code>list-group</code> sections use <code>list-group-emtpy-message-bordered</code>.
-        .clearfix.section-header
-          %h3 Press and Documents
-          .section-actions
-            %a.btn.btn-primary.btn-small.btn-add{ href: "" } Add a Document
-        .list-group
-        .list-group-empty-message-bordered
-          This show contains no documents.
+%article.sg-component
+  %h4 Icon Actions
+  .sg-component-rendered
+    .list-group
+      .list-group-item.list-group-item-with-icons
+        .list-group-item-content
+          .list-group-item-info Artist CV
+        .list-group-item-icons
+          .list-group-item-action.list-group-item-download
+            %a.btn.btn-secondary.btn-small{ href: '#' } Download
+            %a.btn-icon{ href: '#' }= partial 'svgs/download'
+          .list-group-item-action.list-group-item-edit
+            %a.btn.btn-secondary.btn-small{ href: '#' } Edit
+            %a.btn-icon{ href: '#' }= partial 'svgs/circle_edit'
+  %pre
+    :preserve
+      .list-group
+        .list-group-item
+          .list-group-item-content
+            .list-group-item-info Artist CV
+          .list-group-item-icons
+            .list-group-item-action.list-group-item-download
+              %a.btn.btn-secondary.btn-small{ href: '#' } Download
+              %a.btn-icon{ href: '#' }
+                /= render svg partial here
+            .list-group-item-action.list-group-item-edit
+              %a.btn.btn-secondary.btn-small{ href: '#' } Edit
+              %a.btn-icon{ href: '#' }
+                /= render svg partial here
+
+%article.sg-component
+  %h4 List Controls
+  .sg-component-rendered
+    .list-controls
+      .list-controls-row
+        .list-control-counts
+          Viewing 1 - 5 of 37 Artists
+        .list-control-sorting
+          Sorted by: <a href="#" class="active">Most Recent</a> / <a href="#">A-Z</a>
+      .list-controls-row
+        .list-control-filter
+          %select.form-control
+            %option Filter by visibility
+            %option{ value: '1' } Visible
+            %option{ value: '0' } Invisible
+        .list-control-filter
+          %select.form-control
+            %option Filter by availability
+            %option{ value: '1' } Available
+            %option{ value: '0' } Unavailable
+  %pre
+    :preserve
+      .list-controls
+        .list-controls-row
+          .list-control-counts
+            Viewing 1 - 5 of 37 Artists
+          .list-control-sorting
+            Sorted by: &lt;a href="#" class="active"&gt;Most Recent&lt;/a&gt; / &lt;a href="#"&gt;A-Z&lt;/a&gt;
+        .list-controls-row
+          .list-control-filter
+            %select.form-control
+              %option Filter by visibility
+              %option{ value: '1' } Visible
+              %option{ value: '0' } Invisible
+          .list-control-filter
+            %select.form-control
+              %option Filter by availability
+              %option{ value: '1' } Available
+              %option{ value: '0' } Unavailable
+
+%article.sg-component
+  %h4 Full Page Empty List
+  .sg-component-rendered
+    .list-group
+    .list-group-empty-message
+      This show contains no documents.
+  %pre
+    :preserve
+      / Best used when the list is the bulk of the page content.
+      .list-group
+        <b>/ Note the emptiness!</b>
+      .list-group-empty-message
+        This show contains no documents.
+
+%article.sg-component
+  %h4 Bordered Empty List
+  .sg-component-rendered
+    .clearfix.section-header
+      %h3 Press and Documents
+      .section-actions
+        %a.btn.btn-primary.btn-small.btn-add{ href: "" } Add a Document
+    .list-group
+    .list-group-empty-message-bordered
+      This show contains no documents.
+  %pre
+    :preserve
+      / Use the bordered empty when the page has groups of lists
+      / under section headings.
+      .clearfix.section-header
+        %h3 Press and Documents
+        .section-actions
+          %a.btn.btn-primary.btn-small.btn-add{ href: "" } Add a Document
+      .list-group
+        <b>/ Note the emptiness!</b>
+      .list-group-empty-message-bordered
+        This show contains no documents.
