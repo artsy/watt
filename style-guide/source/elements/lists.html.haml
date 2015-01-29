@@ -224,41 +224,62 @@ title: Partner Engineering Style Guide - Lists
   %h4 List Controls
   .sg-component-rendered
     .list-controls
-      .list-controls-row
-        .list-control-counts
-          Viewing 1 - 5 of 37 Artists
-        .list-control-sorting
-          Sorted by: <a href="#" class="active">Most Recent</a> / <a href="#">A-Z</a>
-      .list-controls-row
-        .list-control-filter
-          %select.form-control
-            %option Filter by visibility
-            %option{ value: '1' } Visible
-            %option{ value: '0' } Invisible
-        .list-control-filter
-          %select.form-control
-            %option Filter by availability
-            %option{ value: '1' } Available
-            %option{ value: '0' } Unavailable
-  %pre
-    :preserve
-      .list-controls
+      %form.simple_form.watt-filters{ id: 'artists-filters', action: 'artists_controller_index', method: 'get' }
+        .list-controls-row
+          .list-control-filter
+            .form-group.select.filter_state
+              %select.select.required.form-control{ name: 'filter[state]', id: 'filter_state' }
+                %option{ value: 'all', selected: 'selected' } Select State
+                %option{ value: 'active' } Active
+                %option{ value: 'completed' } Completed
+                %option{ value: 'failed' } Failed
+          .list-control-filter
+            .form-group.select.filter_visibility
+              %select.select.required.form-control{ name: 'filter[visibility]', id: 'filter_visibility' }
+                %option{ value: 'all', selected: 'selected' } Filter by visibility
+                %option{ value: '1' } Visible
+                %option{ value: '0' } Invisible
         .list-controls-row
           .list-control-counts
             Viewing 1 - 5 of 37 Artists
           .list-control-sorting
-            Sorted by: &lt;a href="#" class="active"&gt;Most Recent&lt;/a&gt; / &lt;a href="#"&gt;A-Z&lt;/a&gt;
-        .list-controls-row
-          .list-control-filter
-            %select.form-control
-              %option Filter by visibility
-              %option{ value: '1' } Visible
-              %option{ value: '0' } Invisible
-          .list-control-filter
-            %select.form-control
-              %option Filter by availability
-              %option{ value: '1' } Available
-              %option{ value: '0' } Unavailable
+            Sorted by:
+            %span.sort_option{ value: 'az' }
+              A-Z
+            .sort_separator /
+            %span.active.sort_option{ value: 'most_recent' }
+              Most Recent
+            %input{ value: 'most_recent', type: 'hidden', name: 'filter[sort]', id: 'filter_sort' }
+
+  %pre
+    :preserve
+      .list-controls
+        %form.simple_form.watt-filters{ id: 'artists-filters', action: 'artists_controller_index', method: 'get' }
+          .list-controls-row
+            .list-control-filter
+              .form-group.select.filter_state
+                %select.select.required.form-control{ name: 'filter[state]', id: 'filter_state' }
+                  %option{ value: 'all', selected: 'selected' } Select State
+                  %option{ value: 'active' } Active
+                  %option{ value: 'completed' } Completed
+                  %option{ value: 'failed' } Failed
+            .list-control-filter
+              .form-group.select.filter_visibility
+                %select.select.required.form-control{ name: 'filter[visibility]', id: 'filter_visibility' }
+                  %option{ value: 'all', selected: 'selected' } Filter by visibility
+                  %option{ value: '1' } Visible
+                  %option{ value: '0' } Invisible
+          .list-controls-row
+            .list-control-counts
+              Viewing 1 - 5 of 37 Artists
+            .list-control-sorting.hidden-xs
+              Sorted by:
+              %span.sort_option{ value: 'az' }
+                A-Z
+              .sort_separator /
+              %span.active.sort_option{ value: 'most_recent' }
+                Most Recent
+              %input{ value: 'most_recent', type: 'hidden', name: 'filter[sort]', id: 'filter_sort' }
 
 %article.sg-component
   %h4 Full Page Empty List
