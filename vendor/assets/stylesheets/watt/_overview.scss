@@ -1,4 +1,4 @@
-.overview-wrap {
+.watt-overview {
   .overview-section {
     @extend .row;
     @extend .single-padding-bottom;
@@ -8,11 +8,6 @@
       border-bottom: none;
       margin-bottom: 0px;
     }
-  }
-
-  .overview-item {
-    @extend .row;
-    @extend .single-padding-bottom;
   }
 
   .overview-section-title {
@@ -27,6 +22,11 @@
 
   .overview-section-content {
     @extend .col-md-8;
+  }
+
+  .overview-item {
+    @extend .row;
+    @extend .single-padding-bottom;
   }
 
   .overview-item-title {

@@ -1,13 +1,24 @@
 ---
-title: Partner Engineering Style Guide - Overviews
+title: Partner Engineering Style Guide - Overview
 ---
 .page-title
-  %h2 Overviews
+  %h2 Overview
+
+%p Overview is an optional Watt CSS extension that provides a generic layout for displaying grouped data. It builds on Bootstrap's grid items. Overview is not included in <code>watt/base.scss</code>. To use Overview you must import <code>watt/overview</code> directly in your application's scss files along with <code>watt/base</code>.
+
+.double-padding-top
+  %article.sg-component
+    %h4 Required
+    %pre
+      :preserve
+        // in your application's local.scss or equivalent file.
+        @import 'watt/base';
+        @import 'watt/overview';
 
 %article.sg-component
-  %h4 Basic example
+  %h4 Example
   .sg-component-rendered
-    .overview-wrap
+    .watt-overview
       .overview-section
         .overview-section-title
           Details
@@ -59,7 +70,7 @@ title: Partner Engineering Style Guide - Overviews
 
   %pre
     :preserve
-      .overview-wrap
+      .watt-overview
         .overview-section
           .overview-section-title
             Details
