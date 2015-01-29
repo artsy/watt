@@ -5,3 +5,4 @@
 #= require ../../vendor/assets/javascripts/watt/nav
 #= require ../../vendor/assets/javascripts/watt/progress_bar
 #= require ../../vendor/assets/javascripts/watt/tabs
+#= require ../../vendor/assets/javascripts/watt/filters

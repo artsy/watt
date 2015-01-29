@@ -210,9 +210,24 @@ a.list-pager-page-link {
 
 .list-control-sorting {
   text-align: right;
+  .sort_option {
+    &:first-child {
+      padding-left: $spacing-unit/2;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .sort_separator {
+    display: inline-block;
+    margin-left: $spacing-unit/2;
+  }
   .active {
     color: $purple;
     text-decoration: underline;
+    &:hover {
+      cursor: default;
+    }
   }
 }
 
