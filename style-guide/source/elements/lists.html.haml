@@ -253,11 +253,14 @@ title: Partner Engineering Style Guide - Lists
 
   %pre
     :preserve
+      // For filters and sort to work properly
+      // application needs to load javascript from this file: vendor/assets/javascripts/watt/filters
       .list-controls
-        %form.simple_form.watt-filters{ id: 'artists-filters', action: 'artists_controller_index', method: 'get' }
+        %form.simple_form.watt-filters{ id: 'artists-filters', action: 'artists_controller_index', method: 'get' } // form.watt-filters required
           .list-controls-row
             .list-control-filter
               .form-group.select.filter_state
+                // all select changes trigger from submission
                 %select.select.required.form-control{ name: 'filter[state]', id: 'filter_state' }
                   %option{ value: 'all', selected: 'selected' } Select State
                   %option{ value: 'active' } Active
@@ -274,6 +277,8 @@ title: Partner Engineering Style Guide - Lists
               Viewing 1 - 5 of 37 Artists
             .list-control-sorting.hidden-xs
               Sorted by:
+              // all .sort_option clicks will trigger from submission
+              // each sort_option expected to have a valid sort value attribute
               %span.sort_option{ value: 'az' }
                 A-Z
               .sort_separator /
