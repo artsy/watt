@@ -32,14 +32,16 @@
 #
 
 $ ->
-  $('body').on 'change', '.watt-filters select', ->
+  $('.list-controls').on 'change', '.watt-filters select', ->
     $form = $(this).closest('form')
+    Pace.restart() if Pace
     $form.submit()
 
-  $('body').on 'click', '.watt-filters .sort_option', ->
+  $('.list-controls').on 'click', '.watt-filters .sort_option', ->
     $sort_option = $(this)
     $form = $sort_option.closest('form')
     $form.find('.sort_option').removeClass('active')
     $sort_option.addClass('active')
     $form.find('#filter_sort').val $sort_option.attr('value')
+    Pace.restart() if Pace
     $form.submit()
