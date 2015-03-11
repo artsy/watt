@@ -94,3 +94,49 @@ title: Partner Engineering Style Guide - Panels
           %em You can always update this under
           %a{ href: '#' }< 'Shows & Fairs'
           .
+
+%article.sg-component
+  %h4 Panel with Button Actions
+  .sg-component-rendered
+    .panel.actionable
+      .panel-content
+        %h4 Panel Header
+        %p
+          Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      .panel-actions
+        %a.btn.btn-small.btn-primary.btn-full-width{ href: "#" } Save the world
+  %pre
+    :preserve
+      .panel.actionable
+        .panel-content
+          %h4 Panel Header
+          %p
+            Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        .panel-actions
+          %a.btn.btn-small.btn-primary.btn-full-width{ href: "#" } Save the world
+
+%article.sg-component
+  %h4 Panel with Link Actions
+  .sg-component-rendered
+    .panel.actionable.link-actions.is-notice
+      .panel-content
+        %em
+          Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      .panel-actions
+        %a{ href: "#" } Save another world
+  %pre
+    :preserve
+      .panel.actionable.link-actions.is-notice
+        .panel-content
+          %em
+            Paragraph text - Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        .panel-actions
+          %a{ href: "#" } Save another world
