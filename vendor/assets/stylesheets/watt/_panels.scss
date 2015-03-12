@@ -41,3 +41,36 @@
     max-width: 660px;
   }
 }
+
+// Panel with actions
+.panel.actionable {
+  .panel-content { margin-bottom: $spacing-unit; }
+  @include media(min-width $screen-sm-min) {
+    @include display(flex);
+    @include align-items(center);
+    .panel-content {
+      @include flex(1 0);
+      margin-bottom: 0;
+      + .panel-actions { margin-left: 30px; }
+    }
+    .panel-actions {
+      @include flex(0 0 auto);
+    }
+  }
+}
+.panel.actionable.link-actions {
+  .panel-actions {
+    text-align: center;
+    a {
+      @include avant-garde();
+      font-size: 12px;
+      line-height: 1.5;
+      border-bottom: 1px solid $black;
+      text-decoration: none;
+      &:hover {
+        color: $purple;
+        border-color: $purple;
+      }
+    }
+  }
+}
