@@ -1,0 +1,268 @@
+---
+title: Partner Engineering Style Guide
+---
+.bordered.page-title
+  %h2 Modal
+  %p
+    We use <a href="http://vodkabears.github.io/remodal/" target="_blank">Remodal.js</a>
+    as the underlying implementation of the modal windows. It is lightweight and mobile
+    first, and it is easier to extend if necessary in the future. The size of the modal
+    window is relative to the screen size, and can be modified in CSS. We also provide
+    auxiliary classes for various common use cases such as with and without a fixed
+    header or footer. For more details, please refer to the Remodal.js
+    <a href="https://github.com/VodkaBears/Remodal#readme" target="_blank">documentation</a>.
+  %p
+    Note that we should stop using <a href="http://fancyapps.com/fancybox/" target="_blank">fancybox</a>
+    and start to use Remodal.js going forward for better mobile user experience.
+
+%article.sg-component
+  %h4 Common Modal
+  .sg-component-rendered
+    .modal-container.hidden
+      .modal.remodal{ 'data-remodal-id' => 'common-modal' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio quam, consequat vel rutrum vitae, efficitur ac dolor. Nunc et odio nulla. Suspendisse ut risus turpis. Quisque cursus pellentesque diam non sodales. Nullam faucibus purus orci, quis auctor orci laoreet ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus id nulla nec odio commodo scelerisque. Etiam lectus est, aliquam a tortor ac, tincidunt rhoncus justo. Proin sodales interdum ipsum, in facilisis felis tempor a. Maecenas ut elit a massa interdum posuere. Donec tristique a velit in viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          %p
+            Aliquam malesuada magna nibh, in pretium metus dignissim non. Donec vestibulum ut leo in placerat. Vestibulum congue lectus in nisi vestibulum eleifend. Morbi porta eleifend libero, non finibus nisi. Nulla hendrerit ex orci, non posuere diam viverra in. Donec eget lacus sit amet neque lobortis bibendum lacinia id neque. In ut quam est. Nam mauris erat, consequat at mollis eget, imperdiet eget tellus. Curabitur tincidunt dui vel tortor consequat, eu convallis orci ultrices. Nam tincidunt dictum nulla, non sagittis elit. Quisque eros sem, varius sed pulvinar interdum, rhoncus sagittis metus.
+          %p
+            Sed in fermentum massa. Vivamus nec elit vitae nunc ornare vehicula. Fusce pretium sodales risus. Aliquam in pellentesque mi. Vivamus non tellus vehicula, pulvinar enim facilisis, accumsan massa. Integer eget enim quis nibh aliquet sagittis id non augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur felis sapien, ornare a nisl id, pharetra pulvinar lectus. Mauris lacus ex, tempus dictum mattis ut, faucibus a nunc. Curabitur bibendum dapibus lectus sed feugiat. Nullam porttitor ex id lectus dapibus, ac suscipit erat auctor. Quisque elementum est quis ipsum viverra, vel posuere enim gravida. Nullam congue nisi in erat viverra, tincidunt venenatis sapien cursus.
+          %p
+            Ut congue sapien purus, ornare dignissim sapien interdum bibendum. Aliquam commodo sagittis ex sed porta. Integer sit amet mauris sed mauris auctor pharetra. Duis dolor massa, eleifend nec pellentesque in, posuere vitae tortor. Curabitur dolor tortor, consectetur id tempus eget, gravida a nisi. Nullam in ante faucibus, ullamcorper felis nec, euismod nulla. Vivamus rhoncus, libero eu sollicitudin finibus, enim mauris vulputate diam, eu malesuada metus felis sed felis. Vestibulum vitae ullamcorper ex. Phasellus sem metus, maximus ut erat consectetur, auctor euismod leo. Duis sit amet accumsan arcu. Nulla facilisi. Aliquam placerat finibus semper. Curabitur at dignissim nunc.
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+    .row
+      .col-md-2.col-md-offset-5
+        %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'common-modal' } Open
+
+  %pre
+    :preserve
+      // The modal
+      .modal.remodal{ 'data-remodal-id' => 'common-modal' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p ...
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+
+      // The trigger
+      %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'common-modal' } Open
+
+%article.sg-component
+  %h4 Modal without fixed header
+  .sg-component-rendered
+    .modal-container.hidden
+      .modal.remodal.no-fixed-header{ 'data-remodal-id' => 'modal-no-fixed-header' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio quam, consequat vel rutrum vitae, efficitur ac dolor. Nunc et odio nulla. Suspendisse ut risus turpis. Quisque cursus pellentesque diam non sodales. Nullam faucibus purus orci, quis auctor orci laoreet ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus id nulla nec odio commodo scelerisque. Etiam lectus est, aliquam a tortor ac, tincidunt rhoncus justo. Proin sodales interdum ipsum, in facilisis felis tempor a. Maecenas ut elit a massa interdum posuere. Donec tristique a velit in viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          %p
+            Aliquam malesuada magna nibh, in pretium metus dignissim non. Donec vestibulum ut leo in placerat. Vestibulum congue lectus in nisi vestibulum eleifend. Morbi porta eleifend libero, non finibus nisi. Nulla hendrerit ex orci, non posuere diam viverra in. Donec eget lacus sit amet neque lobortis bibendum lacinia id neque. In ut quam est. Nam mauris erat, consequat at mollis eget, imperdiet eget tellus. Curabitur tincidunt dui vel tortor consequat, eu convallis orci ultrices. Nam tincidunt dictum nulla, non sagittis elit. Quisque eros sem, varius sed pulvinar interdum, rhoncus sagittis metus.
+          %p
+            Sed in fermentum massa. Vivamus nec elit vitae nunc ornare vehicula. Fusce pretium sodales risus. Aliquam in pellentesque mi. Vivamus non tellus vehicula, pulvinar enim facilisis, accumsan massa. Integer eget enim quis nibh aliquet sagittis id non augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur felis sapien, ornare a nisl id, pharetra pulvinar lectus. Mauris lacus ex, tempus dictum mattis ut, faucibus a nunc. Curabitur bibendum dapibus lectus sed feugiat. Nullam porttitor ex id lectus dapibus, ac suscipit erat auctor. Quisque elementum est quis ipsum viverra, vel posuere enim gravida. Nullam congue nisi in erat viverra, tincidunt venenatis sapien cursus.
+          %p
+            Ut congue sapien purus, ornare dignissim sapien interdum bibendum. Aliquam commodo sagittis ex sed porta. Integer sit amet mauris sed mauris auctor pharetra. Duis dolor massa, eleifend nec pellentesque in, posuere vitae tortor. Curabitur dolor tortor, consectetur id tempus eget, gravida a nisi. Nullam in ante faucibus, ullamcorper felis nec, euismod nulla. Vivamus rhoncus, libero eu sollicitudin finibus, enim mauris vulputate diam, eu malesuada metus felis sed felis. Vestibulum vitae ullamcorper ex. Phasellus sem metus, maximus ut erat consectetur, auctor euismod leo. Duis sit amet accumsan arcu. Nulla facilisi. Aliquam placerat finibus semper. Curabitur at dignissim nunc.
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+    .row
+      .col-md-2.col-md-offset-5
+        %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'modal-no-fixed-header' } Open
+
+  %pre
+    :preserve
+      // The modal
+      .modal.remodal.no-fixed-header{ 'data-remodal-id' => 'modal-no-fixed-header' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p ...
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+
+      // The trigger
+      %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'modal-no-fixed-header' } Open
+
+%article.sg-component
+  %h4 Modal without fixed footer
+  .sg-component-rendered
+    .modal-container.hidden
+      .modal.remodal.no-fixed-footer{ 'data-remodal-id' => 'modal-no-fixed-footer' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio quam, consequat vel rutrum vitae, efficitur ac dolor. Nunc et odio nulla. Suspendisse ut risus turpis. Quisque cursus pellentesque diam non sodales. Nullam faucibus purus orci, quis auctor orci laoreet ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus id nulla nec odio commodo scelerisque. Etiam lectus est, aliquam a tortor ac, tincidunt rhoncus justo. Proin sodales interdum ipsum, in facilisis felis tempor a. Maecenas ut elit a massa interdum posuere. Donec tristique a velit in viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          %p
+            Aliquam malesuada magna nibh, in pretium metus dignissim non. Donec vestibulum ut leo in placerat. Vestibulum congue lectus in nisi vestibulum eleifend. Morbi porta eleifend libero, non finibus nisi. Nulla hendrerit ex orci, non posuere diam viverra in. Donec eget lacus sit amet neque lobortis bibendum lacinia id neque. In ut quam est. Nam mauris erat, consequat at mollis eget, imperdiet eget tellus. Curabitur tincidunt dui vel tortor consequat, eu convallis orci ultrices. Nam tincidunt dictum nulla, non sagittis elit. Quisque eros sem, varius sed pulvinar interdum, rhoncus sagittis metus.
+          %p
+            Sed in fermentum massa. Vivamus nec elit vitae nunc ornare vehicula. Fusce pretium sodales risus. Aliquam in pellentesque mi. Vivamus non tellus vehicula, pulvinar enim facilisis, accumsan massa. Integer eget enim quis nibh aliquet sagittis id non augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur felis sapien, ornare a nisl id, pharetra pulvinar lectus. Mauris lacus ex, tempus dictum mattis ut, faucibus a nunc. Curabitur bibendum dapibus lectus sed feugiat. Nullam porttitor ex id lectus dapibus, ac suscipit erat auctor. Quisque elementum est quis ipsum viverra, vel posuere enim gravida. Nullam congue nisi in erat viverra, tincidunt venenatis sapien cursus.
+          %p
+            Ut congue sapien purus, ornare dignissim sapien interdum bibendum. Aliquam commodo sagittis ex sed porta. Integer sit amet mauris sed mauris auctor pharetra. Duis dolor massa, eleifend nec pellentesque in, posuere vitae tortor. Curabitur dolor tortor, consectetur id tempus eget, gravida a nisi. Nullam in ante faucibus, ullamcorper felis nec, euismod nulla. Vivamus rhoncus, libero eu sollicitudin finibus, enim mauris vulputate diam, eu malesuada metus felis sed felis. Vestibulum vitae ullamcorper ex. Phasellus sem metus, maximus ut erat consectetur, auctor euismod leo. Duis sit amet accumsan arcu. Nulla facilisi. Aliquam placerat finibus semper. Curabitur at dignissim nunc.
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+    .row
+      .col-md-2.col-md-offset-5
+        %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'modal-no-fixed-footer' } Open
+
+  %pre
+    :preserve
+      // The modal
+      .modal.remodal.no-fixed-footer{ 'data-remodal-id' => 'modal-no-fixed-footer' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p ...
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+
+      // The trigger
+      %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'modal-no-fixed-footer' } Open
+
+%article.sg-component
+  %h4 Modal without fixed header and footer
+  .sg-component-rendered
+    .modal-container.hidden
+      .modal.remodal.no-fixed-header.no-fixed-footer{ 'data-remodal-id' => 'modal-no-fixed-header-and-footer' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio quam, consequat vel rutrum vitae, efficitur ac dolor. Nunc et odio nulla. Suspendisse ut risus turpis. Quisque cursus pellentesque diam non sodales. Nullam faucibus purus orci, quis auctor orci laoreet ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus id nulla nec odio commodo scelerisque. Etiam lectus est, aliquam a tortor ac, tincidunt rhoncus justo. Proin sodales interdum ipsum, in facilisis felis tempor a. Maecenas ut elit a massa interdum posuere. Donec tristique a velit in viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          %p
+            Aliquam malesuada magna nibh, in pretium metus dignissim non. Donec vestibulum ut leo in placerat. Vestibulum congue lectus in nisi vestibulum eleifend. Morbi porta eleifend libero, non finibus nisi. Nulla hendrerit ex orci, non posuere diam viverra in. Donec eget lacus sit amet neque lobortis bibendum lacinia id neque. In ut quam est. Nam mauris erat, consequat at mollis eget, imperdiet eget tellus. Curabitur tincidunt dui vel tortor consequat, eu convallis orci ultrices. Nam tincidunt dictum nulla, non sagittis elit. Quisque eros sem, varius sed pulvinar interdum, rhoncus sagittis metus.
+          %p
+            Sed in fermentum massa. Vivamus nec elit vitae nunc ornare vehicula. Fusce pretium sodales risus. Aliquam in pellentesque mi. Vivamus non tellus vehicula, pulvinar enim facilisis, accumsan massa. Integer eget enim quis nibh aliquet sagittis id non augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur felis sapien, ornare a nisl id, pharetra pulvinar lectus. Mauris lacus ex, tempus dictum mattis ut, faucibus a nunc. Curabitur bibendum dapibus lectus sed feugiat. Nullam porttitor ex id lectus dapibus, ac suscipit erat auctor. Quisque elementum est quis ipsum viverra, vel posuere enim gravida. Nullam congue nisi in erat viverra, tincidunt venenatis sapien cursus.
+          %p
+            Ut congue sapien purus, ornare dignissim sapien interdum bibendum. Aliquam commodo sagittis ex sed porta. Integer sit amet mauris sed mauris auctor pharetra. Duis dolor massa, eleifend nec pellentesque in, posuere vitae tortor. Curabitur dolor tortor, consectetur id tempus eget, gravida a nisi. Nullam in ante faucibus, ullamcorper felis nec, euismod nulla. Vivamus rhoncus, libero eu sollicitudin finibus, enim mauris vulputate diam, eu malesuada metus felis sed felis. Vestibulum vitae ullamcorper ex. Phasellus sem metus, maximus ut erat consectetur, auctor euismod leo. Duis sit amet accumsan arcu. Nulla facilisi. Aliquam placerat finibus semper. Curabitur at dignissim nunc.
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+    .row
+      .col-md-2.col-md-offset-5
+        %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'modal-no-fixed-header-and-footer' } Open
+
+  %pre
+    :preserve
+      // The modal
+      .modal.remodal.no-fixed-header.no-fixed-footer{ 'data-remodal-id' => 'modal-no-fixed-header-and-footer' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p ...
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+
+      // The trigger
+      %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'modal-no-fixed-header-and-footer' } Open
+
+%article.sg-component
+  %h4 Custom Size Modal
+  .sg-component-rendered
+    .modal-container.hidden
+      .modal.remodal.smaller-modal{ 'data-remodal-id' => 'custom-size-modal' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio quam, consequat vel rutrum vitae, efficitur ac dolor. Nunc et odio nulla. Suspendisse ut risus turpis. Quisque cursus pellentesque diam non sodales. Nullam faucibus purus orci, quis auctor orci laoreet ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus id nulla nec odio commodo scelerisque. Etiam lectus est, aliquam a tortor ac, tincidunt rhoncus justo. Proin sodales interdum ipsum, in facilisis felis tempor a. Maecenas ut elit a massa interdum posuere. Donec tristique a velit in viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          %p
+            Aliquam malesuada magna nibh, in pretium metus dignissim non. Donec vestibulum ut leo in placerat. Vestibulum congue lectus in nisi vestibulum eleifend. Morbi porta eleifend libero, non finibus nisi. Nulla hendrerit ex orci, non posuere diam viverra in. Donec eget lacus sit amet neque lobortis bibendum lacinia id neque. In ut quam est. Nam mauris erat, consequat at mollis eget, imperdiet eget tellus. Curabitur tincidunt dui vel tortor consequat, eu convallis orci ultrices. Nam tincidunt dictum nulla, non sagittis elit. Quisque eros sem, varius sed pulvinar interdum, rhoncus sagittis metus.
+          %p
+            Sed in fermentum massa. Vivamus nec elit vitae nunc ornare vehicula. Fusce pretium sodales risus. Aliquam in pellentesque mi. Vivamus non tellus vehicula, pulvinar enim facilisis, accumsan massa. Integer eget enim quis nibh aliquet sagittis id non augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur felis sapien, ornare a nisl id, pharetra pulvinar lectus. Mauris lacus ex, tempus dictum mattis ut, faucibus a nunc. Curabitur bibendum dapibus lectus sed feugiat. Nullam porttitor ex id lectus dapibus, ac suscipit erat auctor. Quisque elementum est quis ipsum viverra, vel posuere enim gravida. Nullam congue nisi in erat viverra, tincidunt venenatis sapien cursus.
+          %p
+            Ut congue sapien purus, ornare dignissim sapien interdum bibendum. Aliquam commodo sagittis ex sed porta. Integer sit amet mauris sed mauris auctor pharetra. Duis dolor massa, eleifend nec pellentesque in, posuere vitae tortor. Curabitur dolor tortor, consectetur id tempus eget, gravida a nisi. Nullam in ante faucibus, ullamcorper felis nec, euismod nulla. Vivamus rhoncus, libero eu sollicitudin finibus, enim mauris vulputate diam, eu malesuada metus felis sed felis. Vestibulum vitae ullamcorper ex. Phasellus sem metus, maximus ut erat consectetur, auctor euismod leo. Duis sit amet accumsan arcu. Nulla facilisi. Aliquam placerat finibus semper. Curabitur at dignissim nunc.
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+    .row
+      .col-md-2.col-md-offset-5
+        %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'custom-size-modal' } Open
+
+  %pre
+    :preserve
+      // Custom CSS to override the default remodal styles
+      // Note the media query because of the mobile first approach
+      @media (min-width: $screen-sm-min) {
+        .smaller-modal {
+          width: 600px;
+          height: 400px;
+        }
+      }
+
+  %pre
+    :preserve
+      // The modal
+      .modal.remodal.smaller-modal{ 'data-remodal-id' => 'custom-size-modal' }
+        .modal-header
+          %h2 Modal Header
+        .modal-close
+          %a{ href: '#' }
+        .modal-content
+          %p ...
+        .modal-footer
+          .row
+            .col-sm-6
+              %a.btn.btn-primary.btn-full-width Save the World
+            .col-sm-6
+              %a.btn.btn-secondary.btn-full-width Maybe Next Time
+
+      // The trigger
+      %a.btn.btn-small.btn-primary.btn-full-width{ 'data-remodal-target' => 'custom-size-modal' } Open
+

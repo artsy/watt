@@ -81,6 +81,10 @@ pre {
   }
 }
 
+h2 {
+  margin-bottom: 2*$spacing-unit
+}
+
 .grid-item-artwork-low-res {
   display: none;
 }
@@ -89,5 +93,12 @@ pre {
     .grid-item-artwork-low-res {
       display: block;
     }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .remodal.smaller-modal {
+    width: 600px;
+    height: 400px;
   }
 }
