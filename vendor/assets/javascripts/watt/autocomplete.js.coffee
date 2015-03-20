@@ -24,3 +24,8 @@ $ ->
   # On blur, clear the loading spinner and no result hint.
   $('body').on 'autocompletechange', '.ui-autocomplete-input', (event, ui) ->
     $(this).closest('.reactive-input').removeClass 'is-loading no-result'
+
+  # Disallow enter key unless selection is made.
+  $('body').on 'keypress', '.ui-autocomplete-input', (event, ui) ->
+    if event.keyCode == 13
+      return false

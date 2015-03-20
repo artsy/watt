@@ -1,7 +1,8 @@
 .search-component {
   position: relative;
+  .search-indicator,
   .search-submit {
-    border-left: 1px solid $gray-lightest;
+    border-left: none;
     border-bottom: none;
     border-right: none;
     border-top: none;
@@ -9,14 +10,23 @@
     height: 24px;
     width: 30px;
     position: absolute;
-    right: 6px;
-    top: 6px;
+    top: 7px;
     svg {
       path {
         @include transition(color 0.25s ease-in-out);
         fill: $gray-dark;
       }
     }
+  }
+  .search-indicator {
+    border-left: none;
+    border-right: 1px solid $gray-lightest;
+    left: 6px;
+  }
+  .search-submit {
+    border-left: 1px solid $gray-lightest;
+    border-right: none;
+    right: 6px;
     &:hover {
       svg {
         path {
@@ -24,5 +34,10 @@
         }
       }
     }
+  }
+}
+.search-component-autocomplete {
+  .form-control {
+    padding-left: 40px;
   }
 }
