@@ -221,6 +221,56 @@ title: Partner Engineering Style Guide - Lists
                 /= render svg partial here
 
 %article.sg-component
+  %h4 Tabular (aka The Kitchen Sink)
+  .sg-component-rendered
+    .list-group.list-group-tabular
+      .list-group-item.list-group-item-with-icons
+        .list-group-item-image
+          %img{ src: "/images/trees_in_snow.png" }
+        .list-group-item-content
+          .list-group-item-content-sub
+            .list-group-item-artist-name Josef Hoflehner
+            .list-group-item-info
+              %em Trees in Snow, 2005
+          .list-group-item-content-sub
+            .list-group-item-info 32 works
+            .list-group-item-info 19 published to Artsy
+            .list-group-item-info 12 works for sale
+          .list-group-item-content-sub
+            %em Published
+        .list-group-item-icons
+          .list-group-item-action.list-group-item-download
+            %a.btn.btn-secondary.btn-small{ href: '#' } Download
+            %a.btn-icon{ href: '#' }= partial 'svgs/download'
+          .list-group-item-action.list-group-item-edit
+            %a.btn.btn-secondary.btn-small{ href: '#' } Edit
+            %a.btn-icon{ href: '#' }= partial 'svgs/circle_edit'
+  %pre
+    :preserve
+      .list-group.list-group-tabular
+        .list-group-item.list-group-item-with-icons
+          .list-group-item-image
+            %img{ src: "/images/trees_in_snow.png" }
+          .list-group-item-content
+            .list-group-item-content-sub
+              .list-group-item-artist-name Josef Hoflehner
+              .list-group-item-info
+                %em Trees in Snow, 2005
+            .list-group-item-content-sub
+              .list-group-item-info 32 works
+              .list-group-item-info 19 published to Artsy
+              .list-group-item-info 12 works for sale
+            .list-group-item-content-sub
+              %em Published
+          .list-group-item-icons
+            .list-group-item-action.list-group-item-download
+              %a.btn.btn-secondary.btn-small{ href: '#' } Download
+              %a.btn-icon{ href: '#' }= partial 'svgs/download'
+            .list-group-item-action.list-group-item-edit
+              %a.btn.btn-secondary.btn-small{ href: '#' } Edit
+              %a.btn-icon{ href: '#' }= partial 'svgs/circle_edit'
+
+%article.sg-component
   %h4 List Controls
   .sg-component-rendered
     .list-controls

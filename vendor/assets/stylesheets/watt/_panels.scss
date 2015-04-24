@@ -32,6 +32,9 @@
     background-color: $notice-color;
     border: none;
   }
+  &.is-direction {
+    background-color: $white;
+  }
   &.is-constrained {
     h3, h4, p {
       max-width: 440px;

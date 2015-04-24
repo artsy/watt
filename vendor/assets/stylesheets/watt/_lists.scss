@@ -65,6 +65,20 @@
 .list-group-item-content {
   @include garamond();
   @include flex(1 1px);
+  @include media(min-width $screen-sm-min) {
+    @include display(flex);
+    @include align-items(center);
+  }
+}
+
+.list-group-item-content-sub {
+  padding-right: 2*$spacing-unit;
+  @include media(min-width $screen-sm-min) {
+    @include flex(2);
+    &:last-of-type {
+      @include flex(1);
+    }
+  }
 }
 
 .list-group-item-actions {
@@ -111,6 +125,55 @@
   display: block;
   font-size: 15px;
 }
+
+/**
+ * Tabular columns that stack at two different break points
+ */
+.list-group-tabular {
+  /* mobile first */
+  .list-group-item {
+    display: block;
+  }
+  .list-group-item-image {
+    margin-bottom: 2 * $spacing-unit;
+    max-width: none;
+  }
+  .list-group-item-content {
+    display: block;
+  }
+  .list-group-item-content-sub {
+    margin-bottom: $spacing-unit;
+  }
+  .list-group-item-icons {
+    text-align: center;
+  }
+  /* wide enough for three columns */
+  @include media(min-width $screen-xs-min) {
+    .list-group-item {
+      @include display(flex);
+    }
+    .list-group-item-image {
+      margin-bottom: 0;
+      max-width: 180px;
+    }
+    .list-group-item-content-sub {
+      margin-bottom: $spacing-unit;
+    }
+    .list-group-item-icons {
+      text-align: none;
+    }
+  }
+  /* wide enough for n columns */
+  @include media(min-width $screen-sm-min) {
+    .list-group-item-content {
+      @include display(flex);
+    }
+    .list-group-item-content-sub {
+      margin-bottom: 0;
+    }
+  }
+}
+
 
 .list-pager {
   @extend .double-margin;
