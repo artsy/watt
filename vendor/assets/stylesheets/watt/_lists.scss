@@ -65,10 +65,6 @@
 .list-group-item-content {
   @include garamond();
   @include flex(1 1px);
-  @include media(min-width $screen-sm-min) {
-    @include display(flex);
-    @include align-items(center);
-  }
 }
 
 .list-group-item-content-sub {
@@ -140,6 +136,10 @@
   }
   .list-group-item-content {
     display: block;
+    @include media(min-width $screen-sm-min) {
+      @include display(flex);
+      @include align-items(center);
+    }
   }
   .list-group-item-content-sub {
     margin-bottom: $spacing-unit;
