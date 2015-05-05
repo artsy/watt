@@ -88,19 +88,19 @@
       width: 100%;
     }
   }
-  .artwork-grid-item-artist-name {
+  .artwork-grid-item-title {
+    @include ellipsis();
+    display: block;
+    font-size: 15px;
+    margin: 0 0 $spacing-unit 0;
+  }
+  .artwork-grid-item-artists {
     @include avant-garde();
     @include ellipsis();
     display: block;
     font-size: 14px;
+    line-height: 20px;
     margin: $spacing-unit 0 0.5*$spacing-unit 0;
-  }
-  .artwork-grid-item-title {
-    @include ellipsis();
-    display: block;
-    font-style: italic;
-    font-size: 15px;
-    margin: 0 0 $spacing-unit 0;
   }
   .artwork-grid-item-display-data {
     font-size: 14px;
