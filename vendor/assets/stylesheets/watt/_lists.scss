@@ -69,11 +69,9 @@
 
 .list-group-item-content-sub {
   padding-right: 2*$spacing-unit;
+  @include word-wrap(break-word);
   @include media(min-width $screen-sm-min) {
     @include flex(2);
-    &:last-of-type {
-      @include flex(1);
-    }
   }
 }
 
@@ -136,10 +134,6 @@
   }
   .list-group-item-content {
     display: block;
-    @include media(min-width $screen-sm-min) {
-      @include display(flex);
-      @include align-items(center);
-    }
   }
   .list-group-item-content-sub {
     margin-bottom: $spacing-unit;
@@ -164,9 +158,10 @@
     }
   }
   /* wide enough for n columns */
-  @include media(min-width $screen-sm-min) {
+  @include media(min-width $screen-md-min) {
     .list-group-item-content {
       @include display(flex);
+      @include align-items(center);
     }
     .list-group-item-content-sub {
       margin-bottom: 0;
