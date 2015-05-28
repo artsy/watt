@@ -1,5 +1,6 @@
 .help-tooltip {
   @include garamond();
+  @include word-wrap(normal);
   display: inline-block;
   position: relative;
   cursor: help;
