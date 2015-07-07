@@ -2,13 +2,15 @@
 
 Watt is a shared js/css/img asset library for some Artsy ruby apps.
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/7ea367a5-f53f-42c1-89f8-fe2f768f18ab/188343/badge.svg)](https://semaphoreci.com/artsy-it/watt)
+
 Meta
 ---
 
 * __State:__ production (in [Volt](https://github.com/artsy/volt/), [Ohm](https://github.com/artsy/ohm/), [Induction](https://github.com/artsy/induction/), [Lattice](https://github.com/artsy/lattice/), [Helix](https://github.com/artsy/helix/), & [Vibrations](https://github.com/artsy/vibrations/))
 * __Style Guide:__ [http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/](http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/)
 * __Github:__ [https://github.com/artsy/watt/](https://github.com/artsy/watt/)
-* __CI:__ [Semaphore](https://semaphoreapp.com/artsy/watt/) (such as it is)
+* __CI:__ [Semaphore](https://semaphoreci.com/artsy-it/watt) (such as it is)
 * __Point People:__ [@oxaudo](https://github.com/oxaudo), [@gib](https://github.com/gib)
 
 # On Bootstrap
