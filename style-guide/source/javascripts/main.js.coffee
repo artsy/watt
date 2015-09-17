@@ -8,3 +8,4 @@
 #= require ../../vendor/assets/javascripts/watt/filters
 #= require ../../vendor/assets/javascripts/watt/jquery.remodal
 #= require ../../vendor/assets/javascripts/watt/modals
+#= require ../../vendor/assets/javascripts/watt/flash

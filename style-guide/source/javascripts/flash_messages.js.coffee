@@ -5,8 +5,3 @@ $ ->
     $($(this).data('target')).removeClass('hidden')
     false
   )
-
-  $(".flash-wrap, .flash-wrap a").on('click', (e) ->
-    $('.flash-wrap').parent().parent().addClass('hidden')
-    false
-  )
