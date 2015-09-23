@@ -128,7 +128,8 @@
   }
   .artwork-grid-action-edit,
   .artwork-grid-action-save,
-  .artwork-grid-action-remove {
+  .artwork-grid-action-remove,
+  .artwork-grid-action-delete {
     float: right;
     margin: 0 0 0 0.5*$spacing-unit;
     padding: 0;
@@ -140,7 +141,8 @@
     }
   }
   .artwork-grid-action-edit svg,
-  .artwork-grid-action-remove svg {
+  .artwork-grid-action-remove svg,
+  artwork-grid-action-delete svg, {
     circle {
       fill: $gray-lightest;
     }
@@ -168,7 +170,8 @@
       }
     }
   }
-  .artwork-grid-action-save {
+  .artwork-grid-action-save,
+  .artwork-grid-action-delete {
     &.active svg {
       circle {
         fill: $purple;
