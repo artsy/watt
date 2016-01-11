@@ -149,6 +149,33 @@ a.btn.btn-secondary,
 }
 
 
+// link
+
+input[type="submit"].btn.btn-link,
+button.btn.btn-link,
+a.btn.btn-link,
+.btn-link:visited {
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: underline;
+  &:hover {
+    background-color: transparent;
+    color: $black;
+    text-decoration: none;
+  }
+
+  &[data-state='loading'],
+  &.is-loading {
+    color: $black;
+    &:after {
+      content: '';
+      display: block;
+      @include spinner(25px, 6px, $purple);
+    }
+  }
+}
+
+
 // delete
 
 input[type="submit"].btn.btn-delete,
