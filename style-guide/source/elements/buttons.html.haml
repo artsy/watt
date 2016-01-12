@@ -10,7 +10,7 @@ title: Partner Engineering Style Guide
   .container
     .row
       .col-md-10
-        - ['btn-basic','btn-disabled','btn-primary','btn-secondary','btn-delete','btn-add','btn-secondary-add'].each do |btn_class|
+        - ['btn-basic','btn-disabled','btn-primary','btn-secondary','btn-delete','btn-add','btn-secondary-add', 'btn-link'].each do |btn_class|
           .unit{id: btn_class}
             %h3
               - if btn_class == 'btn-basic'
@@ -56,7 +56,7 @@ title: Partner Engineering Style Guide
       .col-md-2
         .panel.panel-info.affix#section-nav
           %ul.nav.nav-pills.nav-stacked
-            - ['btn-basic','btn-disabled','btn-primary','btn-secondary','btn-delete','btn-add','btn-secondary-add', 'btn-full-width'].each do |btn_class|
+            - ['btn-basic','btn-disabled','btn-primary','btn-secondary','btn-delete', 'btn-link', 'btn-add','btn-secondary-add', 'btn-full-width'].each do |btn_class|
               %li
                 %a{ href: "##{btn_class}"}
                   = btn_class
