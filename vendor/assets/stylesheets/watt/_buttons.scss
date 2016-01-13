@@ -166,7 +166,9 @@ a.btn.btn-link,
 
   &[data-state='loading'],
   &.is-loading {
-    color: $black;
+    border-color: $gray-lighter;
+    color: $gray-lighter;
+    text-decoration: none;
     &:after {
       content: '';
       display: block;
