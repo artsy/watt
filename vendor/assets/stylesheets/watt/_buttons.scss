@@ -76,20 +76,19 @@ input[type="submit"].btn:visited,
 input[type="submit"].btn.btn-disabled,
 button.btn.btn-disabled,
 a.btn.btn-disabled {
-  background-color: lighten($black, 90%);
-  border-color: lighten($black, 90%);
-  color: $white;
+  background-color: $gray-lightest;
+  border-color: $gray-lightest;
+  color: $gray;
   cursor: default;
 
   &:hover, &:visited {
-    background-color: $white;
-    background-color: lighten($black, 90%);
-    border-color: lighten($black, 90%);
+    background-color: $gray-lightest;
+    border-color: $gray-lightest;
   }
 
   &[data-state='loading'],
   &.is-loading {
-    color: $white;
+    color: $gray;
     &:after { display: none; }
   }
 }
