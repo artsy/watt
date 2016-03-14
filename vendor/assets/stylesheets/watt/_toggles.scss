@@ -63,4 +63,16 @@
       margin-left: -15px;
     }
   }
+  &.toggle-disabled {
+    background-color: $gray-lightest;
+    border-color: $gray-lighter;
+    color: $gray;
+    cursor: default;
+    &, &:focus, &:hover {
+      &::after, .toggle-dot {
+        color: $gray;
+        cursor: default;
+      }
+    }
+  }
 }

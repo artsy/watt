@@ -1,5 +1,5 @@
 $ ->
-  $('.toggle').click (e) ->
+  $('.toggle:not(.toggle-disabled)').click (e) ->
     e.preventDefault()
     $this     = $(this)
     $toggle   = if $this.is '.toggle-label' then $this.prev() else $this.closest 'a.toggle'
