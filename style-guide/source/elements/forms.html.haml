@@ -54,6 +54,20 @@ title: Partner Engineering Style Guide - Forms
               .col-sm-10
                 %a.toggle{ data: { state: 'no' }}
                   .toggle-dot
+            .form-group
+              %label.col-sm-2.control-label
+                Ready to rock?
+              .col-sm-10
+                %a.toggle.toggle-disabled{ data: { state: 'no' }}
+                  .toggle-dot
+                %em (disabled)
+            .form-group
+              %label.col-sm-2.control-label
+                Ready to rock?
+              .col-sm-10
+                %a.toggle.toggle-disabled{ data: { state: 'yes' }}
+                  .toggle-dot
+                %em (disabled)
     .row
       .col-md-12
         .unit.bordered.single-padding-top
