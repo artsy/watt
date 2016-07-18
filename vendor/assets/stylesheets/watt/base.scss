@@ -30,7 +30,9 @@
 // Watt extensions
 @import "watt/pace";
 @import "watt/flash";
-@import "watt/modals";
+@import "watt/fancybox";        // DEPRECATED
+@import "watt/jquery.remodal";  // DEPRECATED
+@import "watt/modal";
 @import "watt/contents";
 @import "watt/forms";
 @import "watt/footer";

@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Artsy's custom styles to override Remodal's default theme
+   ========================================================================== */
+
+$modal-padding: 35px;
+$modal-close-height: 26px;
+$modal-close-width: $modal-close-height;
+$fixed-header-height: 60px;
+$fixed-footer-height: 70px;
+
+.remodal.artsy-modal {
+  text-align: left;
+}
+
+/* Mobile first */
+.remodal.artsy-modal {
+  .modal-header { margin-bottom: $spacing-unit * 2; }
+  .modal-footer { margin-top: $spacing-unit * 3; }
+  .modal-close {
+    position: absolute;
+    top: $modal-padding;
+    right: $modal-padding;
+    width: $modal-close-width;
+    height: $modal-close-height;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    a {
+      @extend .with-icon;
+      @extend .icon-close;
+      color: black;
+      font-size: 26px;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Larger displays */
+@media (min-width: $screen-sm-min) {
+  .remodal.artsy-modal {
+    max-width: 800px;
+    min-height: 0;
+    max-height: 800px;
+    height: 90%;
+    margin: 20px auto;
+
+    .modal-inner {
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding-top: $fixed-header-height;
+      padding-bottom: $fixed-footer-height;
+    }
+    .modal-header,
+    .modal-footer {
+      position: absolute;
+      left: $modal-padding;
+      width: calc(100% - #{$modal-padding} * 2);
+      background-color: white;
+      z-index: 2;
+    }
+    .modal-header {
+      top: $modal-padding;
+      min-height: $fixed-header-height;
+    }
+    .modal-footer {
+      bottom: $modal-padding;
+      min-height: $fixed-footer-height;
+      //overflow: hidden;
+      // align the content of footer to the bottom
+      > * {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &.no-fixed-header {
+      .modal-inner { padding-top: 0; }
+      .modal-header {
+        position: static;
+        width: 100%;
+        min-height: 0;
+      }
+    }
+    &.no-fixed-footer {
+      .modal-inner { padding-bottom: 0; }
+      .modal-footer {
+        position: static;
+        width: 100%;
+        min-height: 0;
+        > * { position: static; }
+      }
+    }
+  }
+}

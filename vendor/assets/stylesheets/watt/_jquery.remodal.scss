@@ -1,93 +1,3 @@
-$fixed-header-height: 40px;
-$fixed-footer-height: 70px;
-$modal-close-height: 26px;
-$modal-close-width: $modal-close-height;
-
-.fancybox-wrap {
-  .unit {
-    @extend .single-padding;
-  }
-  .fancybox-inner {
-    padding-top: $fixed-header-height;
-    padding-bottom: $fixed-footer-height;
-  }
-}
-
-.fancybox-inner {
-  h2 {
-    @extend .single-padding-bottom;
-    @extend .single-margin-bottom;
-    font-size: 26px;
-    line-height: 26px;
-    font-family:$serif;
-    text-align:left;
-    color:black;
-    font-weight:normal;
-  }
-  .row {
-    margin: 0;
-    p a {
-      text-decoration: underline;
-    }
-  }
-  .modal {
-    height: 100%;
-    overflow: auto;
-    &.no-fixed-header {
-      margin-top: -$fixed-header-height;
-      height: calc(100% + #{$fixed-header-height});
-      .modal-header, .modal-close { position: static; }
-      .modal-close { float: right; }
-      .modal-header { width: calc(100% - #{$modal-close-width}); }
-    }
-    &.no-fixed-footer {
-      margin-bottom: -$fixed-footer-height;
-      height: calc(100% + #{$fixed-footer-height});
-      .modal-footer { position: static; }
-    }
-    &.no-fixed-header.no-fixed-footer {
-      height: calc(100% + #{$fixed-header-height + $fixed-footer-height});
-    }
-  }
-  .modal-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: $modal-close-width;
-    height: $modal-close-height;
-    padding: 0;
-    margin: 0;
-    z-index: 3;
-    a {
-      @extend .with-icon;
-      @extend .icon-close;
-      color: black;
-      font-size: 26px;
-      text-decoration: none;
-    }
-  }
-  .modal-header,
-  .modal-footer {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 2;
-  }
-  .modal-header {
-    top: 0;
-    min-height: 40px;
-  }
-  .modal-content {
-    overflow: hidden;
-  }
-  .modal-footer {
-    bottom: 0;
-    height: 70px;
-    overflow: hidden;
-  }
-}
-
 /*
  *  Remodal - v0.5.0
  *  Flat, responsive, lightweight, easy customizable modal window plugin with declarative state notation and hash tracking.
@@ -103,6 +13,8 @@ $modal-close-width: $modal-close-height;
    Remodal necessary styles
    ========================================================================== */
 
+@warn "watt/jquery.remodal is deprecated and will be removed in the next release.";
+
 $modal-padding: 35px;
 $modal-close-height: 26px;
 $modal-close-width: $modal-close-height;
@@ -117,14 +29,14 @@ html.remodal-is-locked {
 
 /* Anti FOUC */
 
-.remodal,
-[data-remodal-id] {
+.remodal:not(.artsy-modal),
+[data-remodal-id]:not(.artsy-modal) {
   visibility: hidden;
 }
 
 /* Necessary styles of the overlay */
 
-.remodal-overlay {
+.remodal-overlay:not(.artsy-modal) {
   position: fixed;
   z-index: 9999;
   top: -5000px;
@@ -136,7 +48,7 @@ html.remodal-is-locked {
 
 /* Necessary styles of the wrapper */
 
-.remodal-wrapper {
+.remodal-wrapper:not(.artsy-modal) {
   position: fixed;
   z-index: 10000;
   top: 0;
@@ -149,7 +61,7 @@ html.remodal-is-locked {
   -webkit-overflow-scrolling: touch;
 }
 
-.remodal-wrapper:after {
+.remodal-wrapper:not(.artsy-modal):after {
   display: inline-block;
   height: 100%;
   margin-left: -0.05em;
@@ -158,14 +70,14 @@ html.remodal-is-locked {
 
 /* Fix iPad, iPhone glitches */
 
-.remodal-overlay,
-.remodal-wrapper {
+.remodal-overlay:not(.artsy-modal),
+.remodal-wrapper:not(.artsy-modal) {
   -webkit-transform: translateZ(0px);
 }
 
 /* Necessary styles of the modal dialog */
 
-.remodal {
+.remodal:not(.artsy-modal) {
   position: relative;
   display: inline-block;
 }
@@ -176,29 +88,29 @@ html.remodal-is-locked {
 
 /* Background for effects */
 
-.remodal-bg {
+.remodal-bg:not(.artsy-modal) {
   @include transition(filter 0.2s ease-out);
 }
 
-body.remodal-is-active .remodal-bg {
+body.remodal-is-active .remodal-bg:not(.artsy-modal) {
   @include filter(blur(3px));
 }
 
 /* Default theme styles of the overlay */
 
-.remodal-overlay {
+.remodal-overlay:not(.artsy-modal) {
   @include transition(opacity 0.2s ease-out);
   opacity: 0;
   background: rgba(33, 36, 46, 0.95);
 }
 
-body.remodal-is-active .remodal-overlay {
+body.remodal-is-active .remodal-overlay:not(.artsy-modal) {
   opacity: 1;
 }
 
 /* Default theme styles of the modal dialog */
 
-.remodal {
+.remodal:not(.artsy-modal) {
   @include box-sizing(border-box);
   @include transition(transform 0.2s ease-out, opacity 0.2s ease-out);
   @include transform(scale(0.95));
@@ -212,29 +124,21 @@ body.remodal-is-active .remodal-overlay {
   text-align: left;
 }
 
-body.remodal-is-active .remodal {
+body.remodal-is-active .remodal:not(.artsy-modal) {
   @include transform(scale(1));
   opacity: 1;
 }
 
 /* Vertical align of the modal dialog */
 
-.remodal,
-.remodal-wrapper:after {
+.remodal:not(.artsy-modal),
+.remodal-wrapper:not(.artsy-modal):after {
   vertical-align: middle;
 }
 
-/* Hide the original remodal close button */
-
-.remodal-close { display: none; }
-
-/* Hide the original dialog buttons */
-
-.remodal-confirm, .remodal-cancel { display: none; }
-
 /* Custom styles */
 /* Mobile first */
-.remodal.modal {
+.remodal.modal:not(.artsy-modal) {
   .modal-header { margin-bottom: $spacing-unit * 2; }
   .modal-footer { margin-top: $spacing-unit * 3; }
   .modal-close {
@@ -258,7 +162,7 @@ body.remodal-is-active .remodal {
 
 /* Larger displays */
 @media (min-width: $screen-sm-min) {
-  .remodal.modal {
+  .remodal.modal:not(.artsy-modal) {
     max-width: 800px;
     min-height: 0;
     max-height: 800px;
@@ -320,11 +224,11 @@ body.remodal-is-active .remodal {
 /* IE8
    ========================================================================== */
 
-.lt-ie9 .remodal-overlay {
+.lt-ie9 .remodal-overlay:not(.artsy-modal) {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F021242E, endColorstr=#F021242E);
 }
 
-.lt-ie9 .remodal {
+.lt-ie9 .remodal:not(.artsy-modal) {
   width: 800px;
   min-height: 0;
   margin: 20px auto;
