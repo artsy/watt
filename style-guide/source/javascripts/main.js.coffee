@@ -6,6 +6,6 @@
 #= require ../../vendor/assets/javascripts/watt/progress_bar
 #= require ../../vendor/assets/javascripts/watt/tabs
 #= require ../../vendor/assets/javascripts/watt/filters
-#= require ../../vendor/assets/javascripts/watt/jquery.remodal
 #= require ../../vendor/assets/javascripts/watt/modals
+#= require ../../vendor/assets/javascripts/watt/remodal
 #= require ../../vendor/assets/javascripts/watt/flash
