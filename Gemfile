@@ -13,15 +13,15 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'rails'
-gem 'haml-rails', '0.5.3'
+gem 'rails', '4.2.7'
+gem 'haml-rails'
 
 group :development, :test do
   gem 'byebug'
-  gem "rspec-rails"
+  gem 'rspec-rails'
   gem 'capybara', '2.3.0'
   gem 'shoulda-matchers', '2.6.1', require: false
   gem 'guard-rspec', require: false
-  gem 'rubocop', '0.21.0'
-  gem 'guard-rubocop', '1.1.0'
+  gem 'rubocop', '0.41.2'
+  gem 'guard-rubocop'
 end
