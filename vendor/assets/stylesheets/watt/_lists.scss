@@ -20,6 +20,9 @@
     margin-left: $spacing-unit;
     @include flex(0 16px);
   }
+  .right-arrow {
+    border-color: $gray;
+  }
 }
 
 .list-group-item {
@@ -37,6 +40,9 @@
     text-decoration: none;
     .icon-chevron-right {
       color: $black;
+    }
+    .right-arrow {
+      border-color: $black;
     }
   }
   @include media(max-width $screen-xs-max) {
@@ -207,6 +213,9 @@
   .icon-chevron-right {
     margin-left: 0;
     margin-right: -5px;
+  }
+  .left-arrow, .right-arrow {
+    border-color: $gray;
   }
 }
 
