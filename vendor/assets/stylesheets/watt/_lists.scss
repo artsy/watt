@@ -20,7 +20,7 @@
     margin-left: $spacing-unit;
     @include flex(0 16px);
   }
-  .right-arrow {
+  .pe-right-arrow {
     border-color: $gray;
   }
 }
@@ -41,7 +41,7 @@
     .icon-chevron-right {
       color: $black;
     }
-    .right-arrow {
+    .pe-right-arrow {
       border-color: $black;
     }
   }
@@ -214,7 +214,7 @@
     margin-left: 0;
     margin-right: -5px;
   }
-  .left-arrow, .right-arrow {
+  .pe-left-arrow, .pe-right-arrow {
     border-color: $gray;
   }
 }

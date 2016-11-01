@@ -78,19 +78,22 @@
 }
 
 // NEW Artsy Partner Engineering Icons
-.left-arrow {
+[class^='pe-'], [class*=" pe-"] {
+  display: inline-block;
+  position: relative;
+}
+
+.pe-left-arrow {
   border-bottom: 2px solid $black;
   border-left: 2px solid $black;
-  display: inline-block;
   height: 8px;
   width: 8px;
   @include transform(rotate(45deg));
 }
 
-.right-arrow {
+.pe-right-arrow {
   border-top: 2px solid $black;
   border-right: 2px solid $black;
-  display: inline-block;
   height: 8px;
   width: 8px;
   @include transform(rotate(45deg));
@@ -103,13 +106,11 @@
   width: 12px;
 }
 
-.checkmark {
+.pe-checkmark {
   border-bottom: 3px solid $black;
   border-left: 3px solid $black;
-  display: inline-block;
   height: 8px;
   margin-right: 25px;
   width: 16px;
   @include transform(rotate(-45deg));
 }
-
