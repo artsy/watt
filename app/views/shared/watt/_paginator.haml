@@ -8,7 +8,7 @@
       .col-md-12
         .list-pager{ data: { page: paginator[:current_page], total_count: paginator[:total_pages_count] }}
           %a.list-pager-prev{ class: "#{paginator[:current_page] == 1 ? 'list-pager-disabled' : ''}", href: paginator[:previous_url], data: { remote: remote } }
-            %span.icon-chevron-left
+            %span.left-arrow.larger-arrow
             %span Previous
           - [paginator[:page_groups][:first], paginator[:page_groups][:second], paginator[:page_groups][:third]].each do |page_group|
             - unless page_group.empty?
@@ -17,4 +17,4 @@
                   %a.list-pager-page-link{ class: "#{current_page == page[:page] ? 'is-active' : ''}", href: page[:url], data: { remote: remote } } #{page[:page] }
           %a.list-pager-next{ class: "#{paginator[:total_pages_count] > paginator[:current_page] ? '' : 'list-pager-disabled'}", href: paginator[:next_url], data: { remote: remote } }
             %span Next
-            %span.icon-chevron-right
+            %span.right-arrow.larger-arrow
