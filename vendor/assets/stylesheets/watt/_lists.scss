@@ -20,7 +20,7 @@
     margin-left: $spacing-unit;
     @include flex(0 16px);
   }
-  .pe-right-arrow {
+  .watt-icon-right-arrow {
     border-color: $gray;
   }
 }
@@ -41,7 +41,7 @@
     .icon-chevron-right {
       color: $black;
     }
-    .pe-right-arrow {
+    .watt-icon-right-arrow {
       border-color: $black;
     }
   }
@@ -214,7 +214,7 @@
     margin-left: 0;
     margin-right: -5px;
   }
-  .pe-left-arrow, .pe-right-arrow {
+  .watt-icon-left-arrow, .watt-icon-right-arrow {
     border-color: $gray;
   }
 }

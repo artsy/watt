@@ -3,6 +3,7 @@
 
 #### Features
 
+* [#256](https://github.com/artsy/watt/pull/256): Rename pe- icons to watt-icon icons - [@oxaudo](https://github.com/oxaudo).
 * [#255](https://github.com/artsy/watt/pull/255): Updates gray colors for better contrasts - [@gnilekaw](https://github.com/gnilekaw).
 * [#254](https://github.com/artsy/watt/pull/254): Fixes purple borders on visited buttons - [@gnilekaw](https://github.com/gnilekaw).
 * [#253](https://github.com/artsy/watt/pull/253): Updates colors from Artsy.net - [@gnilekaw](https://github.com/gnilekaw).
