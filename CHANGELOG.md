@@ -3,6 +3,7 @@
 
 #### Features
 
+* [#259](https://github.com/artsy/watt/pull/259): Allow shorty modals to reset their height - [@gnilekaw](https://github.com/gnilekaw).
 * [#256](https://github.com/artsy/watt/pull/256): Rename pe- icons to watt-icon icons - [@oxaudo](https://github.com/oxaudo).
 * [#255](https://github.com/artsy/watt/pull/255): Updates gray colors for better contrasts - [@gnilekaw](https://github.com/gnilekaw).
 * [#254](https://github.com/artsy/watt/pull/254): Fixes purple borders on visited buttons - [@gnilekaw](https://github.com/gnilekaw).
