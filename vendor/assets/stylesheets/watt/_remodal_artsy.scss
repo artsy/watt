@@ -63,8 +63,11 @@ $fixed-footer-height: 70px;
       top: $modal-padding;
       min-height: $fixed-header-height;
     }
+    .modal-content {
+      margin-bottom: $modal-padding * 2;
+    }
     .modal-footer {
-      bottom: $modal-padding;
+      bottom: $modal-padding / 2;
       min-height: $fixed-footer-height;
       //overflow: hidden;
       // align the content of footer to the bottom
@@ -94,4 +97,11 @@ $fixed-footer-height: 70px;
       }
     }
   }
+}
+
+// Reset the height for shorty modals
+.remodal.artsy-modal.reset-height {
+  height: auto;
+  .modal-inner { padding-bottom: 0 }
+  .modal-content { margin-bottom: 0 }
 }
