@@ -96,6 +96,13 @@ title: Partner Engineering Style Guide - Forms
             %h5 Price
           .col-md-9
             .form-group
+              %label.col-sm-2.control-label{for:'inputText0'}
+                $Price
+              .col-sm-10.input-group
+                %span.input-group-addon
+                  $
+                %input{ type: "text", class: "form-control", id: "inputText0", placeholder: "Price" }
+            .form-group
               %label.col-sm-2.control-label{for:'inputText1'}
                 Price
               .col-sm-10
