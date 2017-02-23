@@ -3,6 +3,7 @@
 
 #### Features
 
+* [#260](https://github.com/artsy/watt/pull/260): Adding support for `input-group` and `input-group-addon` - [@ashkan18](https://github.com/ashkan18).
 * [#259](https://github.com/artsy/watt/pull/259): Allow shorty modals to reset their height - [@gnilekaw](https://github.com/gnilekaw).
 * [#256](https://github.com/artsy/watt/pull/256): Rename pe- icons to watt-icon icons - [@oxaudo](https://github.com/oxaudo).
 * [#255](https://github.com/artsy/watt/pull/255): Updates gray colors for better contrasts - [@gnilekaw](https://github.com/gnilekaw).
