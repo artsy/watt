@@ -13,3 +13,8 @@
 * [#251](https://github.com/artsy/watt/pull/251): Use css arrows in paginator next/previous buttons - [@oxaudo](https://github.com/oxaudo).
 * [#250](https://github.com/artsy/watt/pull/250): Add css version of some icons in icons.css - [@oxaudo](https://github.com/oxaudo).
 * [#249](https://github.com/artsy/watt/pull/249): Add Danger - [@starsirius](https://github.com/starsirius).
+
+
+#### Fixes
+
+* [#261](https://github.com/artsy/watt/pull/261): Set input element after addon to be 95% to avoid going over 100% after adding addon - [@ashkan18](https://github.com/ashkan18).

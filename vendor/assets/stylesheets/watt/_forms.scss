@@ -25,5 +25,8 @@
     .input-group-addon {
       border-width: 2px;
     }
+    .input-group-addon + input {
+      width: 95%;
+    }
   }
 }
