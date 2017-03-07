@@ -17,4 +17,5 @@
 
 #### Fixes
 
+* [#262](https://github.com/artsy/watt/pull/262): Increase z-indexes for the header, footer and close modal elements - [@oxaudo](https://github.com/oxaudo).
 * [#261](https://github.com/artsy/watt/pull/261): Set input element after addon to be 95% to avoid going over 100% after adding addon - [@ashkan18](https://github.com/ashkan18).
