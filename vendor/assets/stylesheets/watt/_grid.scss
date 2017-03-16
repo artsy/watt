@@ -123,13 +123,13 @@
     text-decoration: none;
   }
   .grid-item-artwork-view,
-  .grid-item-artwork-quick-edit {
+  .grid-item-artwork-quick-edit,
+  .artwork-grid-action-remove,
+  .artwork-grid-action-delete {
     line-height: 24px;
   }
   .artwork-grid-action-edit,
-  .artwork-grid-action-save,
-  .artwork-grid-action-remove,
-  .artwork-grid-action-delete {
+  .artwork-grid-action-save {
     float: right;
     margin: 0 0 0 0.5*$spacing-unit;
     padding: 0;

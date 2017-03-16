@@ -3,6 +3,7 @@
 
 #### Features
 
+* [#263](https://github.com/artsy/watt/pull/263): Move delete/remove icons to have style similar to link icons - [@oxaudo](https://github.com/oxaudo).
 * [#260](https://github.com/artsy/watt/pull/260): Adding support for `input-group` and `input-group-addon` - [@ashkan18](https://github.com/ashkan18).
 * [#259](https://github.com/artsy/watt/pull/259): Allow shorty modals to reset their height - [@gnilekaw](https://github.com/gnilekaw).
 * [#256](https://github.com/artsy/watt/pull/256): Rename pe- icons to watt-icon icons - [@oxaudo](https://github.com/oxaudo).
