@@ -34,7 +34,7 @@
 $ ->
   $('.list-controls').on 'change', '.watt-filters select', ->
     $form = $(this).closest('form')
-    Pace.restart() if Pace
+    Pace.restart() if Pace?
     $form.submit()
 
   $('.list-controls').on 'click', '.watt-filters .sort_option', ->
@@ -43,5 +43,5 @@ $ ->
     $form.find('.sort_option').removeClass('active')
     $sort_option.addClass('active')
     $form.find('#filter_sort').val $sort_option.attr('value')
-    Pace.restart() if Pace
+    Pace.restart() if Pace?
     $form.submit()
