@@ -3,6 +3,7 @@
 
 #### Features
 
+* [#271](https://github.com/artsy/watt/pull/271): Embed svg for the X icon background and add skinny x icon - [@oxaudo](https://github.com/oxaudo).
 * [#268](https://github.com/artsy/watt/pull/268): Add a separate color for green-light - [@oxaudo](https://github.com/oxaudo).
 * [#263](https://github.com/artsy/watt/pull/263): Move delete/remove icons to have style similar to link icons - [@oxaudo](https://github.com/oxaudo).
 * [#260](https://github.com/artsy/watt/pull/260): Adding support for `input-group` and `input-group-addon` - [@ashkan18](https://github.com/ashkan18).

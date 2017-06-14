@@ -1,0 +1,40 @@
+---
+title: Partner Engineering Style Guide
+---
+#content-wrap
+  .container
+    .row
+      .col-md-12
+        .page-title.bordered
+          %h2 Icons
+  .container
+    .row.col-md-10
+      %h4 Close buttons
+      - ['watt-icon-close','watt-icon-close-skinny'].each do |btn_class|
+        .row.single-padding
+          .div.col-md-3
+            .div
+              %a{ href: "#", class: "#{btn_class}" }
+          .div.col-md-9
+            %pre
+              &lt;a href=&quot;#&quot; class=&quot;#{btn_class}&quot;&gt;&lt;/a&gt;
+    .row.col-md-10
+      %h4 Arrows
+      - ['watt-icon-left-arrow','watt-icon-left-arrow watt-icon-arrow-large', 'watt-icon-right-arrow', 'watt-icon-right-arrow watt-icon-arrow-large'].each do |btn_class|
+        .row.single-padding
+          .div.col-md-3
+            .div
+              %a{ href: "#", class: "#{btn_class}" }
+          .div.col-md-9
+            %pre
+              &lt;a href=&quot;#&quot; class=&quot;#{btn_class}&quot;&gt;&lt;/a&gt;
+    .row.col-md-10
+      %h4 Checkmark
+      - ['watt-icon-checkmark'].each do |btn_class|
+        .row.single-padding
+          .div.col-md-3
+            .div
+              %a{ href: "#", class: "#{btn_class}" }
+          .div.col-md-9
+            %pre
+              &lt;a href=&quot;#&quot; class=&quot;#{btn_class}&quot;&gt;&lt;/a&gt;
