@@ -79,7 +79,10 @@
 
 // NEW Watt css Icons
 [class^='watt-icon-'], [class*=" watt-icon"] {
+  background-repeat: no-repeat;
+  background-size: contain;
   display: inline-block;
+  overflow: hidden;
   position: relative;
 }
 
@@ -116,26 +119,13 @@
 }
 
 .watt-icon-close {
-  position: relative;
-  display: inline-block;
-  width: 20px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNTE2LDIwLjQ2MTUzODUgTDUwNy41Mzg0NjIsMTIgTDUwNiwxMy41Mzg0NjE1IEw1MTQuNDYxNTM4LDIyIEw1MDYsMzAuNDYxNTM4NSBMNTA3LjUzODQ2MiwzMiBMNTE2LDIzLjUzODQ2MTUgTDUyNC40NjE1MzgsMzIgTDUyNiwzMC40NjE1Mzg1IEw1MTcuNTM4NDYyLDIyIEw1MjYsMTMuNTM4NDYxNSBMNTI0LjQ2MTUzOCwxMiBMNTE2LDIwLjQ2MTUzODUgWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwNiAtMTIpIi8+DQo8L3N2Zz4=');
   height: 20px;
-  overflow: hidden;
+  width: 20px;
+}
 
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    background: #000;
-  }
-  &::before {
-    @include transform(rotate(45deg));
-  }
-  &::after {
-    @include transform(rotate(-45deg));
-  }
+.watt-icon-close-skinny {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDEyIDExIj4NCiAgPHBvbHlnb24gZmlsbD0iIzk5OSIgZmlsbC1ydWxlPSJldmVub2RkIiBwb2ludHM9IjUyNi4yMDggNTUuMjI4IDUyNS4xNzIgNTQuMTY0IDUyMSA1OC4zNjQgNTE2Ljg1NiA1NC4yMiA1MTUuODIgNTUuMzEyIDUxOS45MzYgNTkuNDI4IDUxNS44MiA2My42IDUxNi44NTYgNjQuNjkyIDUyMSA2MC40OTIgNTI1LjE3MiA2NC42OTIgNTI2LjIwOCA2My42IDUyMi4wNjQgNTkuNDI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTE1IC01NCkiLz4NCjwvc3ZnPg==');
+  height: 11px;
+  width: 12px;
 }
