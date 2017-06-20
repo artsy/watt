@@ -1,4 +1,5 @@
 // Bourbon (mixins for transitions, etc.)
+$output-bourbon-deprecation-warnings: false;
 @import "bourbon";
 @import "neat";
 
