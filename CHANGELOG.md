@@ -20,6 +20,7 @@
 
 #### Fixes
 
+* [#274](https://github.com/artsy/watt/pull/274): Stop Bourbon deprecation warnings - [@gnilekaw](https://github.com/gnilekaw).
 * [#264](https://github.com/artsy/watt/pull/264): Fix existence check for Pace.js - [@starsirius](https://github.com/starsirius).
 * [#262](https://github.com/artsy/watt/pull/262): Increase z-indexes for the header, footer and close modal elements - [@oxaudo](https://github.com/oxaudo).
 * [#261](https://github.com/artsy/watt/pull/261): Set input element after addon to be 95% to avoid going over 100% after adding addon - [@ashkan18](https://github.com/ashkan18).
