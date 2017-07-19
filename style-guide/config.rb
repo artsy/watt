@@ -79,14 +79,14 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
-# AWS_SECRET= AWS_ACCESS_KEY_ID= middleman s3_sync
+# AWS_ACCESS_KEY_ID= AWS_SECRET_ACCESS_KEY= middleman s3_sync
 activate :s3_sync do |s3_sync|
   # The name of the S3 bucket you are targetting. This is globally unique.
   s3_sync.bucket                     = 'partner-engineering-style-guide'
   # The AWS region for your bucket.
   s3_sync.region                     = 'us-east-1'
   s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
-  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET']
+  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
 end
 
 helpers do
