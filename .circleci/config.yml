@@ -18,6 +18,7 @@ jobs:
     docker:
       - image: ruby:2.3.1
     steps:
+    - checkout
     - deploy:
         command: |
           cd style-guide
