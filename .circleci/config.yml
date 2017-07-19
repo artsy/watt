@@ -23,6 +23,7 @@ jobs:
         command: |
           cd style-guide
           bundle install --path ../vendor/bundle
+          apt-get update && apt-get install -y nodejs
           bundle exec middleman build
           bundle exec middleman s3_sync
 workflows:
