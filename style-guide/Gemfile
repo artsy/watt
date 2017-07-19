@@ -16,6 +16,7 @@ gem "middleman-minify-html"
 gem 'middleman-s3_sync'
 gem 'fog'
 gem 'nokogiri'
+gem 'execjs'
 
 gem 'haml'
 gem 'bourbon'
