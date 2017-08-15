@@ -119,6 +119,7 @@
   @include avant-garde();
   font-size: 15px;
   line-height: 15px;
+  word-break: normal;
 }
 
 .list-group-item-info {
