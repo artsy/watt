@@ -59,6 +59,7 @@ input[type="submit"].btn:visited,
   &.is-loading {
     background-color: $purple;
     color: transparent;
+    cursor: default;
     &:after {
       content: '';
       display: block;
