@@ -9,3 +9,5 @@
 #= require ../../vendor/assets/javascripts/watt/modals
 #= require ../../vendor/assets/javascripts/watt/remodal
 #= require ../../vendor/assets/javascripts/watt/flash
+#= require ../../vendor/assets/javascripts/watt/remote_animations
+#= require ../../vendor/assets/javascripts/watt/buttons
