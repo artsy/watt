@@ -3,7 +3,6 @@
 
 #### Features
 
-* [#279](https://github.com/artsy/watt/pull/279): Add javascript to disable clicks on 'is-loading' elements - [@oxaudo](https://github.com/oxaudo).
 * [#271](https://github.com/artsy/watt/pull/271): Embed svg for the X icon background and add skinny x icon - [@oxaudo](https://github.com/oxaudo).
 * [#268](https://github.com/artsy/watt/pull/268): Add a separate color for green-light - [@oxaudo](https://github.com/oxaudo).
 * [#263](https://github.com/artsy/watt/pull/263): Move delete/remove icons to have style similar to link icons - [@oxaudo](https://github.com/oxaudo).
