@@ -1,13 +1,19 @@
-// Fonts from fonts.com
+// Garamond and Avant Garde fonts from fonts.com
 //
 // Requires that you provide the following fonts.com script tag.
 // <script type="text/javascript" src="http://fast.fonts.net/jsapi/f7f47a40-b25b-44ee-9f9c-cfdfc8bb2741.js"></script>
+
+// Unica77 from Lineto.com loaded from https://webfonts.artsy.net/unica-webfonts.css
+//
+// Reguires above css file to be loaded in the page header
 
 // Font Variables
 ////////////////////////////////////////////////////////////////////////////////
 $serif: "Adobe Garamond W08", Georgia, Serif;
 $sans-serif: "ITC Avant Garde Gothic W04", "Helvetica Neue", Arial, Helvetica, sans-serif;
-
+$sans-regular: Unica77LLWebRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-medium: Unica77LLWebMedium, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-medium-italic: Unica77LLWebMediumItalic, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Mixins with font smoothing
 ////////////////////////////////////////////////////////////////////////////////
