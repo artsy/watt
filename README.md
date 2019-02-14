@@ -79,6 +79,9 @@ And then execute:
 
     $ bundle
 
+Here is an example of adding Watt to existing project:
+https://github.com/artsy/vortex/pull/18
+
 ## Developing Locally With Middleman
 
 Run `middleman` to see your Watt changes locally:
