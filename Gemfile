@@ -22,7 +22,7 @@ group :development, :test do
   gem 'capybara', '2.3.0'
   gem 'shoulda-matchers', '2.6.1', require: false
   gem 'guard-rspec', require: false
-  gem 'rubocop', '0.41.2'
+  gem 'rubocop', '0.75.1'
   gem 'guard-rubocop'
   gem 'danger'
 end
