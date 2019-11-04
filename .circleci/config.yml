@@ -11,9 +11,6 @@ jobs:
       - run:
           name: rspec
           command: 'bundle exec rspec'
-      - run:
-          name: danger
-          command: 'bundle exec danger'
   deploy:
     docker:
       - image: ruby:2.3.1
