@@ -13,7 +13,7 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'rails', '4.2.7'
+gem 'rails', '6.0.3.2'
 gem 'haml-rails'
 
 group :development, :test do
