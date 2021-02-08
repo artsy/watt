@@ -56,7 +56,7 @@ Note that we shouldn't include the asset in Test mode for fear of incurring extr
 
 Like artsy.net projects, we host our own font for icons. This gives us vector graphics for sharp scaling
 and allows us to use CSS for colors and transitions just like any other typeface.
-See the [Joule](https://github.com/artsy/joule) project for more details.
+See the [Joule](https://github.com/artsy/joule-font) project for more details.
 
 The effort in adding a new icon to Joule can be higher than expected. SVGs are proving to be a great alternative and should be considered first.
 
