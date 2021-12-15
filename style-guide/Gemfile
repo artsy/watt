@@ -13,9 +13,7 @@ gem 'middleman-bootstrap-navbar', '~> 2.0'
 # Live-reloading plugin
 gem "middleman-livereload"
 gem "middleman-minify-html"
-gem 'middleman-s3_sync'
-gem 'fog'
-gem 'xmlrpc'
+gem 'middleman-s3_sync', '~> 3.0.47'
 gem 'nokogiri'
 gem 'execjs'
 
