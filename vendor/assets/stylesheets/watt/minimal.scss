@@ -1,4 +1,7 @@
 $output-bourbon-deprecation-warnings: false;
+$bourbon: (
+  "rails-asset-pipeline": true,
+);
 @import "bourbon";
 @import "neat";
 @import "watt/fonts";

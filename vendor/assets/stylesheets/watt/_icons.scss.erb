@@ -7,7 +7,7 @@
 // static.artsy.net or directly via S3 - gravity-production.s3.amazonaws.com
 //
 // This env var is set in CircleCI for Watt to '/assets/watt/artsy-pe-icons'
-@include font-face(artsy-pe-icons, <%= ENV['ICON_FONT_PATH'] || 'watt/artsy-pe-icons' %>, normal, $asset-pipeline: true, $file-formats: eot woff svg ttf);
+@include font-face(artsy-pe-icons, <%= ENV['ICON_FONT_PATH'] || 'watt/artsy-pe-icons' %>, normal, $file-formats: woff);
 
 [class^="icon-"], [class*=" icon-"], .with-icon {
   font-family: 'artsy-pe-icons';
