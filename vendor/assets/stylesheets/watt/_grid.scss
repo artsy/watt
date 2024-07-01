@@ -57,7 +57,7 @@
       .grid-item-icon, a {
         color: $black;
         &:hover {
-          color: $purple;
+          color: $blue;
         }
       }
     }
@@ -174,14 +174,14 @@
   .artwork-grid-action-delete {
     &.active svg {
       circle {
-        fill: $purple;
+        fill: $blue;
       }
       path {
         fill: $white;
       }
       &:hover {
         circle {
-          fill: $purple;
+          fill: $blue;
         }
         path {
           fill: $white;

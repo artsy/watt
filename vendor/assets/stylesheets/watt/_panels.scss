@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 .panel {
   background-color: $gray-lightest;
-  border-left: 2px solid $purple;
+  border-left: 2px solid $blue;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -16,7 +16,7 @@
     a {
       text-decoration: underline;
       &:hover {
-        color: $purple;
+        color: $blue;
       }
       &.btn {
         text-decoration: none;
@@ -71,8 +71,8 @@
       border-bottom: 1px solid $black;
       text-decoration: none;
       &:hover {
-        color: $purple;
-        border-color: $purple;
+        color: $blue;
+        border-color: $blue;
       }
     }
   }

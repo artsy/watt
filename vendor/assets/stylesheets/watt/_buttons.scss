@@ -50,14 +50,14 @@ input[type="submit"].btn:visited,
   text-decoration: none;
 
   &:hover {
-    background-color: $purple;
+    background-color: $blue;
     color: $white;
     text-decoration: none;
   }
 
   &[data-state='loading'],
   &.is-loading {
-    background-color: $purple;
+    background-color: $blue;
     color: transparent;
     &:after {
       content: '';
@@ -104,14 +104,14 @@ a.btn.btn-primary,
   color: $white;
 
   &:hover {
-    background-color: $purple;
-    border-color: $purple;
+    background-color: $blue;
+    border-color: $blue;
     color: $white;
   }
 
   &[data-state='loading'],
   &.is-loading {
-    background-color: $purple;
+    background-color: $blue;
     color: transparent;
     &:after {
       content: '';
@@ -132,7 +132,7 @@ a.btn.btn-secondary,
   border-color: $gray;
   &:hover {
     background-color: $white;
-    color: $purple;
+    color: $blue;
   }
 
   &[data-state='loading'],
@@ -141,7 +141,7 @@ a.btn.btn-secondary,
     &:after {
       content: '';
       display: block;
-      @include spinner(25px, 6px, $purple);
+      @include spinner(25px, 6px, $blue);
     }
   }
 }
@@ -170,7 +170,7 @@ a.btn.btn-link,
     &:after {
       content: '';
       display: block;
-      @include spinner(25px, 6px, $purple);
+      @include spinner(25px, 6px, $blue);
     }
   }
 }
@@ -188,7 +188,7 @@ a.btn.btn-delete,
 
   &:hover {
     background-color: $white;
-    color: $purple;
+    color: $blue;
   }
 
   &[data-state='loading'],
