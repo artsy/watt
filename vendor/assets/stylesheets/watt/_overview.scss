@@ -31,7 +31,7 @@
 
   .overview-item-title {
     @extend .col-md-4;
-    @include avant-garde();
+    @include unica();
     font-size: 14px;
   }
 

@@ -65,7 +65,7 @@
   .panel-actions {
     text-align: center;
     a {
-      @include avant-garde();
+      @include unica();
       font-size: 12px;
       line-height: 1.5;
       border-bottom: 1px solid $black;

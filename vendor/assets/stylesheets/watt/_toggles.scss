@@ -8,7 +8,7 @@
 }
 
 .toggle {
-  @include avant-garde();
+  @include unica();
   background-color: white;
   border: 2px solid $gray-lighter;
   border-radius: 15px;

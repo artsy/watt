@@ -11,7 +11,7 @@
   border: 1px solid $gray-lightest;
   margin-bottom: 3*$spacing-unit;
   > h4 {
-    @include avant-garde();
+    @include unica();
     border-bottom: 1px solid $gray-lightest;
     font-size: 14px;
     padding: 2*$spacing-unit;
