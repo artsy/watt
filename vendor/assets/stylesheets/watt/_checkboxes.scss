@@ -44,7 +44,7 @@
       top: 3px;
     }
     &:hover {
-      border-color: $purple;
+      border-color: $blue;
       &::after {
         opacity: 0.1;
       }
@@ -56,7 +56,7 @@
     &:focus {
       outline: none;
       & + label {
-        border-color: $purple;
+        border-color: $blue;
         &:after {
           opacity: 0.1;
         }

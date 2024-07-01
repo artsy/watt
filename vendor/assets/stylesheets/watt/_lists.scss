@@ -116,7 +116,7 @@
 }
 
 .list-group-item-artist-name {
-  @include avant-garde();
+  @include unica();
   font-size: 15px;
   line-height: 15px;
   word-break: normal;
@@ -291,7 +291,7 @@ a.list-pager-page-link {
     margin-left: $spacing-unit/2;
   }
   .active {
-    color: $purple;
+    color: $blue;
     text-decoration: underline;
     &:hover {
       cursor: default;
@@ -330,7 +330,7 @@ a.list-pager-page-link {
     margin: 0;
     padding: 0;
     strong {
-      @include avant-garde();
+      @include unica();
       line-height: 100%;
     }
   }

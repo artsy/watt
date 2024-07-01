@@ -2,7 +2,7 @@ body {
   .navbar a,
   .nav-tabs a {
     text-transform: uppercase;
-    font-family: $sans-serif;
+    font-family: $sans-regular;
     -webkit-font-smoothing: antialiased;
   }
 }
@@ -47,7 +47,7 @@ body form {
     @extend .no-padding;
     font-size:13px;
     text-transform: uppercase;
-    font-family: $sans-serif;
+    font-family: $sans-regular;
   }
   label {
     font-weight: normal;

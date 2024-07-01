@@ -14,8 +14,8 @@
   padding-right: $spacing-unit;
   text-decoration: none;
   &:hover {
-    background-color: $purple;
-    border-top: 1px solid $purple;
+    background-color: $blue;
+    border-top: 1px solid $blue;
     color: $white;
   }
 }
@@ -29,7 +29,7 @@
     border: none;
   }
   .summary-detail-label {
-    @include avant-garde();
+    @include unica();
     font-size: 12px;
   }
   .summary-detail-action {

@@ -30,7 +30,7 @@
 }
 
 .artwork-image-low-res {
-  @include avant-garde();
+  @include unica();
   background-color: $black;
   bottom: 0;
   color: $white;
@@ -57,7 +57,7 @@
       .grid-item-icon, a {
         color: $black;
         &:hover {
-          color: $purple;
+          color: $blue;
         }
       }
     }
@@ -95,7 +95,7 @@
     margin: 0 0 $spacing-unit 0;
   }
   .artwork-grid-item-artists {
-    @include avant-garde();
+    @include unica();
     @include ellipsis();
     display: block;
     font-size: 14px;
@@ -105,7 +105,7 @@
   .artwork-grid-item-display-data {
     font-size: 14px;
     span.data-label {
-      @include avant-garde();
+      @include unica();
       font-size: 11px;
     }
   }
@@ -115,7 +115,7 @@
     padding-top: $spacing-unit;
   }
   .artwork-grid-action {
-    @include avant-garde();
+    @include unica();
     color: $gray-darker;
     float: left;
     font-size: 12px;
@@ -174,14 +174,14 @@
   .artwork-grid-action-delete {
     &.active svg {
       circle {
-        fill: $purple;
+        fill: $blue;
       }
       path {
         fill: $white;
       }
       &:hover {
         circle {
-          fill: $purple;
+          fill: $blue;
         }
         path {
           fill: $white;

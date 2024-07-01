@@ -10,7 +10,7 @@
 // Font Variables
 ////////////////////////////////////////////////////////////////////////////////
 $serif: "Adobe Garamond W08", Georgia, Serif;
-$sans-serif: "ITC Avant Garde Gothic W04", "Helvetica Neue", Arial, Helvetica, sans-serif;
+$sans-regular: "ITC Avant Garde Gothic W04", "Helvetica Neue", Arial, Helvetica, sans-serif;
 $sans-regular: Unica77LLWebRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $sans-medium: Unica77LLWebMedium, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $sans-medium-italic: Unica77LLWebMediumItalic, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -18,7 +18,7 @@ $sans-medium-italic: Unica77LLWebMediumItalic, "Helvetica Neue", Helvetica, Aria
 // Mixins with font smoothing
 ////////////////////////////////////////////////////////////////////////////////
 @mixin avant-garde() {
-  font-family: $sans-serif;
+  font-family: $sans-regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: normal;

@@ -67,7 +67,7 @@ $s: 768px;
   }
 }
 .tab-item {
-  @include avant-garde();
+  @include unica();
   display: inline-block;
   font-size: 10px;
   list-style: none;
@@ -87,8 +87,8 @@ $s: 768px;
     display: block;
     padding: 16px;
     &:focus, &:hover {
-      border-color: $purple;
-      color: $purple;
+      border-color: $blue;
+      color: $blue;
       outline: none;
       text-decoration: none;
       @include transition(color 0.25s ease-in-out, border-color 0.25s ease-in-out);

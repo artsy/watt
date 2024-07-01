@@ -46,7 +46,7 @@
     }
   }
   .flash-wrap.flash-notice {
-    background-color: rgba($purple, 0.90);
+    background-color: rgba($blue, 0.90);
   }
   .flash-wrap.flash-error {
     background-color: rgba($red, 0.90);
@@ -79,7 +79,7 @@
     }
   }
   .flash-wrap.flash-notice {
-    background-color: rgba($purple, 0.90);
+    background-color: rgba($blue, 0.90);
   }
   .flash-wrap.flash-error {
     background-color: rgba($red, 0.90);
@@ -88,7 +88,7 @@
 
 .flash-fullscreen {
   .flash-wrap {
-    @include avant-garde();
+    @include unica();
     background-color: rgba($black, 0.80);
     bottom: 0;
     font-size: 18px;

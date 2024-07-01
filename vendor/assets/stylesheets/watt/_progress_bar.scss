@@ -23,7 +23,7 @@ $s: 768px;
   @include align-items(flex-end);
 }
 .progress-bar-item {
-  @include avant-garde();
+  @include unica();
   @include flex(1 1);
   display: inline-block;
   font-size: 9px;
@@ -34,8 +34,8 @@ $s: 768px;
   min-width: 120px;
   &.is-active {
     span {
-      border-color: $purple;
-      color: $purple;
+      border-color: $blue;
+      color: $blue;
     }
   }
   &:last-child { margin-right: 0; }

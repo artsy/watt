@@ -2,7 +2,7 @@ header.navigation {
   background-color: $black;
   clear: both;
   .nav, a {
-    @include avant-garde();
+    @include unica();
     color: $white;
     cursor: pointer;
     font-size: 12px;
