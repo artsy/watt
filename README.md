@@ -11,7 +11,7 @@ Meta
 * __Style Guide:__ [http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/](http://partner-engineering-style-guide.s3-website-us-east-1.amazonaws.com/)
 * __Github:__ [https://github.com/artsy/watt/](https://github.com/artsy/watt/)
 * __CI:__ [CircleCI](https://circleci.com/gh/artsy/watt) (such as it is)
-* __Point People:__ [@oxaudo](https://github.com/oxaudo), [@gib](https://github.com/gib)
+* __Point People:__ [@oxaudo](https://github.com/oxaudo)
 
 # On Bootstrap
 
