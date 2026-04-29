@@ -40,6 +40,9 @@
       max-width: 440px;
     }
   }
+  &.borderless {
+    border: none;
+  }
   .width-constrained {
     max-width: 660px;
   }
